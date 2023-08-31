@@ -204,3 +204,10 @@ def how_many_dice():
         for die in dice:
             print(DICE_ART.get(die)[line], end="")
         print()
+
+
+def new_play():
+    """
+    
+    """
+    print(f"You're ready to play!\nTokens: {tokens}\n")
