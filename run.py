@@ -107,8 +107,8 @@ def starting_throw():
     """
     Creates the sum of 4 randomized dice and returns the value
     """
-    print("Throwing 4 dice on the table...")
-    time.sleep(2)
+    print("Rolling 4 dice on the table...")
+    time.sleep(1.5)
     dice = []
     total = 0
     for die in range(4):
@@ -139,11 +139,12 @@ def place_bet(tk, mn):
     while True:
         token_bets = (input('How many tokens would you like to bet for the next play? '))
         if verify_bet(tk, token_bets):
-            print('Bet accepted.\n')
-            time.sleep(2)
+            a, b = verify_bet(tk, token_bets)
+            print(f'Bet accepted. You have {b} tokens left.\n')
+            time.sleep(1.5)
         else:
             continue
-        return int(token_bets)
+        return [int(token_bets), b]
 
 
 def verify_bet(tokens, bet):
@@ -178,15 +179,15 @@ def choose_option(mania):
     Ask user which of 3 options to choose: more, less or same.
     """
     while True:
-        opt = input(f'Enter what happens to your Mania Number on the next play.\nMore than {mania} (m), Less than {mania} (l), Same as {mania} (s): ').lower()
+        opt = input(f'Choose your Mania Number play.\nMore than {mania} (press "M"), Less than {mania} (press "L"), Same as {mania} (press "S"): ').lower()
         if opt == 'm':
-            print('you have chosen More.\n')
+            print('you have chosen "More".\n')
             break
         elif opt == 'l':
-            print('you have chosen Less.\n')
+            print('you have chosen "Less".\n')
             break
         elif opt == 's':
-            print('you have chosen Same.\n')
+            print('you have chosen "Same".\n')
             break
         else:
             print(f'{opt} is not valid, please try again.\n')
@@ -199,36 +200,49 @@ def how_many_dice():
     Ask user how many dice will be played in the next play
     """
     while True:
-        d = (input('How many dice would you like to play? (2-4): '))
-        if (int(d) > 2) and (int(d) < 4):
-            print(f'Rolling {d} dice...')
-            break
-        elif (int(d) < 2) or (int(d) > 4):
-            print('The number has to be between 2 and 4, please try again.\n')
+        try:
+            x = int(input('How many dice? (2-4): '))
+            if (x < 2) or (x > 4):
+                print('The number has to be between 2 and 4, please try again.\n')
+                continue
+            if (x >= 2) and (x <= 4):
+                print(f'\nRolling {x} dice on the table...')
+                time.sleep(1.5)
+                break
+        except ValueError as e:
+            print(f"Invalid data: {e}. Please try again.\n")
             continue
-        else:
-            print(f'{d} is not valid, try again.')
-            continue
+    return x
 
+def roll_dice(x):
     """
     Throwing the number of dice chosen
     """
     dice = []
-    for die in range(d):
+    total = 0
+    for die in range(x):
         dice.append(random.randint(1, 6))
 
     for line in range(5):
         for die in dice:
             print(DICE_ART.get(die)[line], end="")
         print()
-    return d
+
+    for die in dice:
+        total += die
+    print(f"Total: {total}")
+    return total
 
 
-def new_play():
+def new_play(tokens, bet, play, nr_mania):
     """
-    Process a new play with collected data: tokens, bet, number of dice and option
+    Process a new play with collected data:
+    tokens, bet, play option, number of dice and mania number
     """
-    print(f"You're ready to play!\nTokens: {tokens}\n")
+    new_dice_nr = how_many_dice()
+    new_mania_nr = roll_dice(new_dice_nr)
+    print(f'voce escolheu {new_dice_nr} dados e o seu numero mania é {new_mania_nr}')
+    
 
 
 def main():
@@ -254,7 +268,7 @@ def main():
     )
     print(
         colored(
-            '       You then have three guess options towards this number: "more", "less" or "same".',
+            '       You then have three guesses towards this number: "more", "less" or "same".',
             "black",
         )
     )
@@ -266,10 +280,9 @@ def main():
 
     tkns = charging_tokens()
     mania_nr = starting_throw()
-    bet = place_bet(tkns, mania_nr)
-    print(update_tokens())
-    option = choose_option(mania_nr)
-    dice_nr = how_many_dice()
+    bet, new_tokens = place_bet(tkns, mania_nr)
+    play_option = choose_option(mania_nr)
+    new_play(new_tokens, bet, play_option, mania_nr)
 
 
 main()
