@@ -191,3 +191,16 @@ def how_many_dice():
         else:
             print(f'{d} is not valid, try again.')
             continue
+
+    """
+    Throwing the number of dice chosen in line 184
+    """
+    dice = []
+    total = 0
+    for die in range(d):
+        dice.append(random.randint(1, 6))
+
+    for line in range(5):
+        for die in dice:
+            print(DICE_ART.get(die)[line], end="")
+        print()
