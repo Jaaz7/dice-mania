@@ -211,3 +211,43 @@ def new_play():
     
     """
     print(f"You're ready to play!\nTokens: {tokens}\n")
+
+
+def main():
+    """
+    Prints rules of the game
+    Runs the functions of the program
+    """
+    print("\n")
+    create_title()
+    print(
+        colored(
+            "\n\nWelcome! Bet your tokens to guess the tendency of the next play.\nAre you ready?\n",
+            "cyan",
+        )
+    )
+
+    print("Rules: To win, you need to guess the sum of the next dice play.")
+    print("       --------------------------------------------------------")
+    print("       First, charge your balance with tokens.")
+    print(colored("       Place your bet, only whole tokens are accepted.", "black"))
+    print(
+        "       You roll 4 dice to get a starting Mania Number, it will be the total sum of the 4 dice."
+    )
+    print(
+        colored(
+            '       You then have three guess options towards this number: "more", "less" or "same".',
+            "black",
+        )
+    )
+    print('       If you bet "more", "less" or "same" and win, you win your bet.')
+    print(colored('       If you bet "same" with 3 or 4 dice and win, your bet is doubled up.', "black"))
+    print("       Choose the number of dice you want to play from 2 to 4. A single die cannot be played.")
+    print(colored("       You can always recharge, continue or quit.", "black"))
+    print("       You lose when your balance reaches 0.")
+
+    tkns = charging_tokens()
+    mania_nr = starting_throw()
+    bet = place_bet(tkns, mania_nr)
+    option = choose_option()
+    how_many_dice()
