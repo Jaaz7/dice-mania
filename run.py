@@ -76,12 +76,13 @@ def charging_tokens():
     Ask the player to top up with tokens so the game can start
     """
     while True:
-        tokens = int(input("\nCharge your account (max 500): "))
+        tokens = (input("\nCharge your account (max 500): "))
         if verify_tokens(tokens):
             print("Tokens accepted.\n")
             time.sleep(1.5)
-            break
-    return tokens
+        else:
+            continue
+        return tokens
 
 
 def verify_tokens(num):
@@ -89,14 +90,17 @@ def verify_tokens(num):
     Verify if tokens were correctly submitted
     """
     try:
-        if num < 0:
-            raise ValueError(f'Negatives values are not allowed, you entered {num}')
-        elif num > 500:
-            raise ValueError(f"Maximum value reached, you entered {num}")
+        if (int(num) > 0) and (int(num) < 500):
+            return True
+        elif int(num) < 1:
+            print(f'Value has to be 1 or more, you entered {num}')
+            return False
+        elif int(num) > 500:
+            print(f"Maximum value reached, you entered {num}")
+            return False
     except ValueError as e:
-        print(f"Invalid data: {e}. Please try again.")
-        return False
-    return True
+            print(f"Invalid data: {e}. Please try again.")
+            return False
 
 
 def starting_throw():
@@ -111,7 +115,7 @@ def starting_throw():
         dice.append(random.randint(1, 6))
 
     """
-    Prints the 4 dice art randomized in lines 110 and 111
+    Prints the 4 dice art randomized
     """
     for line in range(5):
         for die in dice:
@@ -184,7 +188,7 @@ def how_many_dice():
     while True:
         d = (input('How many dice will you play with? (2-4): '))
         if (int(d) > 2) and (int(d) < 4):
-            print(f'Rolling {int(d)} dice...')
+            print(f'Rolling {d} dice...')
             break
         elif (int(d) < 2) or (int(d) > 4):
             print('The number has to be between 2 and 4, please try again.\n')
@@ -194,10 +198,9 @@ def how_many_dice():
             continue
 
     """
-    Throwing the number of dice chosen in line 184
+    Throwing the number of dice chosen
     """
     dice = []
-    total = 0
     for die in range(d):
         dice.append(random.randint(1, 6))
 
@@ -205,6 +208,7 @@ def how_many_dice():
         for die in dice:
             print(DICE_ART.get(die)[line], end="")
         print()
+    return d
 
 
 def new_play():
@@ -251,7 +255,8 @@ def main():
     mania_nr = starting_throw()
     bet = place_bet(tkns, mania_nr)
     option = choose_option()
-    how_many_dice()
+    dice_nr = how_many_dice()
+    print(dice_nr)
 
 
 main()
