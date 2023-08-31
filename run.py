@@ -125,3 +125,14 @@ def starting_throw():
         total += die
     print(f"Total: {total}")
     return total
+
+
+def place_bet(tk, mn):
+    print(f'\nYou have {tk} tokens and your Mania Number is {mn}.\n')
+    while True:
+        token_bets = int(input('How many tokens would you like to bet for the next play? '))
+        if verify_bet(tk, token_bets):
+            print('Bet accepted.\n')
+            time.sleep(2)
+            break
+    token_bets
