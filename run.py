@@ -57,3 +57,12 @@ DICE_ART = {
         "│  ●   ●  │",
         "└─────────┘"),
 }
+
+def create_title():
+    """
+    Creates the dice mania ASCII art
+    """
+    for line in range(8):
+        for tuple in range(1, 3):
+            print(colored(DICE_MANIA.get(tuple)[line], "magenta"), end="      ")
+        print()
