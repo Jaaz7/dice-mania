@@ -237,7 +237,8 @@ def roll_dice(x):
 def new_play(tokens, bet, play, nr_mania, loop):
     """
     Process a new play with collected data:
-    tokens, bet, play option, number of dice and mania number
+    tokens, bet, play option, mania number and looping when needed
+    to continue the game
     """
     print('You can win double by betting "Same" on 3 or 4 dice.')
     if loop == 0:
@@ -245,8 +246,8 @@ def new_play(tokens, bet, play, nr_mania, loop):
         new_mania_nr = roll_dice(new_dice_nr)
     
     if loop == 1:
-        new_dice_nr = how_many_dice()
-        new_mania_nr = roll_dice(new_dice_nr)
+        new_dice_nr = how_many_dice() #PROBLEMA
+        new_mania_nr = roll_dice(new_dice_nr) #PROBLEMA
 
     if (play == 'm') and (new_mania_nr < nr_mania):
         print(f'\nYou lost. You chose "More".\n{new_mania_nr} < {nr_mania}')
@@ -254,7 +255,7 @@ def new_play(tokens, bet, play, nr_mania, loop):
         print(f'\nYour token balance: {new_tokens}')
 
         while True:
-            y = input('\nWould you like to continue? (press "C");\nRecharge? (press "R")\nQuit? (Press "Q")').lower()
+            y = input('\nWould you like to continue? (press "C");\nRecharge? (press "R")\nQuit? (Press "Q"): ').lower()
             if y == 'c':
                 x = how_many_dice()
                 mn = roll_dice(x)
@@ -279,7 +280,7 @@ def new_play(tokens, bet, play, nr_mania, loop):
         print(f'Your token balance: {new_tokens}')
 
         while True:
-            y = input('\nWould you like to continue? (press "C");\nRecharge? (press "R")\nQuit? (Press "Q")').lower()
+            y = input('\nWould you like to continue? (press "C");\nRecharge? (press "R")\nQuit? (Press "Q"): ').lower()
             if y == 'c':
                 x = how_many_dice()
                 mn = roll_dice(x)
@@ -304,7 +305,7 @@ def new_play(tokens, bet, play, nr_mania, loop):
         print(f'Your token balance: {new_tokens}')
 
         while True:
-            y = input('\nWould you like to continue? (press "C");\nRecharge? (press "R")\nQuit? (Press "Q")').lower()
+            y = input('\nWould you like to continue? (press "C");\nRecharge? (press "R")\nQuit? (Press "Q"): ').lower()
             if y == 'c':
                 x = how_many_dice()
                 mn = roll_dice(x)
@@ -329,7 +330,7 @@ def new_play(tokens, bet, play, nr_mania, loop):
         print(f'Your token balance: {new_tokens}')
 
         while True:
-            y = input('\nWould you like to continue? (press "C");\nRecharge? (press "R")\nQuit? (Press "Q")').lower()
+            y = input('\nWould you like to continue? (press "C");\nRecharge? (press "R")\nQuit? (Press "Q"): ').lower()
             if y == 'c':
                 x = how_many_dice()
                 mn = roll_dice(x)
@@ -354,7 +355,7 @@ def new_play(tokens, bet, play, nr_mania, loop):
         print(f'Your token balance: {new_tokens}')
 
         while True:
-            y = input('\nWould you like to continue? (press "C");\nRecharge? (press "R")\nQuit? (Press "Q")').lower()
+            y = input('\nWould you like to continue? (press "C");\nRecharge? (press "R")\nQuit? (Press "Q"): ').lower()
             if y == 'c':
                 x = how_many_dice()
                 mn = roll_dice(x)
@@ -379,7 +380,7 @@ def new_play(tokens, bet, play, nr_mania, loop):
         print(f'Your token balance: {new_tokens}')
 
         while True:
-            y = input('\nWould you like to continue? (press "C");\nRecharge? (press "R")\nQuit? (Press "Q")').lower()
+            y = input('\nWould you like to continue? (press "C");\nRecharge? (press "R")\nQuit? (Press "Q"): ').lower()
             if y == 'c':
                 x = how_many_dice()
                 mn = roll_dice(x)
@@ -404,7 +405,7 @@ def new_play(tokens, bet, play, nr_mania, loop):
         print(f'Your token balance: {new_tokens}')
 
         while True:
-            y = input('\nWould you like to continue? (press "C");\nRecharge? (press "R")\nQuit? (Press "Q")').lower()
+            y = input('\nWould you like to continue? (press "C");\nRecharge? (press "R")\nQuit? (Press "Q"): ').lower()
             if y == 'c':
                 x = how_many_dice()
                 mn = roll_dice(x)
@@ -429,7 +430,7 @@ def new_play(tokens, bet, play, nr_mania, loop):
         print(f'Your token balance: {new_tokens}')
 
         while True:
-            y = input('\nWould you like to continue? (press "C");\nRecharge? (press "R")\nQuit? (Press "Q")').lower()
+            y = input('\nWould you like to continue? (press "C");\nRecharge? (press "R")\nQuit? (Press "Q"): ').lower()
             if y == 'c':
                 x = how_many_dice()
                 mn = roll_dice(x)
@@ -454,7 +455,7 @@ def new_play(tokens, bet, play, nr_mania, loop):
         print(f'Your token balance: {new_tokens}')
 
         while True:
-            y = input('\nWould you like to continue? (press "C");\nRecharge? (press "R")\nQuit? (Press "Q")').lower()
+            y = input('\nWould you like to continue? (press "C");\nRecharge? (press "R")\nQuit? (Press "Q"): ').lower()
             if y == 'c':
                 x = how_many_dice()
                 mn = roll_dice(x)
@@ -479,7 +480,7 @@ def new_play(tokens, bet, play, nr_mania, loop):
         print(f'Your token balance: {new_tokens}')
 
         while True:
-            y = input('\nWould you like to continue? (press "C");\nRecharge? (press "R")\nQuit? (Press "Q")').lower()
+            y = input('\nWould you like to continue? (press "C");\nRecharge? (press "R")\nQuit? (Press "Q"): ').lower()
             if y == 'c':
                 x = how_many_dice()
                 mn = roll_dice(x)
