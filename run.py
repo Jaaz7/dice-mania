@@ -153,3 +153,24 @@ def verify_bet(tokens, bet):
         print(f"Invalid data: {e}. Please try again.\n")
         return False
     return True
+
+
+def choose_option():
+    """
+    Ask user which of 3 options to choose: more, less or same.
+    """
+    while True:
+        opt = input('Enter what happens to your Mania Number on the next play.\nMore (m), Less(l), Same(s): ').lower()
+        if opt == 'm':
+            print('you have chosen More.\n')
+            break
+        elif opt == 'l':
+            print('you have chosen Less.\n')
+            break
+        elif opt == 's':
+            print('you have chosen Same.\n')
+            break
+        else:
+            print(f'{opt} is not valid, please try again.\n')
+            continue
+    return opt
