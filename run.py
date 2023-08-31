@@ -76,13 +76,13 @@ def charging_tokens():
     Ask the player to top up with tokens so the game can start
     """
     while True:
-        tokens = (input("\nCharge your account (max 500): "))
+        tokens = input("\nCharge your account (max 500): ")
         if verify_tokens(tokens):
             print("Tokens accepted.\n")
             time.sleep(1.5)
         else:
             continue
-        return tokens
+        return int(tokens)
 
 
 def verify_tokens(num):
@@ -90,14 +90,14 @@ def verify_tokens(num):
     Verify if tokens were correctly submitted
     """
     try:
-        if (int(num) > 0) and (int(num) < 500):
-            return True
-        elif int(num) < 1:
-            print(f'Value has to be 1 or more, you entered {num}')
+        if int(num) < 1:
+            print(f'Value has to be as least 1, you entered {num}')
             return False
         elif int(num) > 500:
             print(f"Maximum value reached, you entered {num}")
             return False
+        else:
+            return True
     except ValueError as e:
             print(f"Invalid data: {e}. Please try again.")
             return False
@@ -137,12 +137,13 @@ def place_bet(tk, mn):
     """
     print(f'\nYou have {tk} tokens and your Mania Number is {mn}.\n')
     while True:
-        token_bets = int(input('How many tokens would you like to bet for the next play? '))
+        token_bets = (input('How many tokens would you like to bet for the next play? '))
         if verify_bet(tk, token_bets):
             print('Bet accepted.\n')
             time.sleep(2)
-            break
-    token_bets
+        else:
+            continue
+        return int(token_bets)
 
 
 def verify_bet(tokens, bet):
@@ -150,22 +151,34 @@ def verify_bet(tokens, bet):
     Verify if the tokens were correctly submitted
     """
     try:
-        if bet > tokens:
-            raise ValueError(f'Bet surpassed allowed amount, maximum {tokens} are permitted')
-        elif bet < 0:
-            raise ValueError(f"Negative numbers are not allowed, you entered {bet}")
+        if int(bet) > tokens:
+            print(f'Bet surpassed allowed amount, maximum {tokens} are permitted, please try again.\n')
+            return False
+        elif int(bet) < 1:
+            print(f"Bet has to be as least 1, you entered {bet}, please try again.\n")
+            return False
+        else:
+            new_tokens = update_tokens(tokens, bet)
+            return [True, new_tokens]
     except ValueError as e:
         print(f"Invalid data: {e}. Please try again.\n")
         return False
-    return True
+    
+
+def update_tokens(tk, bet):
+    """
+    return new tokens value when the player has betted
+    """
+    new_tokens = tk - int(bet)
+    return new_tokens
 
 
-def choose_option():
+def choose_option(mania):
     """
     Ask user which of 3 options to choose: more, less or same.
     """
     while True:
-        opt = input('Enter what happens to your Mania Number on the next play.\nMore (m), Less(l), Same(s): ').lower()
+        opt = input(f'Enter what happens to your Mania Number on the next play.\nMore than {mania} (m), Less than {mania} (l), Same as {mania} (s): ').lower()
         if opt == 'm':
             print('you have chosen More.\n')
             break
@@ -186,7 +199,7 @@ def how_many_dice():
     Ask user how many dice will be played in the next play
     """
     while True:
-        d = (input('How many dice will you play with? (2-4): '))
+        d = (input('How many dice would you like to play? (2-4): '))
         if (int(d) > 2) and (int(d) < 4):
             print(f'Rolling {d} dice...')
             break
@@ -254,9 +267,9 @@ def main():
     tkns = charging_tokens()
     mania_nr = starting_throw()
     bet = place_bet(tkns, mania_nr)
-    option = choose_option()
+    print(update_tokens())
+    option = choose_option(mania_nr)
     dice_nr = how_many_dice()
-    print(dice_nr)
 
 
 main()
