@@ -174,3 +174,20 @@ def choose_option():
             print(f'{opt} is not valid, please try again.\n')
             continue
     return opt
+
+
+def how_many_dice():
+    """
+    Ask user how many dice will be played in the next play
+    """
+    while True:
+        d = (input('How many dice will you play with? (2-4): '))
+        if (int(d) > 2) and (int(d) < 4):
+            print(f'Rolling {int(d)} dice...')
+            break
+        elif (int(d) < 2) or (int(d) > 4):
+            print('The number has to be between 2 and 4, please try again.\n')
+            continue
+        else:
+            print(f'{d} is not valid, try again.')
+            continue
