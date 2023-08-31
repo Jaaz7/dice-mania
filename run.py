@@ -97,3 +97,15 @@ def verify_tokens(num):
         print(f"Invalid data: {e}. Please try again.")
         return False
     return True
+
+
+def starting_throw():
+    """
+    Creates the sum of 4 randomized dice and returns the value
+    """
+    print("Throwing 4 dice on the table...")
+    time.sleep(2)
+    dice = []
+    total = 0
+    for die in range(4):
+        dice.append(random.randint(1, 6))
