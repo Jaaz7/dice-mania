@@ -86,7 +86,7 @@ def charging_tokens():
 
 def verify_tokens(num):
     """
-    
+    Verify if tokens were correctly submitted
     """
     try:
         if num < 0:
@@ -129,7 +129,7 @@ def starting_throw():
 
 def place_bet(tk, mn):
     """
-    
+    Collect the bet from user and return it
     """
     print(f'\nYou have {tk} tokens and your Mania Number is {mn}.\n')
     while True:
@@ -143,6 +143,7 @@ def place_bet(tk, mn):
 
 def verify_bet(tokens, bet):
     """
+    Verify if the tokens were correctly submitted
     """
     try:
         if bet > tokens:
@@ -208,7 +209,7 @@ def how_many_dice():
 
 def new_play():
     """
-    
+    Process a new play with collected data: tokens, bet, number of dice and option
     """
     print(f"You're ready to play!\nTokens: {tokens}\n")
 
@@ -251,3 +252,6 @@ def main():
     bet = place_bet(tkns, mania_nr)
     option = choose_option()
     how_many_dice()
+
+
+main()
