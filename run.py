@@ -2,6 +2,7 @@ import random
 from termcolor import colored
 import time
 
+
 DICE_MANIA = {
     1: (
         " /$$$$$$$  /$$$$$$  /$$$$$$  /$$$$$$$$",
@@ -24,6 +25,7 @@ DICE_MANIA = {
         "|__/     |__/|__/  |__/|__/  \__/|______/|__/  |__/",
     ),
 }
+
 
 DICE_ART = {
     1: ("┌─────────┐",
@@ -58,6 +60,7 @@ DICE_ART = {
         "└─────────┘"),
 }
 
+
 def create_title():
     """
     Creates the dice mania ASCII art
@@ -66,3 +69,16 @@ def create_title():
         for tuple in range(1, 3):
             print(colored(DICE_MANIA.get(tuple)[line], "magenta"), end="      ")
         print()
+
+
+def charging_tokens():
+    """
+    Ask the player to top up with tokens so the game can start
+    """
+    while True:
+        tokens = int(input("\nCharge your account (max 500): "))
+        if verify_tokens(tokens):
+            print("Tokens accepted.\n")
+            time.sleep(1.5)
+            break
+    return tokens
