@@ -109,3 +109,19 @@ def starting_throw():
     total = 0
     for die in range(4):
         dice.append(random.randint(1, 6))
+
+    """
+    Prints the 4 dice art randomized in lines 110 and 111
+    """
+    for line in range(5):
+        for die in dice:
+            print(DICE_ART.get(die)[line], end="")
+        print()
+
+    """
+    Prints the sum of the 4 dice
+    """
+    for die in dice:
+        total += die
+    print(f"Total: {total}")
+    return total
