@@ -128,6 +128,9 @@ def starting_throw():
 
 
 def place_bet(tk, mn):
+    """
+    
+    """
     print(f'\nYou have {tk} tokens and your Mania Number is {mn}.\n')
     while True:
         token_bets = int(input('How many tokens would you like to bet for the next play? '))
@@ -136,3 +139,17 @@ def place_bet(tk, mn):
             time.sleep(2)
             break
     token_bets
+
+
+def verify_bet(tokens, bet):
+    """
+    """
+    try:
+        if bet > tokens:
+            raise ValueError(f'Bet surpassed allowed amount, maximum {tokens} are permitted')
+        elif bet < 0:
+            raise ValueError(f"Negative numbers are not allowed, you entered {bet}")
+    except ValueError as e:
+        print(f"Invalid data: {e}. Please try again.\n")
+        return False
+    return True
