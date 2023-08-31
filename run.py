@@ -139,12 +139,12 @@ def place_bet(tk, mn):
     while True:
         token_bets = (input('How many tokens would you like to bet for the next play? '))
         if verify_bet(tk, token_bets):
-            a, b = verify_bet(tk, token_bets)
-            print(f'Bet accepted. You have {b} tokens left.\n')
+            a, new_tokens = verify_bet(tk, token_bets)
+            print(f'Bet accepted. You have {new_tokens} tokens left.\n')
             time.sleep(1.5)
         else:
             continue
-        return [int(token_bets), b]
+        return [int(token_bets), new_tokens]
 
 
 def verify_bet(tokens, bet):
@@ -201,7 +201,7 @@ def how_many_dice():
     """
     while True:
         try:
-            x = int(input('How many dice? (2-4): '))
+            x = int(input('\nHow many dice? (2-4): '))
             if (x < 2) or (x > 4):
                 print('The number has to be between 2 and 4, please try again.\n')
                 continue
@@ -234,15 +234,269 @@ def roll_dice(x):
     return total
 
 
-def new_play(tokens, bet, play, nr_mania):
+def new_play(tokens, bet, play, nr_mania, loop):
     """
     Process a new play with collected data:
     tokens, bet, play option, number of dice and mania number
     """
-    new_dice_nr = how_many_dice()
-    new_mania_nr = roll_dice(new_dice_nr)
-    print(f'voce escolheu {new_dice_nr} dados e o seu numero mania é {new_mania_nr}')
+    print('You can win double by betting "Same" on 3 or 4 dice.')
+    if loop == 0:
+        new_dice_nr = how_many_dice()
+        new_mania_nr = roll_dice(new_dice_nr)
     
+    if loop == 1:
+        new_dice_nr = how_many_dice()
+        new_mania_nr = roll_dice(new_dice_nr)
+
+    if (play == 'm') and (new_mania_nr < nr_mania):
+        print(f'\nYou lost. You chose "More".\n{new_mania_nr} < {nr_mania}')
+        new_tokens = tokens - bet
+        print(f'\nYour token balance: {new_tokens}')
+
+        while True:
+            y = input('\nWould you like to continue? (press "C");\nRecharge? (press "R")\nQuit? (Press "Q")').lower()
+            if y == 'c':
+                x = how_many_dice()
+                mn = roll_dice(x)
+                bet_nr, updated_tokens = place_bet(new_tokens, mn)
+                play_name = choose_option(mn)
+                lp = 1
+                new_play(updated_tokens, bet_nr, play_name, mn, lp)
+                break
+            elif y == 'r':
+                print('this feature is under development...')
+                break
+            elif y == 'q':
+                print(f'you quit! Your total balance is {new_tokens}')
+                break
+            else:
+                print('This input is not valid, please try again.')
+                continue
+
+    elif (play == 'm') and (new_mania_nr == nr_mania):
+        print(f'\nYou lost. You chose "More".\n{new_mania_nr} = {nr_mania}')
+        new_tokens = tokens - bet
+        print(f'Your token balance: {new_tokens}')
+
+        while True:
+            y = input('\nWould you like to continue? (press "C");\nRecharge? (press "R")\nQuit? (Press "Q")').lower()
+            if y == 'c':
+                x = how_many_dice()
+                mn = roll_dice(x)
+                bet_nr, updated_tokens = place_bet(new_tokens, mn)
+                play_name = choose_option(mn)
+                lp = 1
+                new_play(updated_tokens, bet_nr, play_name, mn, lp)
+                break
+            elif y == 'r':
+                print('this feature is under development...')
+                break
+            elif y == 'q':
+                print(f'you quit! Your total balance is {new_tokens}')
+                break
+            else:
+                print('This input is not valid, please try again.')
+                continue
+
+    elif (play == 'm') and (new_mania_nr > nr_mania):
+        print(f'\nYou Won! You chose "More".\n{new_mania_nr} > {nr_mania}')
+        new_tokens = tokens + (bet * 2)
+        print(f'Your token balance: {new_tokens}')
+
+        while True:
+            y = input('\nWould you like to continue? (press "C");\nRecharge? (press "R")\nQuit? (Press "Q")').lower()
+            if y == 'c':
+                x = how_many_dice()
+                mn = roll_dice(x)
+                bet_nr, updated_tokens = place_bet(new_tokens, mn)
+                play_name = choose_option(mn)
+                lp = 1
+                new_play(updated_tokens, bet_nr, play_name, mn, lp)
+                break
+            elif y == 'r':
+                print('this feature is under development...')
+                break
+            elif y == 'q':
+                print(f'you quit! Your total balance is {new_tokens}')
+                break
+            else:
+                print('This input is not valid, please try again.')
+                continue
+
+    elif (play == 'l') and (new_mania_nr > nr_mania):
+        print(f'\nYou lost. You chose "Less".\n{new_mania_nr} > {nr_mania}')
+        new_tokens = tokens - bet
+        print(f'Your token balance: {new_tokens}')
+
+        while True:
+            y = input('\nWould you like to continue? (press "C");\nRecharge? (press "R")\nQuit? (Press "Q")').lower()
+            if y == 'c':
+                x = how_many_dice()
+                mn = roll_dice(x)
+                bet_nr, updated_tokens = place_bet(new_tokens, mn)
+                play_name = choose_option(mn)
+                lp = 1
+                new_play(updated_tokens, bet_nr, play_name, mn, lp)
+                break
+            elif y == 'r':
+                print('this feature is under development...')
+                break
+            elif y == 'q':
+                print(f'you quit! Your total balance is {new_tokens}')
+                break
+            else:
+                print('This input is not valid, please try again.')
+                continue
+
+    elif (play == 'l') and (new_mania_nr == nr_mania):
+        print(f'\nYou lost. You chose "Less".\n{new_mania_nr} = {nr_mania}')
+        new_tokens = tokens - bet
+        print(f'Your token balance: {new_tokens}')
+
+        while True:
+            y = input('\nWould you like to continue? (press "C");\nRecharge? (press "R")\nQuit? (Press "Q")').lower()
+            if y == 'c':
+                x = how_many_dice()
+                mn = roll_dice(x)
+                bet_nr, updated_tokens = place_bet(new_tokens, mn)
+                play_name = choose_option(mn)
+                lp = 1
+                new_play(updated_tokens, bet_nr, play_name, mn, lp)
+                break
+            elif y == 'r':
+                print('this feature is under development...')
+                break
+            elif y == 'q':
+                print(f'you quit! Your total balance is {new_tokens}')
+                break
+            else:
+                print('This input is not valid, please try again.')
+                continue
+
+    elif (play == 'l') and (new_mania_nr < nr_mania):
+        print(f'\nYou won! You chose "Less".\n{new_mania_nr} < {nr_mania}')
+        new_tokens = tokens + (bet * 2)
+        print(f'Your token balance: {new_tokens}')
+
+        while True:
+            y = input('\nWould you like to continue? (press "C");\nRecharge? (press "R")\nQuit? (Press "Q")').lower()
+            if y == 'c':
+                x = how_many_dice()
+                mn = roll_dice(x)
+                bet_nr, updated_tokens = place_bet(new_tokens, mn)
+                play_name = choose_option(mn)
+                lp = 1
+                new_play(updated_tokens, bet_nr, play_name, mn, lp)
+                break
+            elif y == 'r':
+                print('this feature is under development...')
+                break
+            elif y == 'q':
+                print(f'you quit! Your total balance is {new_tokens}')
+                break
+            else:
+                print('This input is not valid, please try again.')
+                continue
+
+    elif (play == 's') and (new_mania_nr > nr_mania):
+        print(f'\nYou lost. You chose "Same".\n{new_mania_nr} > {nr_mania}')
+        new_tokens = tokens - bet
+        print(f'Your token balance: {new_tokens}')
+
+        while True:
+            y = input('\nWould you like to continue? (press "C");\nRecharge? (press "R")\nQuit? (Press "Q")').lower()
+            if y == 'c':
+                x = how_many_dice()
+                mn = roll_dice(x)
+                bet_nr, updated_tokens = place_bet(new_tokens, mn)
+                play_name = choose_option(mn)
+                lp = 1
+                new_play(updated_tokens, bet_nr, play_name, mn, lp)
+                break
+            elif y == 'r':
+                print('this feature is under development...')
+                break
+            elif y == 'q':
+                print(f'you quit! Your total balance is {new_tokens}')
+                break
+            else:
+                print('This input is not valid, please try again.')
+                continue
+
+    elif (play == 's') and (new_mania_nr < nr_mania):
+        print(f'\nYou lost. YOu chose "Same".\n{new_mania_nr} < {nr_mania}')
+        new_tokens = tokens - bet
+        print(f'Your token balance: {new_tokens}')
+
+        while True:
+            y = input('\nWould you like to continue? (press "C");\nRecharge? (press "R")\nQuit? (Press "Q")').lower()
+            if y == 'c':
+                x = how_many_dice()
+                mn = roll_dice(x)
+                bet_nr, updated_tokens = place_bet(new_tokens, mn)
+                play_name = choose_option(mn)
+                lp = 1
+                new_play(updated_tokens, bet_nr, play_name, mn, lp)
+                break
+            elif y == 'r':
+                print('this feature is under development...')
+                break
+            elif y == 'q':
+                print(f'you quit! Your total balance is {new_tokens}')
+                break
+            else:
+                print('This input is not valid, please try again.')
+                continue
+
+    elif (play == 's') and (new_mania_nr == nr_mania) and (new_dice_nr == 3 or new_dice_nr == 4):
+        print(f'\nCongratulations, you won double! You chose "Same" with {new_dice_nr} dice!\n{new_mania_nr} = {nr_mania}')
+        new_tokens = tokens + (bet * 4)
+        print(f'Your token balance: {new_tokens}')
+
+        while True:
+            y = input('\nWould you like to continue? (press "C");\nRecharge? (press "R")\nQuit? (Press "Q")').lower()
+            if y == 'c':
+                x = how_many_dice()
+                mn = roll_dice(x)
+                bet_nr, updated_tokens = place_bet(new_tokens, mn)
+                play_name = choose_option(mn)
+                lp = 1
+                new_play(updated_tokens, bet_nr, play_name, mn, lp)
+                break
+            elif y == 'r':
+                print('this feature is under development...')
+                break
+            elif y == 'q':
+                print(f'you quit! Your total balance is {new_tokens}')
+                break
+            else:
+                print('This input is not valid, please try again.')
+                continue
+    
+    elif (play == 's') and (new_mania_nr == nr_mania):
+        print(f'\nYou won! You chose "Same".\n{new_mania_nr} = {nr_mania}')
+        new_tokens = tokens + (bet * 2)
+        print(f'Your token balance: {new_tokens}')
+
+        while True:
+            y = input('\nWould you like to continue? (press "C");\nRecharge? (press "R")\nQuit? (Press "Q")').lower()
+            if y == 'c':
+                x = how_many_dice()
+                mn = roll_dice(x)
+                bet_nr, updated_tokens = place_bet(new_tokens, mn)
+                play_name = choose_option(mn)
+                lp = 1
+                new_play(updated_tokens, bet_nr, play_name, mn, lp)
+                break
+            elif y == 'r':
+                print('this feature is under development...')
+                break
+            elif y == 'q':
+                print(f'you quit! Your total balance is {new_tokens}')
+                break
+            else:
+                print('This input is not valid, please try again.')
+                continue
 
 
 def main():
@@ -282,7 +536,8 @@ def main():
     mania_nr = starting_throw()
     bet, new_tokens = place_bet(tkns, mania_nr)
     play_option = choose_option(mania_nr)
-    new_play(new_tokens, bet, play_option, mania_nr)
+    loop = 0
+    new_play(new_tokens, bet, play_option, mania_nr, loop)
 
 
 main()
