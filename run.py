@@ -82,3 +82,18 @@ def charging_tokens():
             time.sleep(1.5)
             break
     return tokens
+
+
+def verify_tokens(num):
+    """
+    
+    """
+    try:
+        if num < 0:
+            raise ValueError(f'Negatives values are not allowed, you entered {num}')
+        elif num > 500:
+            raise ValueError(f"Maximum value reached, you entered {num}")
+    except ValueError as e:
+        print(f"Invalid data: {e}. Please try again.")
+        return False
+    return True
