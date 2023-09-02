@@ -479,32 +479,21 @@ def main():
     """
     print("\n")
     create_title()
-    print(
-        colored(
-            "\n\nWelcome! Bet your tokens to guess the tendency of the next play.\nAre you ready?\n",
-            "cyan",
-        )
-    )
+    print(colored("\n\nWelcome! Bet your tokens to guess the tendency of the next play.\nAre you ready?\n", 'cyan'))
 
     print("Rules: To win, you need to guess the sum of the next dice play.")
     print("       --------------------------------------------------------")
+
     print("       Charge your balance with tokens.")
-    print(colored("       Place your bet, only whole tokens are accepted.", "magenta"))
-    print(
-        "       You start with a Mania Number of 12."
-    )
-    print(
-        colored(
-            '       Choose the number of dice you want to play from 2 to 4. A single die cannot be played.',
-            "black",
-        )
-    )
+    print(colored("       Place your bet, only whole tokens are accepted.", 'cyan'))
+    print("       You start with a Mania Number of 12.")
+    print(colored('       Choose the number of dice you want to play from 2 to 4. A single die cannot be played.', "cyan"))
     print('       The sum of the dice you roll will be your new Mania Number.')
-    print('       You then have three play options towards the number 12, will the new Mania Number be: "More", "Less" or "Same"')
+    print(colored('       Choose one of three play options towards the number 12: "More", "Less" or "Same"', 'cyan'))
     print('       If you bet "More", "Less" or "Same" and win, you win.')
-    print(colored('       If you bet "same" with 3 or 4 dice and win, you win DOUBLE.', "black"))
+    print(colored('       If you bet "same" with 3 or 4 dice and win, you win DOUBLE.', 'cyan'))
     print('       The dice are rolled in.')
-    print(colored("       You can always continue, top up or quit.", "black"))
+    print(colored("       You can always continue, top up or quit.", 'cyan'))
     print("       You lose when your balance reaches 0.")
 
     tokens = charging_tokens()
