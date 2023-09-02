@@ -67,7 +67,7 @@ def create_title():
     """
     for line in range(8):
         for tuple in range(1, 3):
-            print(colored(DICE_MANIA.get(tuple)[line], "magenta"), end="  ")
+            print(colored(DICE_MANIA.get(tuple)[line], "red"), end="  ")
         print()
 
 
@@ -479,23 +479,23 @@ def main():
     """
     print("\n")
     create_title()
-    print(colored("\n\n Welcome! Bet your tokens to guess the tendency of the next play.\n Are you ready?\n", 'cyan'))
+    print("\n\n Welcome! Bet your tokens to guess the tendency of the next play.\n Are you ready?\n")
 
     print(" Rules: To win, you need to guess the sum of the next dice play.")
     print("       --------------------------------------------------------")
 
     print("       Charge your balance with tokens.")
-    print(colored("       Place your bet, only whole tokens are accepted.", 'grey'))
+    print(colored("       Place your bet, only whole tokens are accepted.", 'blue'))
     print("       You start with a Mania Number of 12.")
-    print(colored('       Choose the number of dice you want to play from 2 to 4.', "grey"))
+    print(colored('       Choose the number of dice you want to play from 2 to 4.', "blue"))
     print('       A single die cannot be played.')
-    print(colored("       The sum of the dice you roll will be your new Mania Number, let's call it MN.", 'grey'))
+    print(colored("       The sum of the dice you roll will be your new Mania Number (MN).", 'blue'))
     print('       You must now guess the tendency of the new MN against the old MN.')
-    print(colored('       Choose one of three plays: "More", "Less" or "Same".', 'grey'))
+    print(colored('       Choose one of three plays: "More", "Less" or "Same".', 'blue'))
     print('       If you bet "More", "Less" or "Same" and win, you get 2x the bet value.')
-    print(colored('       If you bet "same" with 4 dice and win, you get 4x the bet value.', 'grey'))
+    print(colored('       If you bet "same" with 4 dice and win, you get 4x the bet value.', 'blue'))
     print('       The dice are rolled in, good luck!')
-    print(colored("       You can always continue, top up or quit.", 'grey'))
+    print(colored("       You can always continue, top up or quit.", 'blue'))
     print("       You lose when your balance reaches 0.")
 
     tokens = charging_tokens()
