@@ -240,7 +240,7 @@ def new_play(tokens, bet, play, old_mania, nr_mania, dice_nr, loop):
                 bet_nr, updated_tokens = place_bet(tokens, new_mania_nr)
                 updated_dice_nr = how_many_dice()
                 play_name = choose_play(new_mania_nr)
-                updated_mania_nr = roll_dice(get_dice_nr)
+                updated_mania_nr = roll_dice(updated_dice_nr)
                 loop = 1
                 new_play(updated_tokens, bet_nr, play_name, new_mania_nr, updated_mania_nr, updated_dice_nr, loop)
                 break
@@ -249,7 +249,7 @@ def new_play(tokens, bet, play, old_mania, nr_mania, dice_nr, loop):
                 bet_nr, updated_tokens = place_bet(new_balance, new_mania_nr)
                 updated_dice_nr = how_many_dice()
                 play_name = choose_play(new_mania_nr)
-                updated_mania_nr = roll_dice(get_dice_nr)
+                updated_mania_nr = roll_dice(updated_dice_nr)
                 loop = 1
                 new_play(updated_tokens, bet_nr, play_name, new_mania_nr, updated_mania_nr, updated_dice_nr, loop)
                 break
@@ -276,7 +276,7 @@ def new_play(tokens, bet, play, old_mania, nr_mania, dice_nr, loop):
                 bet_nr, updated_tokens = place_bet(tokens, new_mania_nr)
                 updated_dice_nr = how_many_dice()
                 play_name = choose_play(new_mania_nr)
-                updated_mania_nr = roll_dice(get_dice_nr)
+                updated_mania_nr = roll_dice(updated_dice_nr)
                 loop = 1
                 new_play(updated_tokens, bet_nr, play_name, new_mania_nr, updated_mania_nr, updated_dice_nr, loop)
                 break
@@ -285,7 +285,7 @@ def new_play(tokens, bet, play, old_mania, nr_mania, dice_nr, loop):
                 bet_nr, updated_tokens = place_bet(new_balance, new_mania_nr)
                 updated_dice_nr = how_many_dice()
                 play_name = choose_play(new_mania_nr)
-                updated_mania_nr = roll_dice(get_dice_nr)
+                updated_mania_nr = roll_dice(updated_dice_nr)
                 loop = 1
                 new_play(updated_tokens, bet_nr, play_name, new_mania_nr, updated_mania_nr, updated_dice_nr, loop)
                 break
@@ -313,7 +313,7 @@ def new_play(tokens, bet, play, old_mania, nr_mania, dice_nr, loop):
                 bet_nr, updated_tokens = place_bet(new_tokens, new_mania_nr)
                 updated_dice_nr = how_many_dice()
                 play_name = choose_play(new_mania_nr)
-                updated_mania_nr = roll_dice(get_dice_nr)
+                updated_mania_nr = roll_dice(updated_dice_nr)
                 loop = 1
                 new_play(updated_tokens, bet_nr, play_name, new_mania_nr, updated_mania_nr, updated_dice_nr, loop)
                 break
@@ -322,7 +322,7 @@ def new_play(tokens, bet, play, old_mania, nr_mania, dice_nr, loop):
                 bet_nr, updated_tokens = place_bet(new_balance, new_mania_nr)
                 updated_dice_nr = how_many_dice()
                 play_name = choose_play(new_mania_nr)
-                updated_mania_nr = roll_dice(get_dice_nr)
+                updated_mania_nr = roll_dice(updated_dice_nr)
                 loop = 1
                 new_play(updated_tokens, bet_nr, play_name, new_mania_nr, updated_mania_nr, updated_dice_nr, loop)
                 break
@@ -349,7 +349,7 @@ def new_play(tokens, bet, play, old_mania, nr_mania, dice_nr, loop):
                 bet_nr, updated_tokens = place_bet(tokens, new_mania_nr)
                 updated_dice_nr = how_many_dice()
                 play_name = choose_play(new_mania_nr)
-                updated_mania_nr = roll_dice(get_dice_nr)
+                updated_mania_nr = roll_dice(updated_dice_nr)
                 loop = 1
                 new_play(updated_tokens, bet_nr, play_name, new_mania_nr, updated_mania_nr, updated_dice_nr, loop)
                 break
@@ -358,7 +358,7 @@ def new_play(tokens, bet, play, old_mania, nr_mania, dice_nr, loop):
                 bet_nr, updated_tokens = place_bet(new_balance, new_mania_nr)
                 updated_dice_nr = how_many_dice()
                 play_name = choose_play(new_mania_nr)
-                updated_mania_nr = roll_dice(get_dice_nr)
+                updated_mania_nr = roll_dice(updated_dice_nr)
                 loop = 1
                 new_play(updated_tokens, bet_nr, play_name, new_mania_nr, updated_mania_nr, updated_dice_nr, loop)
                 break
@@ -385,7 +385,7 @@ def new_play(tokens, bet, play, old_mania, nr_mania, dice_nr, loop):
                 bet_nr, updated_tokens = place_bet(tokens, new_mania_nr)
                 updated_dice_nr = how_many_dice()
                 play_name = choose_play(new_mania_nr)
-                updated_mania_nr = roll_dice(get_dice_nr)
+                updated_mania_nr = roll_dice(updated_dice_nr)
                 loop = 1
                 new_play(updated_tokens, bet_nr, play_name, new_mania_nr, updated_mania_nr, updated_dice_nr, loop)
                 break
@@ -394,7 +394,7 @@ def new_play(tokens, bet, play, old_mania, nr_mania, dice_nr, loop):
                 bet_nr, updated_tokens = place_bet(new_balance, new_mania_nr)
                 updated_dice_nr = how_many_dice()
                 play_name = choose_play(new_mania_nr)
-                updated_mania_nr = roll_dice(get_dice_nr)
+                updated_mania_nr = roll_dice(updated_dice_nr)
                 loop = 1
                 new_play(updated_tokens, bet_nr, play_name, new_mania_nr, updated_mania_nr, updated_dice_nr, loop)
                 break
@@ -422,7 +422,7 @@ def new_play(tokens, bet, play, old_mania, nr_mania, dice_nr, loop):
                 bet_nr, updated_tokens = place_bet(new_tokens, new_mania_nr)
                 updated_dice_nr = how_many_dice()
                 play_name = choose_play(new_mania_nr)
-                updated_mania_nr = roll_dice(get_dice_nr)
+                updated_mania_nr = roll_dice(updated_dice_nr)
                 loop = 1
                 new_play(updated_tokens, bet_nr, play_name, new_mania_nr, updated_mania_nr, updated_dice_nr, loop)
                 break
@@ -431,7 +431,7 @@ def new_play(tokens, bet, play, old_mania, nr_mania, dice_nr, loop):
                 bet_nr, updated_tokens = place_bet(new_balance, new_mania_nr)
                 updated_dice_nr = how_many_dice()
                 play_name = choose_play(new_mania_nr)
-                updated_mania_nr = roll_dice(get_dice_nr)
+                updated_mania_nr = roll_dice(updated_dice_nr)
                 loop = 1
                 new_play(updated_tokens, bet_nr, play_name, new_mania_nr, updated_mania_nr, updated_dice_nr, loop)
                 break
@@ -458,7 +458,7 @@ def new_play(tokens, bet, play, old_mania, nr_mania, dice_nr, loop):
                 bet_nr, updated_tokens = place_bet(tokens, new_mania_nr)
                 updated_dice_nr = how_many_dice()
                 play_name = choose_play(new_mania_nr)
-                updated_mania_nr = roll_dice(get_dice_nr)
+                updated_mania_nr = roll_dice(updated_dice_nr)
                 loop = 1
                 new_play(updated_tokens, bet_nr, play_name, new_mania_nr, updated_mania_nr, updated_dice_nr, loop)
                 break
@@ -467,7 +467,7 @@ def new_play(tokens, bet, play, old_mania, nr_mania, dice_nr, loop):
                 bet_nr, updated_tokens = place_bet(new_balance, new_mania_nr)
                 updated_dice_nr = how_many_dice()
                 play_name = choose_play(new_mania_nr)
-                updated_mania_nr = roll_dice(get_dice_nr)
+                updated_mania_nr = roll_dice(updated_dice_nr)
                 loop = 1
                 new_play(updated_tokens, bet_nr, play_name, new_mania_nr, updated_mania_nr, updated_dice_nr, loop)
                 break
@@ -494,7 +494,7 @@ def new_play(tokens, bet, play, old_mania, nr_mania, dice_nr, loop):
                 bet_nr, updated_tokens = place_bet(tokens, new_mania_nr)
                 updated_dice_nr = how_many_dice()
                 play_name = choose_play(new_mania_nr)
-                updated_mania_nr = roll_dice(get_dice_nr)
+                updated_mania_nr = roll_dice(updated_dice_nr)
                 loop = 1
                 new_play(updated_tokens, bet_nr, play_name, new_mania_nr, updated_mania_nr, updated_dice_nr, loop)
                 break
@@ -503,7 +503,7 @@ def new_play(tokens, bet, play, old_mania, nr_mania, dice_nr, loop):
                 bet_nr, updated_tokens = place_bet(new_balance, new_mania_nr)
                 updated_dice_nr = how_many_dice()
                 play_name = choose_play(new_mania_nr)
-                updated_mania_nr = roll_dice(get_dice_nr)
+                updated_mania_nr = roll_dice(updated_dice_nr)
                 loop = 1
                 new_play(updated_tokens, bet_nr, play_name, new_mania_nr, updated_mania_nr, updated_dice_nr, loop)
                 break
@@ -531,7 +531,7 @@ def new_play(tokens, bet, play, old_mania, nr_mania, dice_nr, loop):
                 bet_nr, updated_tokens = place_bet(new_tokens, new_mania_nr)
                 updated_dice_nr = how_many_dice()
                 play_name = choose_play(new_mania_nr)
-                updated_mania_nr = roll_dice(get_dice_nr)
+                updated_mania_nr = roll_dice(updated_dice_nr)
                 loop = 1
                 new_play(updated_tokens, bet_nr, play_name, new_mania_nr, updated_mania_nr, updated_dice_nr, loop)
                 break
@@ -540,7 +540,7 @@ def new_play(tokens, bet, play, old_mania, nr_mania, dice_nr, loop):
                 bet_nr, updated_tokens = place_bet(new_balance, new_mania_nr)
                 updated_dice_nr = how_many_dice()
                 play_name = choose_play(new_mania_nr)
-                updated_mania_nr = roll_dice(get_dice_nr)
+                updated_mania_nr = roll_dice(updated_dice_nr)
                 loop = 1
                 new_play(updated_tokens, bet_nr, play_name, new_mania_nr, updated_mania_nr, updated_dice_nr, loop)
                 break
@@ -568,7 +568,7 @@ def new_play(tokens, bet, play, old_mania, nr_mania, dice_nr, loop):
                 bet_nr, updated_tokens = place_bet(new_tokens, new_mania_nr)
                 updated_dice_nr = how_many_dice()
                 play_name = choose_play(new_mania_nr)
-                updated_mania_nr = roll_dice(get_dice_nr)
+                updated_mania_nr = roll_dice(updated_dice_nr)
                 loop = 1
                 new_play(updated_tokens, bet_nr, play_name, new_mania_nr, updated_mania_nr, updated_dice_nr, loop)
                 break
@@ -577,7 +577,7 @@ def new_play(tokens, bet, play, old_mania, nr_mania, dice_nr, loop):
                 bet_nr, updated_tokens = place_bet(new_balance, new_mania_nr)
                 updated_dice_nr = how_many_dice()
                 play_name = choose_play(new_mania_nr)
-                updated_mania_nr = roll_dice(get_dice_nr)
+                updated_mania_nr = roll_dice(updated_dice_nr)
                 loop = 1
                 new_play(updated_tokens, bet_nr, play_name, new_mania_nr, updated_mania_nr, updated_dice_nr, loop)
                 break
@@ -650,3 +650,4 @@ def main():
 
 
 main()
+#new_play(100, 5, 's', 11, 12, 4, 1)
