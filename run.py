@@ -79,7 +79,7 @@ def charging_tokens():
     while True:
         tokens = input("\n Charge your account (max 500): ")
         if verify_tokens(tokens):
-            print(" Tokens accepted.\n")
+            print(" Number accepted.\n")
             time.sleep(1.5)
         else:
             continue
@@ -201,7 +201,7 @@ def roll_dice(dice_nr):
 
     for line in range(5):
         for die in dice:
-            print(colored(DICE_ART.get(die)[line], 'cyan'), end="")
+            print(colored(DICE_ART.get(die)[line], 'yellow'), end="")
         print()
 
     for die in dice:
@@ -600,7 +600,7 @@ def top_up(balance):
     while True:
         top_up = input("\n Top up amount (max 500): ")
         if verify_tokens(top_up):
-            print(" Tokens accepted.\n")
+            print(" Number accepted.\n")
             new_balance = balance + int(top_up)
             time.sleep(1.5)
         else:
