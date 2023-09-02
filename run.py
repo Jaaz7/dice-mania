@@ -225,7 +225,7 @@ def new_play(tokens, bet, play, old_mania, nr_mania, dice_nr, loop):
         new_mania_nr = old_mania
 
     if (play == 'm') and (new_mania_nr < nr_mania):
-        print(colored(f'\n You lost. You chose "More".\n {new_mania_nr} < {nr_mania}', 'red'))
+        print(colored(f'\n You lose. You chose "More".\n {new_mania_nr} < {nr_mania}', 'red'))
         print(f'\n Your token balance: {tokens}')
         while True:
             if verify_balance(tokens):
@@ -261,7 +261,7 @@ def new_play(tokens, bet, play, old_mania, nr_mania, dice_nr, loop):
                 continue
 
     elif (play == 'm') and (new_mania_nr == nr_mania):
-        print(colored(f'\n You lost. You chose "More".\n {new_mania_nr} = {nr_mania}', 'red'))
+        print(colored(f'\n You lose. You chose "More".\n {new_mania_nr} = {nr_mania}', 'red'))
         print(f' Your token balance: {tokens}')
         while True:
             if verify_balance(tokens):
@@ -297,7 +297,7 @@ def new_play(tokens, bet, play, old_mania, nr_mania, dice_nr, loop):
                 continue
 
     elif (play == 'm') and (new_mania_nr > nr_mania):
-        print(colored(f'\n You Won! You chose "More".\n {new_mania_nr} > {nr_mania}', 'cyan'))
+        print(colored(f'\n You win! You chose "More".\n {new_mania_nr} > {nr_mania}', 'cyan'))
         new_tokens = tokens + (bet * 2)
         print(f' Your token balance: {new_tokens}')
         while True:
@@ -318,7 +318,7 @@ def new_play(tokens, bet, play, old_mania, nr_mania, dice_nr, loop):
                 new_play(updated_tokens, bet_nr, play_name, new_mania_nr, updated_mania_nr, updated_dice_nr, loop)
                 break
             elif y == 't':
-                new_balance = top_up(tokens)
+                new_balance = top_up(new_tokens)
                 bet_nr, updated_tokens = place_bet(new_balance, new_mania_nr)
                 updated_dice_nr = how_many_dice()
                 play_name = choose_play(new_mania_nr)
@@ -334,7 +334,7 @@ def new_play(tokens, bet, play, old_mania, nr_mania, dice_nr, loop):
                 continue
 
     elif (play == 'l') and (new_mania_nr > nr_mania):
-        print(colored(f'\n You lost. You chose "Less".\n {new_mania_nr} > {nr_mania}', 'red'))
+        print(colored(f'\n You lose. You chose "Less".\n {new_mania_nr} > {nr_mania}', 'red'))
         print(f' Your token balance: {tokens}')
         while True:
             if verify_balance(tokens):
@@ -370,7 +370,7 @@ def new_play(tokens, bet, play, old_mania, nr_mania, dice_nr, loop):
                 continue
 
     elif (play == 'l') and (new_mania_nr == nr_mania):
-        print( colored(f'\n You lost. You chose "Less".\n {new_mania_nr} = {nr_mania}', 'red'))
+        print( colored(f'\n You lose. You chose "Less".\n {new_mania_nr} = {nr_mania}', 'red'))
         print(f' Your token balance: {tokens}')
         while True:
             if verify_balance(tokens):
@@ -406,7 +406,7 @@ def new_play(tokens, bet, play, old_mania, nr_mania, dice_nr, loop):
                 continue
 
     elif (play == 'l') and (new_mania_nr < nr_mania):
-        print(colored(f'\n You won! You chose "Less".\n {new_mania_nr} < {nr_mania}', 'cyan'))
+        print(colored(f'\n You win! You chose "Less".\n {new_mania_nr} < {nr_mania}', 'cyan'))
         new_tokens = tokens + (bet * 2)
         print(f' Your token balance: {new_tokens}')
         while True:
@@ -427,7 +427,7 @@ def new_play(tokens, bet, play, old_mania, nr_mania, dice_nr, loop):
                 new_play(updated_tokens, bet_nr, play_name, new_mania_nr, updated_mania_nr, updated_dice_nr, loop)
                 break
             elif y == 't':
-                new_balance = top_up(tokens)
+                new_balance = top_up(new_tokens)
                 bet_nr, updated_tokens = place_bet(new_balance, new_mania_nr)
                 updated_dice_nr = how_many_dice()
                 play_name = choose_play(new_mania_nr)
@@ -443,7 +443,7 @@ def new_play(tokens, bet, play, old_mania, nr_mania, dice_nr, loop):
                 continue
 
     elif (play == 's') and (new_mania_nr > nr_mania):
-        print(colored(f'\n You lost. You chose "Same".\n {new_mania_nr} > {nr_mania}', 'red'))
+        print(colored(f'\n You lose. You chose "Same".\n {new_mania_nr} > {nr_mania}', 'red'))
         print(f' Your token balance: {tokens}')
         while True:
             if verify_balance(tokens):
@@ -479,7 +479,7 @@ def new_play(tokens, bet, play, old_mania, nr_mania, dice_nr, loop):
                 continue
 
     elif (play == 's') and (new_mania_nr < nr_mania):
-        print(colored(f'\n You lost. YOu chose "Same".\n {new_mania_nr} < {nr_mania}', 'red'))
+        print(colored(f'\n You lose. YOu chose "Same".\n {new_mania_nr} < {nr_mania}', 'red'))
         print(f' Your token balance: {tokens}')
         while True:
             if verify_balance(tokens):
@@ -536,7 +536,7 @@ def new_play(tokens, bet, play, old_mania, nr_mania, dice_nr, loop):
                 new_play(updated_tokens, bet_nr, play_name, new_mania_nr, updated_mania_nr, updated_dice_nr, loop)
                 break
             elif y == 't':
-                new_balance = top_up(tokens)
+                new_balance = top_up(new_tokens)
                 bet_nr, updated_tokens = place_bet(new_balance, new_mania_nr)
                 updated_dice_nr = how_many_dice()
                 play_name = choose_play(new_mania_nr)
@@ -552,7 +552,7 @@ def new_play(tokens, bet, play, old_mania, nr_mania, dice_nr, loop):
                 continue
     
     elif (play == 's') and (new_mania_nr == nr_mania):
-        print(colored(f'\n You won! You chose "Same".\n {new_mania_nr} = {nr_mania}', 'cyan'))
+        print(colored(f'\n You win! You chose "Same".\n {new_mania_nr} = {nr_mania}', 'cyan'))
         new_tokens = tokens + (bet * 2)
         print(f' Your token balance: {new_tokens}')
         while True:
@@ -573,7 +573,7 @@ def new_play(tokens, bet, play, old_mania, nr_mania, dice_nr, loop):
                 new_play(updated_tokens, bet_nr, play_name, new_mania_nr, updated_mania_nr, updated_dice_nr, loop)
                 break
             elif y == 't':
-                new_balance = top_up(tokens)
+                new_balance = top_up(new_tokens)
                 bet_nr, updated_tokens = place_bet(new_balance, new_mania_nr)
                 updated_dice_nr = how_many_dice()
                 play_name = choose_play(new_mania_nr)
