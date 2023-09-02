@@ -248,8 +248,8 @@ def new_play(tokens, bet, play, old_mania, nr_mania, dice_nr, loop):
                 print('this feature is under development...')
                 break
             elif y == 'q':
-                print(f'you quit! You cashed out {tokens}.')
-                break
+                print(f'\n Thanks for playing! You cashed out {tokens}.')
+                sys.exit()
             else:
                 print('This input is not valid, please try again.')
                 continue
@@ -278,8 +278,8 @@ def new_play(tokens, bet, play, old_mania, nr_mania, dice_nr, loop):
                 print('this feature is under development...')
                 break
             elif y == 'q':
-                print(f'you quit! Your total balance is {tokens}')
-                break
+                print(f'\n Thanks for playing! You cashed out {tokens}.')
+                sys.exit()
             else:
                 print('This input is not valid, please try again.')
                 continue
@@ -309,8 +309,8 @@ def new_play(tokens, bet, play, old_mania, nr_mania, dice_nr, loop):
                 print('this feature is under development...')
                 break
             elif y == 'q':
-                print(f'you quit! Your total balance is {new_tokens}')
-                break
+                print(f'\n Thanks for playing! You cashed out {tokens}.')
+                sys.exit()
             else:
                 print('This input is not valid, please try again.')
                 continue
@@ -339,8 +339,8 @@ def new_play(tokens, bet, play, old_mania, nr_mania, dice_nr, loop):
                 print('this feature is under development...')
                 break
             elif y == 'q':
-                print(f' you quit! Your total balance is {tokens}')
-                break
+                print(f'\n Thanks for playing! You cashed out {tokens}.')
+                sys.exit()
             else:
                 print(' This input is not valid, please try again.')
                 continue
@@ -369,8 +369,8 @@ def new_play(tokens, bet, play, old_mania, nr_mania, dice_nr, loop):
                 print(' this feature is under development...')
                 break
             elif y == 'q':
-                print(f' you quit! Your total balance is {tokens}')
-                break
+                print(f'\n Thanks for playing! You cashed out {tokens}.')
+                sys.exit()
             else:
                 print(' This input is not valid, please try again.')
                 continue
@@ -400,8 +400,8 @@ def new_play(tokens, bet, play, old_mania, nr_mania, dice_nr, loop):
                 print(' this feature is under development...')
                 break
             elif y == 'q':
-                print(f' you quit! Your total balance is {new_tokens}')
-                break
+                print(f'\n Thanks for playing! You cashed out {tokens}.')
+                sys.exit()
             else:
                 print(' This input is not valid, please try again.')
                 continue
@@ -430,8 +430,8 @@ def new_play(tokens, bet, play, old_mania, nr_mania, dice_nr, loop):
                 print(' this feature is under development...')
                 break
             elif y == 'q':
-                print(f' you quit! Your total balance is {tokens}')
-                break
+                print(f'\n Thanks for playing! You cashed out {tokens}.')
+                sys.exit()
             else:
                 print(' This input is not valid, please try again.')
                 continue
@@ -460,8 +460,8 @@ def new_play(tokens, bet, play, old_mania, nr_mania, dice_nr, loop):
                 print(' this feature is under development...')
                 break
             elif y == 'q':
-                print(f' you quit! Your total balance is {tokens}')
-                break
+                print(f'\n Thanks for playing! You cashed out {tokens}.')
+                sys.exit()
             else:
                 print(' This input is not valid, please try again.')
                 continue
@@ -491,8 +491,8 @@ def new_play(tokens, bet, play, old_mania, nr_mania, dice_nr, loop):
                 print(' this feature is under development...')
                 break
             elif y == 'q':
-                print(f' you quit! Your total balance is {new_tokens}')
-                break
+                print(f'\n Thanks for playing! You cashed out {tokens}.')
+                sys.exit()
             else:
                 print(' This input is not valid, please try again.')
                 continue
@@ -522,8 +522,8 @@ def new_play(tokens, bet, play, old_mania, nr_mania, dice_nr, loop):
                 print(' This feature is under development...')
                 break
             elif y == 'q':
-                print(f' You quit! Your total balance is {new_tokens}')
-                break
+                print(f'\n Thanks for playing! You cashed out {tokens}.')
+                sys.exit()
             else:
                 print(' This input is not valid, please try again.')
                 continue
