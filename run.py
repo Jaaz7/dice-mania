@@ -73,7 +73,7 @@ def create_title():
 
 def charging_tokens():
     """
-    Ask the player to top up with tokens so the game can start
+    Ask the player to charge with tokens so the game can start
     """
     while True:
         tokens = input("\nCharge your account (max 500): ")
@@ -91,7 +91,7 @@ def verify_tokens(num):
     """
     try:
         if int(num) < 1:
-            print(f'Value has to be as least 1, you entered {num}')
+            print(f'Value has to be as `least 1, you entered {num}')
             return False
         elif int(num) > 500:
             print(f"Maximum value reached, you entered {num}")
@@ -100,46 +100,18 @@ def verify_tokens(num):
             return True
     except ValueError as e:
             print(f"Invalid data: {e}. Please try again.")
-            return False
+            return False    
 
 
-def starting_throw():
-    """
-    Creates the sum of 4 randomized dice and returns the value
-    """
-    print("Rolling 4 dice on the table...")
-    time.sleep(1.5)
-    dice = []
-    total = 0
-    for die in range(4):
-        dice.append(random.randint(1, 6))
-
-    """
-    Prints the 4 dice art randomized
-    """
-    for line in range(5):
-        for die in dice:
-            print(DICE_ART.get(die)[line], end="")
-        print()
-
-    """
-    Prints the sum of the 4 dice
-    """
-    for die in dice:
-        total += die
-    print(f"Total: {total}")
-    return total
-
-
-def place_bet(tk, mn):
+def place_bet(tokens, mania_nr):
     """
     Collect the bet from user and return it
     """
-    print(f'\nYou have {tk} tokens and your Mania Number is {mn}.\n')
+    print(f'\nYou have {tokens} tokens and your Mania Number is {mania_nr}.\n')
     while True:
         token_bets = (input('How many tokens would you like to bet for the next play? '))
         if verify_bet(tk, token_bets):
-            a, new_tokens = verify_bet(tk, token_bets)
+            a, new_tokens = verify_bet(tokens, token_bets)
             print(f'Bet accepted. You have {new_tokens} tokens left.\n')
             time.sleep(1.5)
         else:
@@ -174,7 +146,7 @@ def update_tokens(tk, bet):
     return new_tokens
 
 
-def choose_option(mania):
+def choose_play(mania):
     """
     Ask user which of 3 options to choose: more, less or same.
     """
@@ -246,8 +218,8 @@ def new_play(tokens, bet, play, nr_mania, loop):
         new_mania_nr = roll_dice(new_dice_nr)
     
     if loop == 1:
-        new_dice_nr = how_many_dice() #PROBLEMA
-        new_mania_nr = roll_dice(new_dice_nr) #PROBLEMA
+        new_dice_nr = how_many_dice()
+        new_mania_nr = roll_dice(new_dice_nr)
 
     if (play == 'm') and (new_mania_nr < nr_mania):
         print(f'\nYou lost. You chose "More".\n{new_mania_nr} < {nr_mania}')
@@ -260,7 +232,7 @@ def new_play(tokens, bet, play, nr_mania, loop):
                 x = how_many_dice()
                 mn = roll_dice(x)
                 bet_nr, updated_tokens = place_bet(new_tokens, mn)
-                play_name = choose_option(mn)
+                play_name = choose_play(mn)
                 lp = 1
                 new_play(updated_tokens, bet_nr, play_name, mn, lp)
                 break
@@ -285,7 +257,7 @@ def new_play(tokens, bet, play, nr_mania, loop):
                 x = how_many_dice()
                 mn = roll_dice(x)
                 bet_nr, updated_tokens = place_bet(new_tokens, mn)
-                play_name = choose_option(mn)
+                play_name = choose_play(mn)
                 lp = 1
                 new_play(updated_tokens, bet_nr, play_name, mn, lp)
                 break
@@ -310,7 +282,7 @@ def new_play(tokens, bet, play, nr_mania, loop):
                 x = how_many_dice()
                 mn = roll_dice(x)
                 bet_nr, updated_tokens = place_bet(new_tokens, mn)
-                play_name = choose_option(mn)
+                play_name = choose_play(mn)
                 lp = 1
                 new_play(updated_tokens, bet_nr, play_name, mn, lp)
                 break
@@ -335,7 +307,7 @@ def new_play(tokens, bet, play, nr_mania, loop):
                 x = how_many_dice()
                 mn = roll_dice(x)
                 bet_nr, updated_tokens = place_bet(new_tokens, mn)
-                play_name = choose_option(mn)
+                play_name = choose_play(mn)
                 lp = 1
                 new_play(updated_tokens, bet_nr, play_name, mn, lp)
                 break
@@ -360,7 +332,7 @@ def new_play(tokens, bet, play, nr_mania, loop):
                 x = how_many_dice()
                 mn = roll_dice(x)
                 bet_nr, updated_tokens = place_bet(new_tokens, mn)
-                play_name = choose_option(mn)
+                play_name = choose_play(mn)
                 lp = 1
                 new_play(updated_tokens, bet_nr, play_name, mn, lp)
                 break
@@ -385,7 +357,7 @@ def new_play(tokens, bet, play, nr_mania, loop):
                 x = how_many_dice()
                 mn = roll_dice(x)
                 bet_nr, updated_tokens = place_bet(new_tokens, mn)
-                play_name = choose_option(mn)
+                play_name = choose_play(mn)
                 lp = 1
                 new_play(updated_tokens, bet_nr, play_name, mn, lp)
                 break
@@ -410,7 +382,7 @@ def new_play(tokens, bet, play, nr_mania, loop):
                 x = how_many_dice()
                 mn = roll_dice(x)
                 bet_nr, updated_tokens = place_bet(new_tokens, mn)
-                play_name = choose_option(mn)
+                play_name = choose_play(mn)
                 lp = 1
                 new_play(updated_tokens, bet_nr, play_name, mn, lp)
                 break
@@ -435,7 +407,7 @@ def new_play(tokens, bet, play, nr_mania, loop):
                 x = how_many_dice()
                 mn = roll_dice(x)
                 bet_nr, updated_tokens = place_bet(new_tokens, mn)
-                play_name = choose_option(mn)
+                play_name = choose_play(mn)
                 lp = 1
                 new_play(updated_tokens, bet_nr, play_name, mn, lp)
                 break
@@ -460,7 +432,7 @@ def new_play(tokens, bet, play, nr_mania, loop):
                 x = how_many_dice()
                 mn = roll_dice(x)
                 bet_nr, updated_tokens = place_bet(new_tokens, mn)
-                play_name = choose_option(mn)
+                play_name = choose_play(mn)
                 lp = 1
                 new_play(updated_tokens, bet_nr, play_name, mn, lp)
                 break
@@ -485,7 +457,7 @@ def new_play(tokens, bet, play, nr_mania, loop):
                 x = how_many_dice()
                 mn = roll_dice(x)
                 bet_nr, updated_tokens = place_bet(new_tokens, mn)
-                play_name = choose_option(mn)
+                play_name = choose_play(mn)
                 lp = 1
                 new_play(updated_tokens, bet_nr, play_name, mn, lp)
                 break
@@ -516,27 +488,29 @@ def main():
 
     print("Rules: To win, you need to guess the sum of the next dice play.")
     print("       --------------------------------------------------------")
-    print("       First, charge your balance with tokens.")
-    print(colored("       Place your bet, only whole tokens are accepted.", "black"))
+    print("       Charge your balance with tokens.")
+    print(colored("       Place your bet, only whole tokens are accepted.", "magenta"))
     print(
-        "       You roll 4 dice to get a starting Mania Number, it will be the total sum of the 4 dice."
+        "       You start with a Mania Number of 12."
     )
     print(
         colored(
-            '       You then have three guesses towards this number: "more", "less" or "same".',
+            '       Choose the number of dice you want to play from 2 to 4. A single die cannot be played.',
             "black",
         )
     )
-    print('       If you bet "more", "less" or "same" and win, you win your bet.')
-    print(colored('       If you bet "same" with 3 or 4 dice and win, your bet is doubled up.', "black"))
-    print("       Choose the number of dice you want to play from 2 to 4. A single die cannot be played.")
-    print(colored("       You can always recharge, continue or quit.", "black"))
+    print('       The sum of the dice you roll will be your new Mania Number.')
+    print('       You then have three play options towards the number 12, will the new Mania Number be: "More", "Less" or "Same"')
+    print('       If you bet "More", "Less" or "Same" and win, you win.')
+    print(colored('       If you bet "same" with 3 or 4 dice and win, you win DOUBLE.', "black"))
+    print('       The dice are rolled in.')
+    print(colored("       You can always continue, top up or quit.", "black"))
     print("       You lose when your balance reaches 0.")
 
-    tkns = charging_tokens()
-    mania_nr = starting_throw()
-    bet, new_tokens = place_bet(tkns, mania_nr)
-    play_option = choose_option(mania_nr)
+    tokens = charging_tokens()
+    bet, new_tokens = place_bet(tokens)
+    mania_nr = 12
+    play_option = choose_play(mania_nr)
     loop = 0
     new_play(new_tokens, bet, play_option, mania_nr, loop)
 
