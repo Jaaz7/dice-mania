@@ -67,7 +67,7 @@ def create_title():
     """
     for line in range(8):
         for tuple in range(1, 3):
-            print(colored(DICE_MANIA.get(tuple)[line], "cyan"), end="  ")
+            print(colored(DICE_MANIA.get(tuple)[line], "magenta"), end="  ")
         print()
 
 
@@ -76,9 +76,9 @@ def charging_tokens():
     Ask the player to charge with tokens so the game can start
     """
     while True:
-        tokens = input("\nCharge your account (max 500): ")
+        tokens = input("\n Charge your account (max 500): ")
         if verify_tokens(tokens):
-            print("Tokens accepted.\n")
+            print(" Tokens accepted.\n")
             time.sleep(1.5)
         else:
             continue
@@ -479,21 +479,23 @@ def main():
     """
     print("\n")
     create_title()
-    print(colored("\n\nWelcome! Bet your tokens to guess the tendency of the next play.\nAre you ready?\n", 'cyan'))
+    print(colored("\n\n Welcome! Bet your tokens to guess the tendency of the next play.\n Are you ready?\n", 'cyan'))
 
-    print("Rules: To win, you need to guess the sum of the next dice play.")
+    print(" Rules: To win, you need to guess the sum of the next dice play.")
     print("       --------------------------------------------------------")
 
     print("       Charge your balance with tokens.")
-    print(colored("       Place your bet, only whole tokens are accepted.", 'cyan'))
+    print(colored("       Place your bet, only whole tokens are accepted.", 'black'))
     print("       You start with a Mania Number of 12.")
-    print(colored('       Choose the number of dice you want to play from 2 to 4. A single die cannot be played.', "cyan"))
-    print('       The sum of the dice you roll will be your new Mania Number.')
-    print(colored('       Choose one of three play options towards the number 12: "More", "Less" or "Same"', 'cyan'))
-    print('       If you bet "More", "Less" or "Same" and win, you win.')
-    print(colored('       If you bet "same" with 3 or 4 dice and win, you win DOUBLE.', 'cyan'))
-    print('       The dice are rolled in.')
-    print(colored("       You can always continue, top up or quit.", 'cyan'))
+    print(colored('       Choose the number of dice you want to play from 2 to 4.', "black"))
+    print('       A single die cannot be played.')
+    print(colored("       The sum of the dice you roll will be your new Mania Number, let's call it MN.", 'black'))
+    print('       You must now guess the tendency of the new MN against the old MN.')
+    print(colored('       Choose one of three plays: "More", "Less" or "Same".', 'black'))
+    print('       If you bet "More", "Less" or "Same" and win, you get 2x the bet value.')
+    print(colored('       If you bet "same" with 4 dice and win, you get 4x the bet value.', 'black'))
+    print('       The dice are rolled in, good luck!')
+    print(colored("       You can always continue, top up or quit.", 'black'))
     print("       You lose when your balance reaches 0.")
 
     tokens = charging_tokens()
