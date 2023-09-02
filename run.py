@@ -682,5 +682,5 @@ def main():
     new_play(new_tokens, bet, play_option, useless_var, mania_nr, dice_nr, loop)
 
 
-#main()
-new_play(100, 5, 's', 12, 12, 3, 1)
+main()
+#new_play(100, 5, 's', 12, 12, 3, 1)
