@@ -2,7 +2,6 @@ import random
 from termcolor import colored
 import time
 import sys
-from playsound import playsound
 
 
 DICE_MANIA = {
@@ -653,7 +652,6 @@ def main():
     Prints the rules of the game.
     Runs the functions of the app.
     """
-    playsound('assets/sound/1up_no_copyright.mp3', False)
     print("\n")
     create_title()
     print("\n\n Welcome! Bet your tokens to guess the tendency of the next play.\n Are you ready?\n")
