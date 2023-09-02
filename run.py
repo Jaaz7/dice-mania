@@ -67,7 +67,7 @@ def create_title():
     """
     for line in range(8):
         for tuple in range(1, 3):
-            print(colored(DICE_MANIA.get(tuple)[line], "magenta"), end="      ")
+            print(colored(DICE_MANIA.get(tuple)[line], "magenta"), end="  ")
         print()
 
 
