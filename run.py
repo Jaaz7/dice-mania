@@ -68,7 +68,7 @@ def create_title():
     """
     for line in range(8):
         for tuple in range(1, 3):
-            print(colored(DICE_MANIA.get(tuple)[line], "red"), end="  ")
+            print(colored(DICE_MANIA.get(tuple)[line], "yellow"), end="  ")
         print()
 
 
@@ -157,7 +157,7 @@ def how_many_dice():
     """
     while True:
         try:
-            print(colored('\n Tip: win 4x by rolling 4 dice and playing "Same"!', 'green'))
+            print(colored('\n Tip: win 4x by rolling 4 dice and playing "Same"!', 'cyan'))
             x = int(input(' How many dice? (2-4): '))
             if (x < 2) or (x > 4):
                 print(' The number has to be between 2 and 4, please try again.\n')
@@ -192,7 +192,7 @@ def roll_dice(dice_nr):
     """
     Rolls the number of dice chosen.
     """
-    print(f' Rolling {dice_nr} dice on the table...')
+    print(colored(f' Rolling {dice_nr} dice on the table...', 'yellow'))
     time.sleep(1)
     dice = []
     total = 0
@@ -201,7 +201,7 @@ def roll_dice(dice_nr):
 
     for line in range(5):
         for die in dice:
-            print(DICE_ART.get(die)[line], end="")
+            print(colored(DICE_ART.get(die)[line], 'cyan'), end="")
         print()
 
     for die in dice:
@@ -225,7 +225,7 @@ def new_play(tokens, bet, play, old_mania, nr_mania, dice_nr, loop):
         new_mania_nr = old_mania
 
     if (play == 'm') and (new_mania_nr < nr_mania):
-        print(f'\n You lost. You chose "More".\n {new_mania_nr} < {nr_mania}')
+        print(colored(f'\n You lost. You chose "More".\n {new_mania_nr} < {nr_mania}', 'red'))
         print(f'\n Your token balance: {tokens}')
         while True:
             if verify_balance(tokens):
@@ -261,7 +261,7 @@ def new_play(tokens, bet, play, old_mania, nr_mania, dice_nr, loop):
                 continue
 
     elif (play == 'm') and (new_mania_nr == nr_mania):
-        print(f'\n You lost. You chose "More".\n {new_mania_nr} = {nr_mania}')
+        print(colored(f'\n You lost. You chose "More".\n {new_mania_nr} = {nr_mania}', 'red'))
         print(f' Your token balance: {tokens}')
         while True:
             if verify_balance(tokens):
@@ -297,7 +297,7 @@ def new_play(tokens, bet, play, old_mania, nr_mania, dice_nr, loop):
                 continue
 
     elif (play == 'm') and (new_mania_nr > nr_mania):
-        print(f'\n You Won! You chose "More".\n {new_mania_nr} > {nr_mania}')
+        print(colored(f'\n You Won! You chose "More".\n {new_mania_nr} > {nr_mania}', 'cyan'))
         new_tokens = tokens + (bet * 2)
         print(f' Your token balance: {new_tokens}')
         while True:
@@ -334,7 +334,7 @@ def new_play(tokens, bet, play, old_mania, nr_mania, dice_nr, loop):
                 continue
 
     elif (play == 'l') and (new_mania_nr > nr_mania):
-        print(f'\n You lost. You chose "Less".\n {new_mania_nr} > {nr_mania}')
+        print(colored(f'\n You lost. You chose "Less".\n {new_mania_nr} > {nr_mania}', 'red'))
         print(f' Your token balance: {tokens}')
         while True:
             if verify_balance(tokens):
@@ -370,7 +370,7 @@ def new_play(tokens, bet, play, old_mania, nr_mania, dice_nr, loop):
                 continue
 
     elif (play == 'l') and (new_mania_nr == nr_mania):
-        print(f'\n You lost. You chose "Less".\n {new_mania_nr} = {nr_mania}')
+        print( colored(f'\n You lost. You chose "Less".\n {new_mania_nr} = {nr_mania}', 'red'))
         print(f' Your token balance: {tokens}')
         while True:
             if verify_balance(tokens):
@@ -406,7 +406,7 @@ def new_play(tokens, bet, play, old_mania, nr_mania, dice_nr, loop):
                 continue
 
     elif (play == 'l') and (new_mania_nr < nr_mania):
-        print(f'\n You won! You chose "Less".\n {new_mania_nr} < {nr_mania}')
+        print(colored(f'\n You won! You chose "Less".\n {new_mania_nr} < {nr_mania}', 'cyan'))
         new_tokens = tokens + (bet * 2)
         print(f' Your token balance: {new_tokens}')
         while True:
@@ -443,7 +443,7 @@ def new_play(tokens, bet, play, old_mania, nr_mania, dice_nr, loop):
                 continue
 
     elif (play == 's') and (new_mania_nr > nr_mania):
-        print(f'\n You lost. You chose "Same".\n {new_mania_nr} > {nr_mania}')
+        print(colored(f'\n You lost. You chose "Same".\n {new_mania_nr} > {nr_mania}', 'red'))
         print(f' Your token balance: {tokens}')
         while True:
             if verify_balance(tokens):
@@ -479,7 +479,7 @@ def new_play(tokens, bet, play, old_mania, nr_mania, dice_nr, loop):
                 continue
 
     elif (play == 's') and (new_mania_nr < nr_mania):
-        print(f'\n You lost. YOu chose "Same".\n {new_mania_nr} < {nr_mania}')
+        print(colored(f'\n You lost. YOu chose "Same".\n {new_mania_nr} < {nr_mania}', 'red'))
         print(f' Your token balance: {tokens}')
         while True:
             if verify_balance(tokens):
@@ -515,14 +515,14 @@ def new_play(tokens, bet, play, old_mania, nr_mania, dice_nr, loop):
                 continue
 
     elif (play == 's') and (new_mania_nr == nr_mania) and (get_dice_nr == 4):
-        print(f'\n Congratulations, you won a Jackpot! YOu chose "Same" with 4 dice!\n {new_mania_nr} = {nr_mania}')
+        print(colored(f'\n Congratulations, you won a Jackpot! YOu chose "Same" with 4 dice!\n {new_mania_nr} = {nr_mania}', 'yellow'))
         new_tokens = tokens + (bet * 4)
         print(f' Your token balance: {new_tokens}')
         while True:
             if verify_balance(tokens):
                 break
             else:
-                print(f" You're out of tokens. Game over!")
+                print(f" You're out of tokens. Game Over!")
                 sys.exit()
 
         while True:
@@ -552,7 +552,7 @@ def new_play(tokens, bet, play, old_mania, nr_mania, dice_nr, loop):
                 continue
     
     elif (play == 's') and (new_mania_nr == nr_mania):
-        print(f'\n You won! You chose "Same".\n {new_mania_nr} = {nr_mania}')
+        print(colored(f'\n You won! You chose "Same".\n {new_mania_nr} = {nr_mania}', 'cyan'))
         new_tokens = tokens + (bet * 2)
         print(f' Your token balance: {new_tokens}')
         while True:
@@ -629,7 +629,7 @@ def main():
     print('       You must now guess the tendency of the new MN against the old MN.')
     print(colored('       Choose one of three plays: "More", "Less" or "Same".', 'cyan'))
     print('       If you bet "More", "Less" or "Same" and win, you get 2x the bet value.')
-    print(colored('       If you bet "same" with 4 dice and win, you get 4x the bet value.', 'cyan'))
+    print(colored('       If you bet "same" with 4 dice and win, you get a 4x Jackpot!', 'cyan'))
     print('       The dice are rolled in, good luck!')
     print(colored("       You can always continue, top up or quit.", 'cyan'))
     print("       You lose when your balance reaches 0.")
