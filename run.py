@@ -62,13 +62,26 @@ DICE_ART = {
 }
 
 
+class color:
+   PURPLE = '\033[95m'
+   CYAN = '\033[96m'
+   DARKCYAN = '\033[36m'
+   BLUE = '\033[94m'
+   GREEN = '\033[92m'
+   YELLOW = '\033[93m'
+   RED = '\033[91m'
+   BOLD = '\033[1m'
+   UNDERLINE = '\033[4m'
+   END = '\033[0m'
+
+
 def create_title():
     """
     Creates the dice mania ASCII art.
     """
     for line in range(8):
         for tuple in range(1, 3):
-            print(colored(DICE_MANIA.get(tuple)[line], "yellow"), end="  ")
+            print(colored(color.BOLD + DICE_MANIA.get(tuple)[line], "yellow"), end="  ")
         print()
 
 
