@@ -191,7 +191,7 @@ def choose_play(mania_nr):
     Asks the player to choose their play: more, less or same.
     """
     while True:
-        opt = input(f'\n Guess the next Mania Number!\n\n More than {mania_nr} (press {bold.BOLD + bold.YELLOW + "M" + bold.END})\n Less than {mania_nr} (press {bold.BOLD + bold.YELLOW + "L" + bold.END})\n Same as {mania_nr} (press {bold.BOLD + bold.YELLOW + "S" + bold.END}): ').lower()
+        opt = input(f'\n Guess the next Mania Number!\n\n It will be more than {mania_nr} (press {bold.BOLD + bold.YELLOW + "M" + bold.END})\n It will be less than {mania_nr} (press {bold.BOLD + bold.YELLOW + "L" + bold.END})\n It will be same as {mania_nr} (press {bold.BOLD + bold.YELLOW + "S" + bold.END}): ').lower()
         if (opt == 'm') or (opt == 'l') or (opt == 's'):
             print('')
             break
@@ -234,11 +234,11 @@ def new_play(tokens, bet, play, old_mania, nr_mania, dice_nr, loop):
     if loop == 0:
         new_mania_nr = roll_dice(dice_nr)
     elif loop == 1:
-        new_mania_nr = old_mania
+        new_mania_nr = nr_mania
 
     if (play == 'm') and (new_mania_nr < old_mania):
         print(bold.BOLD + colored(f'\n You lose', 'red'))
-        print(f' You chose {bold.BOLD + bold.YELLOW + "More" + bold.END}.\n {new_mania_nr} < {nr_mania}')
+        print(f' You chose {bold.BOLD + bold.YELLOW + "More" + bold.END}.\n {new_mania_nr} < {old_mania}')
         string1 = '\n Your token balance:'
         print(string1, bold.BOLD + colored(tokens, 'cyan'))
         print('---------------------------------------------------')
@@ -278,7 +278,7 @@ def new_play(tokens, bet, play, old_mania, nr_mania, dice_nr, loop):
 
     elif (play == 'm') and (new_mania_nr == old_mania):
         print(bold.BOLD + colored(f'\n You lose.', 'red'))
-        print(f' You chose {bold.BOLD + bold.YELLOW + "More" + bold.END}.\n {new_mania_nr} = {nr_mania}')
+        print(f' You chose {bold.BOLD + bold.YELLOW + "More" + bold.END}.\n {new_mania_nr} = {old_mania}')
         string1 = '\n Your token balance:'
         print(string1, bold.BOLD + colored(tokens, 'cyan'))
         print('---------------------------------------------------')
@@ -318,7 +318,7 @@ def new_play(tokens, bet, play, old_mania, nr_mania, dice_nr, loop):
 
     elif (play == 'm') and (new_mania_nr > old_mania):
         print(bold.BOLD + colored(f'\n You win {bet * 2} tokens!', 'cyan'))
-        print(f' You chose {bold.BOLD + bold.YELLOW + "More" + bold.END}.\n {new_mania_nr} > {nr_mania}')
+        print(f' You chose {bold.BOLD + bold.YELLOW + "More" + bold.END}.\n {new_mania_nr} > {old_mania}')
         new_tokens = tokens + (bet * 2)
         string1 = '\n Your token balance:'
         print(string1, bold.BOLD + colored(new_tokens, 'cyan'))
@@ -359,7 +359,7 @@ def new_play(tokens, bet, play, old_mania, nr_mania, dice_nr, loop):
 
     elif (play == 'l') and (new_mania_nr > old_mania):
         print(bold.BOLD + colored(f'\n You lose.', 'red'))
-        print(f' You chose {bold.BOLD + bold.YELLOW + "Less" + bold.END}.\n {new_mania_nr} > {nr_mania}')
+        print(f' You chose {bold.BOLD + bold.YELLOW + "Less" + bold.END}.\n {new_mania_nr} > {old_mania}')
         string1 = '\n Your token balance:'
         print(string1, bold.BOLD + colored(tokens, 'cyan'))
         print('---------------------------------------------------')
@@ -399,7 +399,7 @@ def new_play(tokens, bet, play, old_mania, nr_mania, dice_nr, loop):
 
     elif (play == 'l') and (new_mania_nr == old_mania):
         print(bold.BOLD + colored(f'\n You lose.', 'red'))
-        print(f' You chose {bold.BOLD + bold.YELLOW + "Less" + bold.END}.\n {new_mania_nr} = {nr_mania}')
+        print(f' You chose {bold.BOLD + bold.YELLOW + "Less" + bold.END}.\n {new_mania_nr} = {old_mania}')
         string1 = '\n Your token balance:'
         print(string1, bold.BOLD + colored(tokens, 'cyan'))
         print('---------------------------------------------------')
@@ -439,7 +439,7 @@ def new_play(tokens, bet, play, old_mania, nr_mania, dice_nr, loop):
 
     elif (play == 'l') and (new_mania_nr < old_mania):
         print(bold.BOLD + colored(f'\n You win {bet * 2} tokens!', 'cyan'))
-        print(f' You chose {bold.BOLD + bold.YELLOW + "Less" + bold.END}.\n {new_mania_nr} < {nr_mania}')
+        print(f' You chose {bold.BOLD + bold.YELLOW + "Less" + bold.END}.\n {new_mania_nr} < {old_mania}')
         new_tokens = tokens + (bet * 2)
         string1 = '\n Your token balance:'
         print(string1, bold.BOLD + colored(new_tokens, 'cyan'))
@@ -480,7 +480,7 @@ def new_play(tokens, bet, play, old_mania, nr_mania, dice_nr, loop):
 
     elif (play == 's') and (new_mania_nr > old_mania):
         print(bold.BOLD + colored(f'\n You lose.', 'red'))
-        print(f' You chose {bold.BOLD + bold.YELLOW + "Same" + bold.END}.\n {new_mania_nr} > {nr_mania}')
+        print(f' You chose {bold.BOLD + bold.YELLOW + "Same" + bold.END}.\n {new_mania_nr} > {old_mania}')
         string1 = '\n Your token balance:'
         print(string1, bold.BOLD + colored(tokens, 'cyan'))
         print('---------------------------------------------------')
@@ -520,7 +520,7 @@ def new_play(tokens, bet, play, old_mania, nr_mania, dice_nr, loop):
 
     elif (play == 's') and (new_mania_nr < old_mania):
         print(bold.BOLD + colored(f'\n You lose.', 'red'))
-        print(f' You chose {bold.BOLD + bold.YELLOW + "Same" + bold.END}.\n {new_mania_nr} < {nr_mania}')
+        print(f' You chose {bold.BOLD + bold.YELLOW + "Same" + bold.END}.\n {new_mania_nr} < {old_mania}')
         string1 = '\n Your token balance:'
         print(string1, bold.BOLD + colored(tokens, 'cyan'))
         print('---------------------------------------------------')
@@ -560,7 +560,7 @@ def new_play(tokens, bet, play, old_mania, nr_mania, dice_nr, loop):
 
     elif (play == 's') and (new_mania_nr == old_mania) and (dice_nr == 4):
         print(bold.BOLD + colored(f'\n Congratulations, you won a Jackpot! {bet * 4} tokens!', 'yellow'))
-        print(f' You chose {bold.BOLD + bold.YELLOW + "Same" + bold.END}.\n {new_mania_nr} = {nr_mania}')
+        print(f' You chose {bold.BOLD + bold.YELLOW + "Same" + bold.END}.\n {new_mania_nr} = {old_mania}')
         new_tokens = tokens + (bet * 4)
         string1 = '\n Your token balance:'
         print(string1, bold.BOLD + colored(new_tokens, 'cyan'))
@@ -601,7 +601,7 @@ def new_play(tokens, bet, play, old_mania, nr_mania, dice_nr, loop):
     
     elif (play == 's') and (new_mania_nr == old_mania):
         print(bold.BOLD + colored(f'\n You win {bet * 2} tokens!', 'cyan'))
-        print(f' You chose {bold.BOLD + bold.YELLOW + "Same" + bold.END}.\n {new_mania_nr} = {nr_mania}')
+        print(f' You chose {bold.BOLD + bold.YELLOW + "Same" + bold.END}.\n {new_mania_nr} = {old_mania}')
         new_tokens = tokens + (bet * 2)
         string1 = '\n Your token balance:'
         print(string1, bold.BOLD + colored(new_tokens, 'cyan'))
@@ -710,6 +710,6 @@ def main():
 main()
 
 """
-new play = (tokens, bet, play option, last mania number, new mania number, dice number, loop)
+new play = (tokens, bet, play option, old mania number, new mania number, dice number, loop)
 """
 #new_play(100, 5, 's', 0, 9, 3, 0)
