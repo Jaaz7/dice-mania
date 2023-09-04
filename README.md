@@ -22,7 +22,7 @@ Overall Dice Mania is a simple idea which can be compared to classic dice games 
 - ### User Experience (UX)
 - ### Features
   - Existing Features
-  - Features left to implement
+  - Features Left To Implement
 - ### Design
   - Colors
   - Flowchart
@@ -87,10 +87,10 @@ The player can then choose to continue, to top up or to quit the game. Topping u
   - ### Bugs Left To Fix
 ---        
 ## Deployment
-  - Local Cloning
-  - Deploying to Heroku
-  - Forking The Github Repository
+  - ### Local Cloning
+  - ### Deploying to Heroku
+  - ### Forking The Github Repository
 ---
 ## Credit
-  - Code
-  - Content
+  - ### Code
+  - ### Content
