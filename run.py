@@ -368,7 +368,7 @@ def new_play(tokens, bet, play, old_mania, nr_mania, dice_nr, loop):
             elif y == 'q':
                 string1 = '\n Thanks for playing! You cashed out'
                 string2 = 'tokens.'
-                print(string1, bold.BOLD + colored(tokens, 'cyan'), string2)
+                print(string1, bold.BOLD + colored(new_tokens, 'cyan'), string2)
                 sys.exit()
             else:
                 print('This input is not valid, please try again.')
@@ -507,7 +507,7 @@ def new_play(tokens, bet, play, old_mania, nr_mania, dice_nr, loop):
             elif y == 'q':
                 string1 = '\n Thanks for playing! You cashed out'
                 string2 = 'tokens.'
-                print(string1, bold.BOLD + colored(tokens, 'cyan'), string2)
+                print(string1, bold.BOLD + colored(new_tokens, 'cyan'), string2)
                 sys.exit()
             else:
                 print(' This input is not valid, please try again.')
@@ -646,7 +646,7 @@ def new_play(tokens, bet, play, old_mania, nr_mania, dice_nr, loop):
             elif y == 'q':
                 string1 = '\n Thanks for playing! You cashed out'
                 string2 = 'tokens.'
-                print(string1, bold.BOLD + colored(tokens, 'cyan'), string2)
+                print(string1, bold.BOLD + colored(new_tokens, 'cyan'), string2)
                 sys.exit()
             else:
                 print(' This input is not valid, please try again.')
@@ -693,7 +693,7 @@ def new_play(tokens, bet, play, old_mania, nr_mania, dice_nr, loop):
             elif y == 'q':
                 string1 = '\n Thanks for playing! You cashed out'
                 string2 = 'tokens.'
-                print(string1, bold.BOLD + colored(tokens, 'cyan'), string2)
+                print(string1, bold.BOLD + colored(new_tokens, 'cyan'), string2)
                 sys.exit()
             else:
                 print(' This input is not valid, please try again.')
@@ -733,7 +733,7 @@ def main():
     print("\n")
     create_title()
     print("\n\n Welcome! Bet your tokens and guess the sum of the next dice play.\n Are you ready?")
-    print(bold.BOLD + bold.YELLOW + ' Tip: to enter a value you need to press "Enter" at the end.' + bold.END)
+    print(bold.BOLD + bold.YELLOW + ' Tip: to enter a value press "Enter" at the end.' + bold.END)
     while True:
         answer = input('\n Would you like to display the rules? (y/n): ').lower()
         if answer == 'y':
