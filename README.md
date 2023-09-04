@@ -35,9 +35,9 @@ Overall Dice Mania is a simple idea which can be compared to classic dice games 
   - Fixed Bugs
   - Bugs Left To Fix
 - ### Deployment
-  - Local cloning
-  - Deploying to Heroku
-  - Forking the github repository
+  - Local Cloning
+  - Deploying To Heroku
+  - Forking The Github Repository
 - ### Credits
   - Code
   - Content
@@ -83,17 +83,14 @@ The player can then choose to continue, to top up or to quit the game. Topping u
 
 ---
 ## Bugs
-  - 
+  - ### Fixed Bugs
+  - ### Bugs Left To Fix
 ---        
 ## Deployment
-  - 
-
+  - Local Cloning
+  - Deploying to Heroku
+  - Forking The Github Repository
 ---
 ## Credit
-  - 
-
----
-## Deployment
-- lorem Ipsum
-## Credits
-- lorem ipsum
+  - Code
+  - Content
