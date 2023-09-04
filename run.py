@@ -191,7 +191,7 @@ def choose_play(mania_nr):
     Asks the player to choose their play: more, less or same.
     """
     while True:
-        opt = input(f'\n Guess the next Mania Number!\n\n It will be more than {mania_nr} (press {bold.BOLD + bold.YELLOW + "M" + bold.END})\n It will be less than {mania_nr} (press {bold.BOLD + bold.YELLOW + "L" + bold.END})\n It will be same as {mania_nr} (press {bold.BOLD + bold.YELLOW + "S" + bold.END}): ').lower()
+        opt = input(f'\n Guess the next Mania Number!\n\n It will be more than {mania_nr} (press {bold.BOLD + bold.YELLOW + "M" + bold.END})\n It will be less than {mania_nr} (press {bold.BOLD + bold.YELLOW + "L" + bold.END})\n It will be the same as {mania_nr} (press {bold.BOLD + bold.YELLOW + "S" + bold.END}): ').lower()
         if (opt == 'm') or (opt == 'l') or (opt == 's'):
             print('')
             break
@@ -750,7 +750,7 @@ def main():
             print(bold.BOLD + colored('       4. Choose one of three plays: "More", "Less" or "Same".', 'cyan'))
             print('       If you bet "More", "Less" or "Same" and win, you get 2x the bet value.')
             print(bold.BOLD + colored('       If you bet "Same" with 4 dice and win, you get a 4x Jackpot!', 'cyan'))
-            print('       5. The dice are rolled in, good luck!')
+            print('       The dice are rolled in, good luck!')
             print(bold.BOLD + colored("       You can always continue, top up or quit.", 'cyan'))
             print("       You lose when your balance reaches 0.")
             break
