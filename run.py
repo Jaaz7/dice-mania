@@ -98,7 +98,7 @@ def verify_tokens(num):
     """
     try:
         if int(num) < 1:
-            print(f' Value has to be as `least 1, you entered {num}')
+            print(f' Value has to be as least 1, you entered {num}')
             return False
         elif int(num) > 500:
             print(f" Maximum value reached, you entered {num}")
@@ -240,7 +240,7 @@ def new_play(tokens, bet, play, old_mania, nr_mania, dice_nr, loop):
         print(bold.BOLD + colored(f'\n You lose', 'red'))
         print(f' You chose {bold.BOLD + bold.YELLOW + "More" + bold.END}.\n {new_mania_nr} < {old_mania}')
         string1 = '\n Your token balance:'
-        if new_tokens == 0:
+        if tokens == 0:
             string1 = '\n Your token balance:'
             print(string1, bold.BOLD + colored(tokens, 'red'))
         else:
@@ -285,7 +285,7 @@ def new_play(tokens, bet, play, old_mania, nr_mania, dice_nr, loop):
         print(bold.BOLD + colored(f'\n You lose.', 'red'))
         print(f' You chose {bold.BOLD + bold.YELLOW + "More" + bold.END}.\n {new_mania_nr} = {old_mania}')
         string1 = '\n Your token balance:'
-        if new_tokens == 0:
+        if tokens == 0:
             string1 = '\n Your token balance:'
             print(string1, bold.BOLD + colored(tokens, 'red'))
         else:
@@ -375,7 +375,7 @@ def new_play(tokens, bet, play, old_mania, nr_mania, dice_nr, loop):
         print(bold.BOLD + colored(f'\n You lose.', 'red'))
         print(f' You chose {bold.BOLD + bold.YELLOW + "Less" + bold.END}.\n {new_mania_nr} > {old_mania}')
         string1 = '\n Your token balance:'
-        if new_tokens == 0:
+        if tokens == 0:
             string1 = '\n Your token balance:'
             print(string1, bold.BOLD + colored(tokens, 'red'))
         else:
@@ -420,7 +420,7 @@ def new_play(tokens, bet, play, old_mania, nr_mania, dice_nr, loop):
         print(bold.BOLD + colored(f'\n You lose.', 'red'))
         print(f' You chose {bold.BOLD + bold.YELLOW + "Less" + bold.END}.\n {new_mania_nr} = {old_mania}')
         string1 = '\n Your token balance:'
-        if new_tokens == 0:
+        if tokens == 0:
             string1 = '\n Your token balance:'
             print(string1, bold.BOLD + colored(tokens, 'red'))
         else:
@@ -511,7 +511,7 @@ def new_play(tokens, bet, play, old_mania, nr_mania, dice_nr, loop):
         print(bold.BOLD + colored(f'\n You lose.', 'red'))
         print(f' You chose {bold.BOLD + bold.YELLOW + "Same" + bold.END}.\n {new_mania_nr} > {old_mania}')
         string1 = '\n Your token balance:'
-        if new_tokens == 0:
+        if tokens == 0:
             string1 = '\n Your token balance:'
             print(string1, bold.BOLD + colored(tokens, 'red'))
         else:
@@ -556,7 +556,7 @@ def new_play(tokens, bet, play, old_mania, nr_mania, dice_nr, loop):
         print(bold.BOLD + colored(f'\n You lose.', 'red'))
         print(f' You chose {bold.BOLD + bold.YELLOW + "Same" + bold.END}.\n {new_mania_nr} < {old_mania}')
         string1 = '\n Your token balance:'
-        if new_tokens == 0:
+        if tokens == 0:
             string1 = '\n Your token balance:'
             print(string1, bold.BOLD + colored(tokens, 'red'))
         else:
