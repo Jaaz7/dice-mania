@@ -74,7 +74,8 @@ def create_title():
     """
     for line in range(8):
         for tuple in range(1, 3):
-            print(colored(bold.BOLD + DICE_MANIA.get(tuple)[line], "yellow"), end="  ")
+            print(colored(bold.BOLD +
+                          DICE_MANIA.get(tuple)[line], "yellow"), end="  ")
         print()
 
 
@@ -106,8 +107,8 @@ def verify_tokens(num):
         else:
             return True
     except ValueError as e:
-            print(f" Invalid data: {e}. Please try again.")
-            return False    
+        print(f" Invalid data: {e}. Please try again.")
+        return False
 
 
 def place_bet(tokens, mania_nr):
@@ -116,7 +117,8 @@ def place_bet(tokens, mania_nr):
     """
     string1 = '\n You have'
     string2 = 'tokens and your Mania Number is'
-    print(string1, bold.BOLD + colored(tokens, 'cyan'), string2, bold.BOLD + colored(mania_nr, 'yellow'), '\n')
+    print(string1, bold.BOLD + colored(tokens, 'cyan'),
+          string2, bold.BOLD + colored(mania_nr, 'yellow'), '\n')
     while True:
         bet = (input(' How many tokens would you like to bet? '))
         if verify_bet(tokens, bet):
@@ -130,7 +132,8 @@ def place_bet(tokens, mania_nr):
             else:
                 string1 = ' Bet accepted. You have'
                 string2 = 'tokens left.\n'
-                print(string1, bold.BOLD + colored(new_tokens, 'cyan'), string2)
+                print(string1, bold.BOLD +
+                      colored(new_tokens, 'cyan'), string2)
                 time.sleep(1.5)
         else:
             continue
@@ -171,7 +174,7 @@ def how_many_dice():
     while True:
         try:
             print(bold.BOLD + colored('\n Tip: win 4x by rolling 4 dice and playing "Same"!', 'yellow'))
-            x = int(input(' How many dice? (2-4): '))
+            x = int(input(' How many dice do you want to play this round? (2-4 possible): '))
             if (x < 2) or (x > 4):
                 print(' The number has to be between 2 and 4, please try again.\n')
                 continue
@@ -185,13 +188,12 @@ def how_many_dice():
     return x
 
 
-
 def choose_play(mania_nr):
     """
     Asks the player to choose their play: more, less or same.
     """
     while True:
-        opt = input(f'\n Guess the next Mania Number!\n\n It will be more than {mania_nr} (press {bold.BOLD + bold.YELLOW + "M" + bold.END})\n It will be less than {mania_nr} (press {bold.BOLD + bold.YELLOW + "L" + bold.END})\n It will be the same as {mania_nr} (press {bold.BOLD + bold.YELLOW + "S" + bold.END}): ').lower()
+        opt = input(f'\n Guess the next Mania Number!\n     It will be more than {mania_nr} (press {bold.BOLD + bold.YELLOW + "M" + bold.END})\n     It will be less than {mania_nr} (press {bold.BOLD + bold.YELLOW + "L" + bold.END})\n     It will be the same as {mania_nr} (press {bold.BOLD + bold.YELLOW + "S" + bold.END}): ').lower()
         if (opt == 'm') or (opt == 'l') or (opt == 's'):
             print('')
             break
@@ -231,8 +233,10 @@ def new_play(tokens, bet, play, old_mania, nr_mania, dice_nr, loop):
     Creates three options at the end of each play:
     Continue, top up or quit.
     """
+
     if loop == 0:
         new_mania_nr = roll_dice(dice_nr)
+
     elif loop == 1:
         new_mania_nr = nr_mania
 
@@ -651,7 +655,7 @@ def new_play(tokens, bet, play, old_mania, nr_mania, dice_nr, loop):
             else:
                 print(' This input is not valid, please try again.')
                 continue
-    
+
     elif (play == 's') and (new_mania_nr == old_mania):
         print(bold.BOLD + colored(f'\n You win {bet * 2} tokens!', 'cyan'))
         print(f' You chose {bold.BOLD + bold.YELLOW + "Same" + bold.END}.\n {new_mania_nr} = {old_mania}')
@@ -732,8 +736,10 @@ def main():
     """
     print("\n")
     create_title()
-    print("\n\n Welcome! Bet your tokens and guess the sum of the next dice play.\n Are you ready?")
-    print(bold.BOLD + bold.YELLOW + ' Tip: to enter a value press "Enter" at the end.' + bold.END)
+    print("\n\n Welcome! Bet your tokens and guess the sum of the next dice play.\n Are you ready?\n")
+    print(bold.YELLOW + bold.BOLD + ' Tip: Press "Enter" after entering a value/number to play.' + bold.END)
+    print(bold.BOLD + colored(' This game window needs to be clicked to be interacted with.', "cyan"))
+    print(bold.YELLOW + bold.BOLD + ' If you enjoy the game, you can share it with a friend!\n' + bold.END)
     while True:
         answer = input('\n Would you like to display the rules? (y/n): ').lower()
         if answer == 'y':

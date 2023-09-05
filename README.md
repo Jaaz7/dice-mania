@@ -62,23 +62,45 @@ Dice Mania is a simple idea which can be compared to classic dice games due to i
 ---
 ## Features
   - ### Existing Features
-    - hi
+    - under construction...
   - ### Features Left To Implement
     - Option to cancel the top up, going back to the pervious menu.
     - Option to play with more than 4 dice.
     - There could have been different kinds of prizes.
+
 ---
 ## Design
   - ### Colors
-
+    - Yellow.
+    - Cyan.
+    - Red.
+  - ### Art Title
+    - [ASCII art generator.](https://patorjk.com/software/taag/#p=display&f=Graffiti&t=Type%20Something%20)
   - ### Flowchart
+    - [app.diagrams.net](https://app.diagrams.net/)
 
 ---
 ## Technologies Used
-  - [Python](https://en.wikipedia.org/wiki/Python_(programming_language)).
+  - [Python](https://en.wikipedia.org/wiki/Python_(programming_language))
 
 ---
 ## Frameworks, Libraries & Programs Used
+  - [VS Code](https://code.visualstudio.com/)
+    - To write code.
+  - [Termcolor](https://pypi.org/project/termcolor/)
+    - To use colors in the project.
+  - [Git](https://git-scm.com/)
+    - For version control.
+  - [Github](https://github.com/)
+    - to Deploy the website and storing files online.
+  - [Text to ASCII art generator](https://patorjk.com/software/taag/#p=display&f=Graffiti&t=Type%20Something%20)
+    - to Create art for the project.
+  - [App.diagrams.net](https://app.diagrams.net/)
+    - To create a logic flowchart diagram.
+  - [Heroku](https://www.heroku.com/)
+    - To deploy the project.
+  - [CI Python Linter](https://pep8ci.herokuapp.com/)
+    - To check the code for issues.
 
 ---
 ## Testing
@@ -152,7 +174,7 @@ Dice Mania is a simple idea which can be compared to classic dice games due to i
     - Game idea given by my mentor Mitko Bachvarov.
     - All the content was written by the developer Jaaziel do Vale.
 
-  ---
+---
 ## Acknowledgements
   - My mentor Mitko Bachvarov for providing constructive feedback.
   - Slack community and tutors for help and observartions.
