@@ -52,7 +52,7 @@ Dice Mania is a simple idea which can be compared to classic dice games due to i
   - <img src="https://github.com/Jaaz7/dice-mania/assets/130407877/e8d0b9c7-0ae3-448d-b557-e9a29ca0417e" width=90% height=90%>
 
 ---
-## User Experience
+## User Experience (UX)
   - Dice Mania presents itself as an understandable and easy-to-interact game from the beginning.
   - With different color schemes and an option to reveal the rules, it not only highlights important aspects and numbers of the game but it also increases its replayability, resulting in a cleaner experience for returning users.
   - The premise is to guess the total sum of the next dice roll against a number known before, it's easy enough to be interacted and quickly understood by people of all ages.
