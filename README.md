@@ -112,7 +112,8 @@ Dice Mania is a simple idea which can be compared to classic dice games due to i
       <img src="x" width=90% height=90%>
       </details>
   - ### Input Validation Testing
-    - The game was manually tested extensively from start to end while coding it, the website was deployed to heroku at a relative early stage with automation on because further testing was necessary to know how the app looks online. Testing of logo ASCII image display, rules display, tokens input validation, bet input validation, dice number input validation, play option input validation, menu choice input validation (continue, top up, quit) and top up validation were done and improved upon.
+    - The game was manually tested extensively from start to end while coding it, the website was deployed to heroku at a relative early stage with automation on because further testing was necessary to know how the app looks online.
+    - Testing of logo ASCII image display, rules display, tokens input validation, bet input validation, dice number input validation, play option input validation, menu choice input validation (continue, top up, quit) and top up validation were done and improved upon.
 
 ---
 ## Bugs
