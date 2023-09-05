@@ -18,26 +18,26 @@ Overall Dice Mania is a simple idea which can be compared to classic dice games 
 ---
 # Table of Contents
 - ### [How To Play](https://github.com/Jaaz7/dice-mania#how-to-play-1)
-- ### Logic Flowchart
-- ### User Experience (UX)
-- ### Features
-  - Existing Features
-  - Features Left To Implement
-- ### Design
-  - Colors
-  - Flowchart
-- ### Technologies Used
-- ### Frameworls, Libraries & Programs Used
-- ### Testing
-  - Manual Testing
-  - Input Validation Testing
-- ### Bugs
-  - Fixed Bugs
-  - Bugs Left To Fix
-- ### Deployment
-  - Local Cloning
-  - Deploying To Heroku
-  - Forking The Github Repository
+- ### [Logic Flowchart](https://github.com/Jaaz7/dice-mania#logic-flowchart-1)
+- ### [User Experience (UX)](https://github.com/Jaaz7/dice-mania#user-experience)
+- ### [Features](https://github.com/Jaaz7/dice-mania#features-1)
+  - [Existing Features](https://github.com/Jaaz7/dice-mania#existing-features)
+  - [Features Left To Implement](https://github.com/Jaaz7/dice-mania#features-left-to-implement)
+- ### [Design](https://github.com/Jaaz7/dice-mania#design-1)
+  - [Colors](https://github.com/Jaaz7/dice-mania#colors)
+  - [Flowchart](https://github.com/Jaaz7/dice-mania#flowchart)
+- ### [Technologies Used](https://github.com/Jaaz7/dice-mania#technologies-used-1)
+- ### [Frameworls, Libraries & Programs Used](https://github.com/Jaaz7/dice-mania#frameworks-libraries--programs-used)
+- ### [Testing](https://github.com/Jaaz7/dice-mania#testing-1)
+  - [Manual Testing](https://github.com/Jaaz7/dice-mania#manual-testing)
+  - [Input Validation Testing](https://github.com/Jaaz7/dice-mania#input-validation-testing)
+- ### [Bugs](https://github.com/Jaaz7/dice-mania#bugs-1)
+  - [Fixed Bugs](https://github.com/Jaaz7/dice-mania#fixed-bugs)
+  - [Bugs Left To Fix](https://github.com/Jaaz7/dice-mania#fixed-bugs)
+- ### [Deployment](https://github.com/Jaaz7/dice-mania#fixed-bugs)
+  - [Local Cloning](https://github.com/Jaaz7/dice-mania#local-cloning)
+  - [Deploying To Heroku](https://github.com/Jaaz7/dice-mania#local-cloning)
+  - [Forking The Github Repository](https://github.com/Jaaz7/dice-mania#local-cloning)
 - ### Credits
   - Code
   - Content
@@ -91,6 +91,6 @@ The player can then choose to continue, to top up or to quit the game. Topping u
   - ### Deploying to Heroku
   - ### Forking The Github Repository
 ---
-## Credit
+## Credits
   - ### Code
   - ### Content
