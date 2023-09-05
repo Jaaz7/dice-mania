@@ -53,7 +53,7 @@ Dice Mania is a simple idea which can be compared to classic dice games due to i
 ---
 ## User Experience
   - Dice Mania presents itself as an understandable and easy-to-interact game from the beginning.
-  - With different color schemes and an option to reveal the rules, it not only highlights important aspects and numbers of the game but it also increases its replayability, resulting in a cleaner experience for non-newcomers.
+  - With different color schemes and an option to reveal the rules, not only it highlights important aspects and numbers of the game but it also increases its replayability, resulting in a cleaner experience for non-newcomers.
   - The premise is to guess the total sum of the next dice roll against a number known before, it's easy enough to be interacted and quickly understood by people of all ages.
   - The game has helpful tips that keep remembering players of things they can do.
   - Its questions highlight the important input that is required by the player with colors.

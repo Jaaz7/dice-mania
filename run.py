@@ -274,7 +274,7 @@ def new_play(tokens, bet, play, old_mania, nr_mania, dice_nr, loop):
                 new_play(updated_tokens, bet_nr, play_name, new_mania_nr, updated_mania_nr, updated_dice_nr, loop)
                 break
             elif y == 'q':
-                string1 = '\n Thanks for playing! You cashed out'
+                string1 = '\n Thanks for playing! You redeemed'
                 string2 = 'tokens.'
                 print(string1, bold.BOLD + colored(tokens, 'cyan'), string2)
                 sys.exit()
@@ -320,7 +320,7 @@ def new_play(tokens, bet, play, old_mania, nr_mania, dice_nr, loop):
                 new_play(updated_tokens, bet_nr, play_name, new_mania_nr, updated_mania_nr, updated_dice_nr, loop)
                 break
             elif y == 'q':
-                string1 = '\n Thanks for playing! You cashed out'
+                string1 = '\n Thanks for playing! You redeemed'
                 string2 = 'tokens.'
                 print(string1, bold.BOLD + colored(tokens, 'cyan'), string2)
                 sys.exit()
@@ -366,7 +366,7 @@ def new_play(tokens, bet, play, old_mania, nr_mania, dice_nr, loop):
                 new_play(updated_tokens, bet_nr, play_name, new_mania_nr, updated_mania_nr, updated_dice_nr, loop)
                 break
             elif y == 'q':
-                string1 = '\n Thanks for playing! You cashed out'
+                string1 = '\n Thanks for playing! You redeemed'
                 string2 = 'tokens.'
                 print(string1, bold.BOLD + colored(new_tokens, 'cyan'), string2)
                 sys.exit()
@@ -412,7 +412,7 @@ def new_play(tokens, bet, play, old_mania, nr_mania, dice_nr, loop):
                 new_play(updated_tokens, bet_nr, play_name, new_mania_nr, updated_mania_nr, updated_dice_nr, loop)
                 break
             elif y == 'q':
-                string1 = '\n Thanks for playing! You cashed out'
+                string1 = '\n Thanks for playing! You redeemed'
                 string2 = 'tokens.'
                 print(string1, bold.BOLD + colored(tokens, 'cyan'), string2)
                 sys.exit()
@@ -458,7 +458,7 @@ def new_play(tokens, bet, play, old_mania, nr_mania, dice_nr, loop):
                 new_play(updated_tokens, bet_nr, play_name, new_mania_nr, updated_mania_nr, updated_dice_nr, loop)
                 break
             elif y == 'q':
-                string1 = '\n Thanks for playing! You cashed out'
+                string1 = '\n Thanks for playing! You redeemed'
                 string2 = 'tokens.'
                 print(string1, bold.BOLD + colored(tokens, 'cyan'), string2)
                 sys.exit()
@@ -505,7 +505,7 @@ def new_play(tokens, bet, play, old_mania, nr_mania, dice_nr, loop):
                 new_play(updated_tokens, bet_nr, play_name, new_mania_nr, updated_mania_nr, updated_dice_nr, loop)
                 break
             elif y == 'q':
-                string1 = '\n Thanks for playing! You cashed out'
+                string1 = '\n Thanks for playing! You redeemed'
                 string2 = 'tokens.'
                 print(string1, bold.BOLD + colored(new_tokens, 'cyan'), string2)
                 sys.exit()
@@ -551,7 +551,7 @@ def new_play(tokens, bet, play, old_mania, nr_mania, dice_nr, loop):
                 new_play(updated_tokens, bet_nr, play_name, new_mania_nr, updated_mania_nr, updated_dice_nr, loop)
                 break
             elif y == 'q':
-                string1 = '\n Thanks for playing! You cashed out'
+                string1 = '\n Thanks for playing! You redeemed'
                 string2 = 'tokens.'
                 print(string1, bold.BOLD + colored(tokens, 'cyan'), string2)
                 sys.exit()
@@ -597,7 +597,7 @@ def new_play(tokens, bet, play, old_mania, nr_mania, dice_nr, loop):
                 new_play(updated_tokens, bet_nr, play_name, new_mania_nr, updated_mania_nr, updated_dice_nr, loop)
                 break
             elif y == 'q':
-                string1 = '\n Thanks for playing! You cashed out'
+                string1 = '\n Thanks for playing! redeemed'
                 string2 = 'tokens.'
                 print(string1, bold.BOLD + colored(tokens, 'cyan'), string2)
                 sys.exit()
@@ -644,7 +644,7 @@ def new_play(tokens, bet, play, old_mania, nr_mania, dice_nr, loop):
                 new_play(updated_tokens, bet_nr, play_name, new_mania_nr, updated_mania_nr, updated_dice_nr, loop)
                 break
             elif y == 'q':
-                string1 = '\n Thanks for playing! You cashed out'
+                string1 = '\n Thanks for playing! You redeemed'
                 string2 = 'tokens.'
                 print(string1, bold.BOLD + colored(new_tokens, 'cyan'), string2)
                 sys.exit()
@@ -691,7 +691,7 @@ def new_play(tokens, bet, play, old_mania, nr_mania, dice_nr, loop):
                 new_play(updated_tokens, bet_nr, play_name, new_mania_nr, updated_mania_nr, updated_dice_nr, loop)
                 break
             elif y == 'q':
-                string1 = '\n Thanks for playing! You cashed out'
+                string1 = '\n Thanks for playing! You redeemed'
                 string2 = 'tokens.'
                 print(string1, bold.BOLD + colored(new_tokens, 'cyan'), string2)
                 sys.exit()
