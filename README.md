@@ -3,7 +3,7 @@
 <br><br>
 Dice Mania is a simple idea which can be compared to classic dice games due to its randomization. It's all about luck and unpredictability, keeping it interesting and fun.
 <br><br>
-<img src="https://github.com/Jaaz7/dice-mania/assets/130407877/d3f92459-be85-48ca-a79a-25d0922c0f35" width=90% height=90%>
+<img src="https://github.com/Jaaz7/dice-mania/assets/130407877/b9c67ae4-0f73-46df-9619-20aa656e38c0" width=90% height=90%>
 <br>
 **[Visit the live project here.](https://dice-mania-d8c8705be82a.herokuapp.com/)**
 
@@ -64,7 +64,72 @@ Dice Mania is a simple idea which can be compared to classic dice games due to i
 ---
 ## Features
   - ### Existing Features
-    - under construction...
+    - Starting screen
+      <br><br>
+      Displays the logo, a welcome message and some tips:
+      <br>
+      <img src="https://github.com/Jaaz7/dice-mania/assets/130407877/1b54b57b-847b-42a6-8966-966f64668d50" width=70% height=70%>
+    - Show_rules
+      <br><br>
+      Rules are shown when choosing "y":
+      <br>
+      <img src="https://github.com/Jaaz7/dice-mania/assets/130407877/2b277fd9-4dbc-4e95-8f30-32f26b6fcd0f" width=70% height=70%>
+    - Charge tokens prompt
+      <br><br>
+      Confirmation that tokens were accepted:
+      <br>
+      <img src="https://github.com/Jaaz7/dice-mania/assets/130407877/ace9638f-95c8-479e-bbe6-c67383c81d26" width=50% height=50%>
+    - Bet prompt
+      <br><br>
+      Before betting, the player is reminded of how many tokens they have and what's their current mania number
+      <br>
+      After the bet is accepted, a messaeg will confirm this and display the remaining tokens:
+      <br>
+      <img src="https://github.com/Jaaz7/dice-mania/assets/130407877/34770609-1341-4dc8-85ec-e4df77aa28d8" width=50% height=50%>
+    - Choose dice number prompt
+      <br><br>
+      A tip reminding about the jackpot is shown
+      <br>
+      Confirmation that the dice number was accepted:
+      <br>
+      <img src="https://github.com/Jaaz7/dice-mania/assets/130407877/e9d582c9-acd8-4b4b-acc0-701ea69ac0f8" width=60% height=60%>
+    - Choose play option prompt and conclusion of the play
+      <br><br>
+      After choosing, the dice are immediately rolled
+      <br>
+      The dice ASCII art is shown is a randomized matter. A message appears revealing the total sum, which is the new mania number
+      <br>
+      A message is shown revealing if the player wins or loses, as well as a message depicting the play option choice
+      <br><br>
+      A direct comparison of mania numbers is shown for clear understanding why the player wins or loses
+      <br>
+      A message revealing the player's new token balance is shown
+      <br>
+      A separator is printed to detach each play from the other, for visibility purposes
+      <br><br>
+      If the player wins, a message in cyan color clearly demonstrates a positive outcome and the tokens won are shown:
+      <br>
+      <img src="https://github.com/Jaaz7/dice-mania/assets/130407877/392682d9-dff8-45e6-af0c-1ffc0410a485" width=60% height=60%>
+      <br><br>
+      If the player loses, a message in red color clearly demonstrates a negative outcome:
+      <br>
+      <img src="https://github.com/Jaaz7/dice-mania/assets/130407877/dc5593c9-0e2b-4df9-8bab-196e874b2ef6" width=60% height=60%>
+      <br><br>
+      If the player wins the jackpot, a message in yellow color explains it and the tokens won are shown:
+      <br>
+      <img src="https://github.com/Jaaz7/dice-mania/assets/130407877/ba95c0ea-2392-497e-b433-bbbd57b97185" width=60% height=60%>
+    - Betting all the balance
+      <br><br>
+      If the player bets all their balance, a different message will appear
+      <br>
+      clearly demonstrating their balance in a red "0". Confirming they've just made an all-in.
+      <br>
+      <img src="https://github.com/Jaaz7/dice-mania/assets/130407877/9d9ad8c6-f498-4585-a574-b79b2cf82f72" width=50% height=50%>
+    - Quitting
+      <br><br>
+      If the player quits, a message thanks the player for playing and shows the total tokens they've redeemed.
+      <br>
+      <img src="https://github.com/Jaaz7/dice-mania/assets/130407877/b89edfb3-70d5-4253-9d42-76448869aca7" width=50% height=50%>
   - ### Features Left To Implement
     - Option to cancel the top up, going back to the pervious menu.
     - Option to play with more than 4 dice.
@@ -115,38 +180,38 @@ Dice Mania is a simple idea which can be compared to classic dice games due to i
     - Testing of logo ASCII image display, rules display, tokens input validation, bet input validation, dice number input validation, play option input validation, menu choice input validation (continue, top up, quit) and top up            validation were done and improved upon.
   - ### Input Validation Testing
     - Display rules
-      <br>
-      Must be "y" or "n"
+      <br><br>
+      Must be "y" or "n":
       <br>
       <img src="https://github.com/Jaaz7/dice-mania/assets/130407877/f0a6a8d1-cc82-4dc1-9fe7-e2715cf44b85" width=50% height=50%>
     - Charge tokens
-      <br>
-      Must be a number between 1 and 500
+      <br><br>
+      Must be a number between 1 and 500:
       <br>
       <img src="https://github.com/Jaaz7/dice-mania/assets/130407877/ac51cdfd-f38e-445a-85f8-14d4a6370f17" width=75% height=75%>
     - Place bet
-      <br>
-      Must be a number between 1 and current balance
+      <br><br>
+      Must be a number between 1 and current balance:
       <br>
       <img src="https://github.com/Jaaz7/dice-mania/assets/130407877/ce8e8ab7-e88b-4008-b8d9-8ffd3fe8d94c" width=75% height=75%>
     - Choose dice number
-      <br>
-      Must be a number between 2 and 4
+      <br><br>
+      Must be a number between 2 and 4:
       <br>
       <img src="https://github.com/Jaaz7/dice-mania/assets/130407877/d64aa420-8194-4738-a11f-a5e991f506fa" width=70% height=70%>
     - Play option
-      <br>
-      Must be "m" or "l" or "s"
+      <br><br>
+      Must be "m" or "l" or "s":
       <br>
       <img src="https://github.com/Jaaz7/dice-mania/assets/130407877/c4d275fc-66b4-4083-a357-6f49744ab494" width=40% height=40%>
     - Final menu
-      <br>
-      Must be "c" or "t" or "q"
+      <br><br>
+      Must be "c" or "t" or "q":
       <br>
       <img src="https://github.com/Jaaz7/dice-mania/assets/130407877/b36ee79b-f630-4f16-ac3a-e294e6c627d3" width=40% height=40%>
     - Top up
-      <br>
-      Must be a number between 1 and 500
+      <br><br>
+      Must be a number between 1 and 500:
       <br>
       <img src="https://github.com/Jaaz7/dice-mania/assets/130407877/fb6b1cbc-ce0a-4bf4-a055-cad881f26624" width=75% height=75%>
 
@@ -223,4 +288,4 @@ Dice Mania is a simple idea which can be compared to classic dice games due to i
 ---
 ## Acknowledgements
   - Mentor Mitko Bachvarov for providing constructive feedback.
-  - Slack community and tutors for help and observartions.
+  - Slack community and tutors for help and observations.
