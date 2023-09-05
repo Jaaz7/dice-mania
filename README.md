@@ -77,7 +77,7 @@ Dice Mania is a simple idea which can be compared to classic dice games due to i
     - Cyan.
     - Red.
   - ### Art Title
-    - [ASCII art generator.](https://patorjk.com/software/taag/#p=display&f=Graffiti&t=Type%20Something%20)
+    - [ASCII art generator](https://patorjk.com/software/taag/#p=display&f=Graffiti&t=Type%20Something%20)
   - ### Flowchart
     - [app.diagrams.net](https://app.diagrams.net/)
 
@@ -111,16 +111,17 @@ Dice Mania is a simple idea which can be compared to classic dice games due to i
       <details><summary>Click to expand</summary>
       <img src="x" width=90% height=90%>
       </details>
-  - ### Input Validation Testing
     - The game was manually tested extensively from start to end while coding it, the website was deployed to heroku at a relative early stage with automation on because further testing was necessary to know how the app looks online.
-    - Testing of logo ASCII image display, rules display, tokens input validation, bet input validation, dice number input validation, play option input validation, menu choice input validation (continue, top up, quit) and top up validation were done and improved upon.
+    - Testing of logo ASCII image display, rules display, tokens input validation, bet input validation, dice number input validation, play option input validation, menu choice input validation (continue, top up, quit) and top up            validation were done and improved upon.
+  - ### Input Validation Testing
+    - 
 
 ---
 ## Bugs
   - ### Fixed Bugs
 
   - ### Bugs Left To Fix
-
+    - No detected unflixed bugs.
 ---        
 ## Deployment
   - ### Local Cloning
@@ -177,9 +178,12 @@ Dice Mania is a simple idea which can be compared to classic dice games due to i
     - Gained knowledge about looping through ASCII dictionaries with @CodingProfessor on [YouTube](https://www.youtube.com/@CodingProfessor).
     - Python 3.10.12 documentation.
     - [Termcolor Library](https://pypi.org/project/termcolor/) color documentation.
-    - [Dice ASCII art concept, implentation and logic.](https://inventwithpython.com/bigbookpython/project17.html)
+    - [InventWithPython](https://inventwithpython.com/bigbookpython/project17.html). Dice ASCII art concept, implentation and logic.
   - ### Content
     - Game idea given by my mentor Mitko Bachvarov.
     - All the content was written by the developer Jaaziel do Vale.
 
 ---
+## Acknowledgements
+  - My mentor Mitko Bachvarov for providing constructive feedback.
+  - Slack community and tutors for help and observartions.
