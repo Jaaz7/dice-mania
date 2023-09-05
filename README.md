@@ -20,7 +20,7 @@ Dice Mania is a simple idea which can be compared to classic dice games due to i
   - [Art Title](https://github.com/Jaaz7/dice-mania#art-title)
   - [Flowchart](https://github.com/Jaaz7/dice-mania#flowchart)
 - ### [Technologies Used](https://github.com/Jaaz7/dice-mania#technologies-used-1)
-- ### [Frameworls, Libraries & Programs Used](https://github.com/Jaaz7/dice-mania#frameworks-libraries--programs-used)
+- ### [Frameworks, Libraries & Programs Used](https://github.com/Jaaz7/dice-mania#frameworks-libraries--programs-used)
 - ### [Testing](https://github.com/Jaaz7/dice-mania#testing-1)
   - [Manual Testing](https://github.com/Jaaz7/dice-mania#manual-testing)
   - [Input Validation Testing](https://github.com/Jaaz7/dice-mania#input-validation-testing)
