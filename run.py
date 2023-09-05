@@ -146,7 +146,7 @@ def verify_bet(tokens, bet):
     """
     try:
         if int(bet) > tokens:
-            print(f' Bet surpassed allowed amount, maximum {tokens} are permitted, please try again.\n')
+            print(f' Bet surpassed allowed amount, maximum {tokens} permitted, please try again.\n')
             return False
         elif int(bet) < 1:
             print(f" Bet has to be as least 1, you entered {bet}, please try again.\n")

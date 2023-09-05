@@ -40,7 +40,7 @@ Dice Mania is a simple idea which can be compared to classic dice games due to i
 ## How To Play
   - The starting screen gives the user an option to read the rules.
   - Once this option is chosen, the player is prompted to charge their balance with the game's currency: tokens.
-  - Once the tokens are accepted, a message will indicate it was successfully sumbitted.
+  - Once the tokens are accepted, a message will indicate it was successfully submitted.
   - The player will then start the game. They will be prompted to pick their bet, their dice number and their play option.
   - The play options are "More", "Less", and "Same".
   - Once chosen, the dice will be rolled and it will be decided whether the player wins or loses. This completes a play.
@@ -54,7 +54,7 @@ Dice Mania is a simple idea which can be compared to classic dice games due to i
 ---
 ## User Experience
   - Dice Mania presents itself as an understandable and easy-to-interact game from the beginning.
-  - With different color schemes and an option to reveal the rules, it not only highlights important aspects and numbers of the game but it also increases its replayability, resulting in a cleaner experience for non-newcomers.
+  - With different color schemes and an option to reveal the rules, it not only highlights important aspects and numbers of the game but it also increases its replayability, resulting in a cleaner experience for returning users.
   - The premise is to guess the total sum of the next dice roll against a number known before, it's easy enough to be interacted and quickly understood by people of all ages.
   - The game has helpful tips that keep remembering players of things they can do.
   - Its questions highlight the important input that is required by the player with colors.
@@ -123,17 +123,32 @@ Dice Mania is a simple idea which can be compared to classic dice games due to i
       <br>
       Must be a number between 1 and 500
       <br>
-      <img src="https://github.com/Jaaz7/dice-mania/assets/130407877/f0a6a8d1-cc82-4dc1-9fe7-e2715cf44b85" width=50% height=50%>
+      <img src="https://github.com/Jaaz7/dice-mania/assets/130407877/ac51cdfd-f38e-445a-85f8-14d4a6370f17" width=75% height=75%>
     - Place bet
       <br>
       Must be a number between 1 and current balance
       <br>
-      <img src="https://github.com/Jaaz7/dice-mania/assets/130407877/f0a6a8d1-cc82-4dc1-9fe7-e2715cf44b85" width=50% height=50%>
-    - Charge tokens
+      <img src="https://github.com/Jaaz7/dice-mania/assets/130407877/ce8e8ab7-e88b-4008-b8d9-8ffd3fe8d94c" width=75% height=75%>
+    - Choose dice number
+      <br>
+      Must be a number between 2 and 4
+      <br>
+      <img src="https://github.com/Jaaz7/dice-mania/assets/130407877/d64aa420-8194-4738-a11f-a5e991f506fa" width=70% height=70%>
+    - Play option
+      <br>
+      Must be "m" or "l" or "s"
+      <br>
+      <img src="https://github.com/Jaaz7/dice-mania/assets/130407877/c4d275fc-66b4-4083-a357-6f49744ab494" width=40% height=40%>
+    - Final menu
+      <br>
+      Must be "c" or "t" or "q"
+      <br>
+      <img src="https://github.com/Jaaz7/dice-mania/assets/130407877/b36ee79b-f630-4f16-ac3a-e294e6c627d3" width=40% height=40%>
+    - Top up
       <br>
       Must be a number between 1 and 500
       <br>
-      <img src="https://github.com/Jaaz7/dice-mania/assets/130407877/f0a6a8d1-cc82-4dc1-9fe7-e2715cf44b85" width=50% height=50%>
+      <img src="https://github.com/Jaaz7/dice-mania/assets/130407877/fb6b1cbc-ce0a-4bf4-a055-cad881f26624" width=75% height=75%>
 
 ---
 ## Bugs
