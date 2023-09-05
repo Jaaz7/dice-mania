@@ -126,10 +126,23 @@ The player can then choose to continue, to top up or to quit the game. Topping u
     <br>
     ‎12. Deployed website [Dice Mania](https://dice-mania-d8c8705be82a.herokuapp.com/).
   - ### Forking The Github Repository
+    By forking the repository, a copy of the original one is made inside the GitHub account. This is important if one wants to view and make changes to a project without affecting the original. The steps are the following:
+    <br><br>
+    ‎1. Log in to GitHub and locate [GitHub Repository dice-mania](https://github.com/Jaaz7/dice-mania).
+    ‎2. At the top of the Repository, under the main navigation, locate "Fork" button.
+    ‎3. Now there should be a copy of the original repository in the GitHub account.
 ---
 ## Credits
   - ### Code
+    - Gained understanding of python through the Code Institute lessons.
+    - Gained knowledge about looping through ASCII dictionaries with @CodingProfessor on [YouTube](https://www.youtube.com/).
+    - Python 3.10.12 documentation.
+    - Termcolor color documentation.
   - ### Content
+    - Game idea given by my mentor Mitko Bachvarov.
+    - All the content was written by the developer Jaaziel do Vale.
 
   ---
   ## Acknowledgements
+    - My mentor Mitko Bachvarov for providing constructive feedback.
+    - Slack community and tutors for help and observartions.
