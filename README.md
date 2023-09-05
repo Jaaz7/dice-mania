@@ -1,15 +1,7 @@
 # Dice Mania
-**Dice Mania is a game where the player bets tokens to guess the total sum of a dice roll.**
+**A game where the player bets tokens to guess the total sum of a dice roll.**
 <br><br>
-The starting screen gives the user an option to read the rules.
-<br>
-Once this option is chosen, the player is prompted to charge their balance with the game's currency: tokens.
-<br><br>
-Once the tokens are accepted, a message will indicate it was successfully sumbitted.
-<br>
-The player will then start the game. They will be prompted to pick their bet, their dice number and their play option.
-<br><br>
-Overall Dice Mania is a simple idea which can be compared to classic dice games because due to its randomization. It's all about luck and unpredictability, keeping it interesting and fun.
+Dice Mania is a simple idea which can be compared to classic dice games due to its randomization. It's all about luck and unpredictability, keeping it interesting and fun.
 <br><br>
 <img src="https://github.com/Jaaz7/dice-mania/assets/130407877/d3f92459-be85-48ca-a79a-25d0922c0f35" width=90% height=90%>
 <br>
@@ -45,12 +37,14 @@ Overall Dice Mania is a simple idea which can be compared to classic dice games 
 
 ---
 ## How To Play
-The play options are "More", "Less", and "Same". Once chosen, the dice will be rolled and it will be decided whether the player wins or loses. This completes a play.
-<br>
-Winning means 2x the bet value, but there's also a jackpot that can be won if the player chooses 4 dice with the option "Same".
-<br>
-The player can then choose to continue, to top up or to quit the game. Topping up means adding more tokens to the current balance.
-<br>
+  - The starting screen gives the user an option to read the rules.
+  - Once this option is chosen, the player is prompted to charge their balance with the game's currency: tokens.
+  - Once the tokens are accepted, a message will indicate it was successfully sumbitted.
+  - The player will then start the game. They will be prompted to pick their bet, their dice number and their play option.
+  - The play options are "More", "Less", and "Same".
+  - Once chosen, the dice will be rolled and it will be decided whether the player wins or loses. This completes a play.
+  - Winning means 2x the bet value, but there's also a jackpot that can be won if the player chooses 4 dice with the option "Same".
+  - The player can then choose to continue, to top up or to quit the game. Topping up means adding more tokens to the current balance.
 
 ---
 ## Logic Flowchart
@@ -58,7 +52,12 @@ The player can then choose to continue, to top up or to quit the game. Topping u
 
 ---
 ## User Experience
-- 
+  - Dice Mania presents itself as an understandable and easy-to-interact game from the beginning.
+  - With different color schemes and an option to reveal the rules, it not only highlights important aspects and numbers of the game but it also increases its replayability, resulting in a cleaner experience for non-newcomers.
+  - The premise is to guess the total sum of the next dice roll against a number known before, it's easy enough to be interacted and quickly understood by people of all ages.
+  - The game has helpful tips that keep remembering players of things they can do.
+  - Its questions highlight the important input that is required by the player with colors.
+  - It has a 4x winning bet if the player wants to be riskier, it provides a good reward system that motivates players to go for big plays.
 
 ---
 ## Features
@@ -135,16 +134,18 @@ The player can then choose to continue, to top up or to quit the game. Topping u
     By forking the repository, a copy of the original one is made inside the GitHub account. This is important if one wants to view and make changes to a project without affecting the original. The steps are the following:
     <br><br>
     ‎1. Log in to GitHub and locate [GitHub Repository dice-mania](https://github.com/Jaaz7/dice-mania).
+    <br>
     ‎2. At the top of the Repository, under the main navigation, locate "Fork" button.
+    <br>
     ‎3. Now there should be a copy of the original repository in the GitHub account.
 
 ---
 ## Credits
   - ### Code
     - Gained understanding of python through the Code Institute lessons.
-    - Gained knowledge about looping through ASCII dictionaries with @CodingProfessor on [YouTube](https://www.youtube.com/).
+    - Gained knowledge about looping through ASCII dictionaries with @CodingProfessor on [YouTube](https://www.youtube.com/@CodingProfessor).
     - Python 3.10.12 documentation.
-    - Termcolor color documentation.
+    - [Termcolor Library](https://pypi.org/project/termcolor/) color documentation.
   - ### Content
     - Game idea given by my mentor Mitko Bachvarov.
     - All the content was written by the developer Jaaziel do Vale.
