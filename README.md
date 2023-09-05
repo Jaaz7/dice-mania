@@ -11,7 +11,7 @@ Dice Mania is a simple idea which can be compared to classic dice games due to i
 # Table of Contents
 - ### [How To Play](https://github.com/Jaaz7/dice-mania#how-to-play-1)
 - ### [Logic Flowchart](https://github.com/Jaaz7/dice-mania#logic-flowchart-1)
-- ### [User Experience (UX)](https://github.com/Jaaz7/dice-mania#user-experience)
+- ### [User Experience (UX)](https://github.com/Jaaz7/dice-mania#user-experience-ux-1)
 - ### [Features](https://github.com/Jaaz7/dice-mania#features-1)
   - [Existing Features](https://github.com/Jaaz7/dice-mania#existing-features)
   - [Features Left To Implement](https://github.com/Jaaz7/dice-mania#features-left-to-implement)
