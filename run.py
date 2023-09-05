@@ -157,7 +157,7 @@ def verify_bet(tokens, bet):
     except ValueError as e:
         print(f" Invalid data: {e}. Please try again.\n")
         return False
-    
+
 
 def update_tokens(tokens, bet):
     """

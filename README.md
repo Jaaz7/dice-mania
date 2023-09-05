@@ -17,6 +17,7 @@ Dice Mania is a simple idea which can be compared to classic dice games due to i
   - [Features Left To Implement](https://github.com/Jaaz7/dice-mania#features-left-to-implement)
 - ### [Design](https://github.com/Jaaz7/dice-mania#design-1)
   - [Colors](https://github.com/Jaaz7/dice-mania#colors)
+  - [Art Title](https://github.com/Jaaz7/dice-mania#art-title)
   - [Flowchart](https://github.com/Jaaz7/dice-mania#flowchart)
 - ### [Technologies Used](https://github.com/Jaaz7/dice-mania#technologies-used-1)
 - ### [Frameworls, Libraries & Programs Used](https://github.com/Jaaz7/dice-mania#frameworks-libraries--programs-used)
@@ -58,6 +59,7 @@ Dice Mania is a simple idea which can be compared to classic dice games due to i
   - The game has helpful tips that keep remembering players of things they can do.
   - Its questions highlight the important input that is required by the player with colors.
   - It has a 4x winning bet if the player wants to be riskier, it provides a good reward system that motivates players to go for big plays.
+  - The player is motivated to invite friends to play Dice Mania.
 
 ---
 ## Features
@@ -94,7 +96,7 @@ Dice Mania is a simple idea which can be compared to classic dice games due to i
   - [Github](https://github.com/)
     - to Deploy the website and storing files online.
   - [Text to ASCII art generator](https://patorjk.com/software/taag/#p=display&f=Graffiti&t=Type%20Something%20)
-    - to Create art for the project.
+    - to create art for the project.
   - [App.diagrams.net](https://app.diagrams.net/)
     - To create a logic flowchart diagram.
   - [Heroku](https://www.heroku.com/)
@@ -105,8 +107,12 @@ Dice Mania is a simple idea which can be compared to classic dice games due to i
 ---
 ## Testing
   - ### Manual Testing
-
+    - CI Python Linter was used to test run.py
+      <details><summary>Click to expand</summary>
+      <img src="x" width=90% height=90%>
+      </details>
   - ### Input Validation Testing
+    - The game was manually tested extensively from start to end while coding it, the website was deployed to heroku at a relative early stage with automation on because further testing was necessary to know how the app looks online. Testing of logo ASCII image display, rules display, tokens input validation, bet input validation, dice number input validation, play option input validation, menu choice input validation (continue, top up, quit) and top up validation were done and improved upon.
 
 ---
 ## Bugs
@@ -170,11 +176,9 @@ Dice Mania is a simple idea which can be compared to classic dice games due to i
     - Gained knowledge about looping through ASCII dictionaries with @CodingProfessor on [YouTube](https://www.youtube.com/@CodingProfessor).
     - Python 3.10.12 documentation.
     - [Termcolor Library](https://pypi.org/project/termcolor/) color documentation.
+    - [Dice ASCII art concept, implentation and logic.](https://inventwithpython.com/bigbookpython/project17.html)
   - ### Content
     - Game idea given by my mentor Mitko Bachvarov.
     - All the content was written by the developer Jaaziel do Vale.
 
 ---
-## Acknowledgements
-  - My mentor Mitko Bachvarov for providing constructive feedback.
-  - Slack community and tutors for help and observartions.
