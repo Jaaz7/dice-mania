@@ -41,7 +41,7 @@ Overall Dice Mania is a simple idea which can be compared to classic dice games 
 - ### [Credits](https://github.com/Jaaz7/dice-mania#credits-1)
   - [Code](https://github.com/Jaaz7/dice-mania#code)
   - [Content](https://github.com/Jaaz7/dice-mania#content)
-- ### Acknowledgements
+- ### [Acknowledgements](https://github.com/Jaaz7/dice-mania#acknowledgements-1)
 
 ---
 ## How To Play
@@ -88,7 +88,43 @@ The player can then choose to continue, to top up or to quit the game. Topping u
 ---        
 ## Deployment
   - ### Local Cloning
+    ‎ 1. Log in to GitHub and locate [GitHub Repository dice-mania](https://github.com/Jaaz7/dice-mania).
+    <br>
+    ‎ 2. Click on the green code button, select clone with HTTPS, SSH or GitHub CLI and copy the link shown.
+    <br>
+    ‎ 3. Open Git Bash.
+    <br>
+    ‎ 4. Change the current working directory to the location where you want the cloned directory to be created.
+    <br>
+    ‎ 5. Type `git clone` and then paste The URL copied in step 3.
+    <br>
+    ‎ 6. Press Enter and your local clone will be created.
   - ### Deploying to Heroku
+    To deploy with Heroku, Code Institute Python Essentials Template was used so the python code can be viewed in a terminal in a browser.
+    <br><br>
+    ‎ 1. Log in to Heroku or create a new account.
+    <br>
+    ‎ 2. On the main page click "New" and select "Create new app".
+    <br>
+    ‎ 3. Choose your unique app name and select your region.
+    <br>
+    ‎ 4. Click "Create app".
+    <br>
+    ‎ 5. On the next page find "settings" and locate "Config Vars".
+    <br>
+    ‎ 6. Click "Reveal Config Vars" and add "PORT" key and value "8000", click "Add".
+    <br>
+    ‎7. Scroll down, locate "Buildpack" and click "Add", select "Python".
+    <br>
+    ‎8. Repeat step 7. only this time add "Node.js", make sure "Python" is first on the list.
+    <br>
+    ‎9. Scroll to the top and select "Deploy" tab.
+    <br>
+    ‎10. Select GitHub as deployment method and search for your repository and link them together.
+    <br>
+    ‎11. Scroll down and select either "Enable Automatic Deploys" or "Manual Deploy".
+    <br>
+    ‎12. Deployed website [Dice Mania](https://dice-mania-d8c8705be82a.herokuapp.com/).
   - ### Forking The Github Repository
 ---
 ## Credits
