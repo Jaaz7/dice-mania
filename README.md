@@ -63,28 +63,34 @@ The player can then choose to continue, to top up or to quit the game. Topping u
 ---
 ## Features
   - ### Existing Features
+
   - ### Features Left To Implement
 
 ---
 ## Design
   - ### Colors
+
   - ### Flowchart
 
 ---
 ## Technologies Used
-  - 
+  - [Python](https://en.wikipedia.org/wiki/Python_(programming_language)).
+
 ---
 ## Frameworks, Libraries & Programs Used
 
 ---
 ## Testing
   - ### Manual Testing
+
   - ### Input Validation Testing
 
 ---
 ## Bugs
   - ### Fixed Bugs
+
   - ### Bugs Left To Fix
+
 ---        
 ## Deployment
   - ### Local Cloning
@@ -131,6 +137,7 @@ The player can then choose to continue, to top up or to quit the game. Topping u
     ‎1. Log in to GitHub and locate [GitHub Repository dice-mania](https://github.com/Jaaz7/dice-mania).
     ‎2. At the top of the Repository, under the main navigation, locate "Fork" button.
     ‎3. Now there should be a copy of the original repository in the GitHub account.
+
 ---
 ## Credits
   - ### Code
@@ -143,6 +150,6 @@ The player can then choose to continue, to top up or to quit the game. Topping u
     - All the content was written by the developer Jaaziel do Vale.
 
   ---
-  ## Acknowledgements
-    - My mentor Mitko Bachvarov for providing constructive feedback.
-    - Slack community and tutors for help and observartions.
+## Acknowledgements
+  - My mentor Mitko Bachvarov for providing constructive feedback.
+  - Slack community and tutors for help and observartions.
