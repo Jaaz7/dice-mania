@@ -180,10 +180,10 @@ Dice Mania is a simple idea which can be compared to classic dice games due to i
     - [Termcolor Library](https://pypi.org/project/termcolor/) color documentation.
     - [InventWithPython](https://inventwithpython.com/bigbookpython/project17.html). Dice ASCII art concept, implentation and logic.
   - ### Content
-    - Game idea given by my mentor Mitko Bachvarov.
-    - All the content was written by the developer Jaaziel do Vale.
+    - Game idea given by mentor Mitko Bachvarov.
+    - All code and content were written by Jaaziel do Vale.
 
 ---
 ## Acknowledgements
-  - My mentor Mitko Bachvarov for providing constructive feedback.
+  - Mentor Mitko Bachvarov for providing constructive feedback.
   - Slack community and tutors for help and observartions.
