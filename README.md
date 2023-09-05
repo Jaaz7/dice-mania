@@ -38,9 +38,9 @@ Overall Dice Mania is a simple idea which can be compared to classic dice games 
   - [Local Cloning](https://github.com/Jaaz7/dice-mania#local-cloning)
   - [Deploying To Heroku](https://github.com/Jaaz7/dice-mania#local-cloning)
   - [Forking The Github Repository](https://github.com/Jaaz7/dice-mania#local-cloning)
-- ### Credits
-  - Code
-  - Content
+- ### [Credits](https://github.com/Jaaz7/dice-mania#credits-1)
+  - [Code](https://github.com/Jaaz7/dice-mania#code)
+  - [Content](https://github.com/Jaaz7/dice-mania#content)
 - ### Acknowledgements
 
 ---
@@ -94,3 +94,6 @@ The player can then choose to continue, to top up or to quit the game. Topping u
 ## Credits
   - ### Code
   - ### Content
+
+  ---
+  ## Acknowledgements
