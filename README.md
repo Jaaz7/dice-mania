@@ -121,7 +121,7 @@ Dice Mania is a simple idea which can be compared to classic dice games due to i
   - ### Fixed Bugs
 
   - ### Bugs Left To Fix
-    - No detected unflixed bugs.
+    - No detected unfixed bugs.
 ---        
 ## Deployment
   - ### Local Cloning
