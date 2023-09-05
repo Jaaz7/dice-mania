@@ -198,7 +198,7 @@ def choose_play(mania_nr):
             print('')
             break
         else:
-            print(f' {opt} is not valid, please try again.\n')
+            print(f'\n     {opt} is not valid, please try again.\n')
             continue
     return opt
 

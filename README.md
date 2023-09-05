@@ -114,12 +114,34 @@ Dice Mania is a simple idea which can be compared to classic dice games due to i
     - The game was manually tested extensively from start to end while coding it, the website was deployed to heroku at a relative early stage with automation on because further testing was necessary to know how the app looks online.
     - Testing of logo ASCII image display, rules display, tokens input validation, bet input validation, dice number input validation, play option input validation, menu choice input validation (continue, top up, quit) and top up            validation were done and improved upon.
   - ### Input Validation Testing
-    - 
+    - Display rules
+      <br>
+      Must be "y" or "n"
+      <br>
+      <img src="https://github.com/Jaaz7/dice-mania/assets/130407877/f0a6a8d1-cc82-4dc1-9fe7-e2715cf44b85" width=50% height=50%>
+    - Charge tokens
+      <br>
+      Must be a number between 1 and 500
+      <br>
+      <img src="https://github.com/Jaaz7/dice-mania/assets/130407877/f0a6a8d1-cc82-4dc1-9fe7-e2715cf44b85" width=50% height=50%>
+    - Place bet
+      <br>
+      Must be a number between 1 and current balance
+      <br>
+      <img src="https://github.com/Jaaz7/dice-mania/assets/130407877/f0a6a8d1-cc82-4dc1-9fe7-e2715cf44b85" width=50% height=50%>
+    - Charge tokens
+      <br>
+      Must be a number between 1 and 500
+      <br>
+      <img src="https://github.com/Jaaz7/dice-mania/assets/130407877/f0a6a8d1-cc82-4dc1-9fe7-e2715cf44b85" width=50% height=50%>
 
 ---
 ## Bugs
   - ### Fixed Bugs
-
+    - Fixed a bug where the dice were not being updated, Turns out the variable to carry on the updated dice number from the second game on was wrong.
+    - Fixed a bug where the topped up tokens were not being carried on to the next loop, this was an easy fix as I was using the var wih the old token balance instead of the updated one that was topped up.
+    - Fixed a bug where the old dice roll sum was not being accounted for (the mania number). This was a matter of inverting both variables I was using to do the math with the old plus new mania numbers.
+    - Fixed a bug where if you bet your total balance and win, the game stops. This was an easy fix because the variable being used to pass on the tokens was the old one (with a value of 0), not the variable with the new balance, which accounts the bet that was just won.
   - ### Bugs Left To Fix
     - No detected unfixed bugs.
 ---        
