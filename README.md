@@ -88,31 +88,31 @@ The player can then choose to continue, to top up or to quit the game. Topping u
 ---        
 ## Deployment
   - ### Local Cloning
-    ‎ 1. Log in to GitHub and locate [GitHub Repository dice-mania](https://github.com/Jaaz7/dice-mania).
+    ‎1. Log in to GitHub and locate [GitHub Repository dice-mania](https://github.com/Jaaz7/dice-mania).
     <br>
-    ‎ 2. Click on the green code button, select clone with HTTPS, SSH or GitHub CLI and copy the link shown.
+    ‎2. Click on the green code button, select clone with HTTPS, SSH or GitHub CLI and copy the link shown.
     <br>
-    ‎ 3. Open Git Bash.
+    ‎3. Open Git Bash.
     <br>
-    ‎ 4. Change the current working directory to the location where you want the cloned directory to be created.
+    ‎4. Change the current working directory to the location where you want the cloned directory to be created.
     <br>
-    ‎ 5. Type `git clone` and then paste The URL copied in step 3.
+    ‎5. Type `git clone` and then paste The URL copied in step 3.
     <br>
-    ‎ 6. Press Enter and your local clone will be created.
+    ‎6. Press Enter and your local clone will be created.
   - ### Deploying to Heroku
-    To deploy with Heroku, Code Institute Python Essentials Template was used so the python code can be viewed in a terminal in a browser.
+    To deploy to Heroku, Code Institute Python Essentials Template was used so the python app can be viewed in a terminal in a browser.
     <br><br>
-    ‎ 1. Log in to Heroku or create a new account.
+    ‎1. Log in to Heroku or create a new account.
     <br>
-    ‎ 2. On the main page click "New" and select "Create new app".
+    ‎2. On the main page click "New" and select "Create new app".
     <br>
-    ‎ 3. Choose your unique app name and select your region.
+    ‎3. Choose your unique app name and select your region.
     <br>
-    ‎ 4. Click "Create app".
+    ‎4. Click "Create app".
     <br>
-    ‎ 5. On the next page find "settings" and locate "Config Vars".
+    ‎5. On the next page find "settings" and locate "Config Vars".
     <br>
-    ‎ 6. Click "Reveal Config Vars" and add "PORT" key and value "8000", click "Add".
+    ‎6. Click "Reveal Config Vars" and add "PORT" key and value "8000", click "Add".
     <br>
     ‎7. Scroll down, locate "Buildpack" and click "Add", select "Python".
     <br>
