@@ -283,7 +283,7 @@ def new_play(tokens, bet, play, old_mania, nr_mania, dice_nr, loop):
                 print(string1, bold.BOLD + colored(tokens, 'cyan'), string2)
                 sys.exit()
             else:
-                print('This input is not valid, please try again.')
+                print('\n This input is not valid, please try again.')
                 continue
 
     elif (play == 'm') and (new_mania_nr == old_mania):
@@ -329,7 +329,7 @@ def new_play(tokens, bet, play, old_mania, nr_mania, dice_nr, loop):
                 print(string1, bold.BOLD + colored(tokens, 'cyan'), string2)
                 sys.exit()
             else:
-                print('This input is not valid, please try again.')
+                print('\n This input is not valid, please try again.')
                 continue
 
     elif (play == 'm') and (new_mania_nr > old_mania):
@@ -375,7 +375,7 @@ def new_play(tokens, bet, play, old_mania, nr_mania, dice_nr, loop):
                 print(string1, bold.BOLD + colored(new_tokens, 'cyan'), string2)
                 sys.exit()
             else:
-                print('This input is not valid, please try again.')
+                print('\n This input is not valid, please try again.')
                 continue
 
     elif (play == 'l') and (new_mania_nr > old_mania):
@@ -421,7 +421,7 @@ def new_play(tokens, bet, play, old_mania, nr_mania, dice_nr, loop):
                 print(string1, bold.BOLD + colored(tokens, 'cyan'), string2)
                 sys.exit()
             else:
-                print(' This input is not valid, please try again.')
+                print('\n This input is not valid, please try again.')
                 continue
 
     elif (play == 'l') and (new_mania_nr == old_mania):
@@ -467,7 +467,7 @@ def new_play(tokens, bet, play, old_mania, nr_mania, dice_nr, loop):
                 print(string1, bold.BOLD + colored(tokens, 'cyan'), string2)
                 sys.exit()
             else:
-                print(' This input is not valid, please try again.')
+                print('\n This input is not valid, please try again.')
                 continue
 
     elif (play == 'l') and (new_mania_nr < old_mania):
@@ -514,7 +514,7 @@ def new_play(tokens, bet, play, old_mania, nr_mania, dice_nr, loop):
                 print(string1, bold.BOLD + colored(new_tokens, 'cyan'), string2)
                 sys.exit()
             else:
-                print(' This input is not valid, please try again.')
+                print('\n This input is not valid, please try again.')
                 continue
 
     elif (play == 's') and (new_mania_nr > old_mania):
@@ -560,7 +560,7 @@ def new_play(tokens, bet, play, old_mania, nr_mania, dice_nr, loop):
                 print(string1, bold.BOLD + colored(tokens, 'cyan'), string2)
                 sys.exit()
             else:
-                print(' This input is not valid, please try again.')
+                print('\n This input is not valid, please try again.')
                 continue
 
     elif (play == 's') and (new_mania_nr < old_mania):
@@ -606,7 +606,7 @@ def new_play(tokens, bet, play, old_mania, nr_mania, dice_nr, loop):
                 print(string1, bold.BOLD + colored(tokens, 'cyan'), string2)
                 sys.exit()
             else:
-                print(' This input is not valid, please try again.')
+                print('\n This input is not valid, please try again.')
                 continue
 
     elif (play == 's') and (new_mania_nr == old_mania) and (dice_nr == 4):
@@ -653,7 +653,7 @@ def new_play(tokens, bet, play, old_mania, nr_mania, dice_nr, loop):
                 print(string1, bold.BOLD + colored(new_tokens, 'cyan'), string2)
                 sys.exit()
             else:
-                print(' This input is not valid, please try again.')
+                print('\n This input is not valid, please try again.')
                 continue
 
     elif (play == 's') and (new_mania_nr == old_mania):
@@ -700,7 +700,7 @@ def new_play(tokens, bet, play, old_mania, nr_mania, dice_nr, loop):
                 print(string1, bold.BOLD + colored(new_tokens, 'cyan'), string2)
                 sys.exit()
             else:
-                print(' This input is not valid, please try again.')
+                print('\n This input is not valid, please try again.')
                 continue
 
 
