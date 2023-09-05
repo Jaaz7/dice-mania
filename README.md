@@ -11,13 +11,13 @@ The player will then start the game. They will be prompted to pick their bet, th
 <br><br>
 Overall Dice Mania is a simple idea which can be compared to classic dice games because due to its randomization. It's all about luck and unpredictability, keeping it interesting and fun.
 <br><br>
-<img src="https://github.com/Jaaz7/dice-mania/assets/130407877/d3f92459-be85-48ca-a79a-25d0922c0f35" width=100% height=100%>
+<img src="https://github.com/Jaaz7/dice-mania/assets/130407877/d3f92459-be85-48ca-a79a-25d0922c0f35" width=90% height=90%>
 <br>
 **[Visit the live project here.](https://dice-mania-d8c8705be82a.herokuapp.com/)**
 
 ---
 # Table of Contents
-- ### How To Play
+- ### [How To Play](https://github.com/Jaaz7/dice-mania#how-to-play-1)
 - ### Logic Flowchart
 - ### User Experience (UX)
 - ### Features
@@ -54,7 +54,7 @@ The player can then choose to continue, to top up or to quit the game. Topping u
 
 ---
 ## Logic Flowchart
-- 
+- <img src="https://github.com/Jaaz7/dice-mania/assets/130407877/e8d0b9c7-0ae3-448d-b557-e9a29ca0417e" width=90% height=90%>
 
 ---
 ## User Experience
