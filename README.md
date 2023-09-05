@@ -122,14 +122,19 @@ Dice Mania is a simple idea which can be compared to classic dice games due to i
       <br><br>
       If the player bets all their balance, a different message will appear
       <br>
-      clearly demonstrating their balance in a red "0". Confirming they've just made an all-in.
+      clearly demonstrating their balance in a red "0". Confirming they've just made an all-in:
       <br>
       <img src="https://github.com/Jaaz7/dice-mania/assets/130407877/9d9ad8c6-f498-4585-a574-b79b2cf82f72" width=50% height=50%>
     - Quitting
       <br><br>
-      If the player quits, a message thanks the player for playing and shows the total tokens they've redeemed.
+      If the player quits, a message thanks the player for playing and shows the total tokens they've redeemed:
       <br>
-      <img src="https://github.com/Jaaz7/dice-mania/assets/130407877/b89edfb3-70d5-4253-9d42-76448869aca7" width=50% height=50%>
+      <img src="https://github.com/Jaaz7/dice-mania/assets/130407877/cbf3da19-4972-46a1-9e97-2c2b13a4649d" width=50% height=50%>
+    - Game over message
+      <br><br>
+      When the player runs out of tokens a message will inform that it's game over:
+      <br>
+      <img src="https://github.com/Jaaz7/dice-mania/assets/130407877/fc85c96a-ea9d-4624-8562-bda4fb5a7bbb" width=40% height=40%>
   - ### Features Left To Implement
     - Option to cancel the top up, going back to the pervious menu.
     - Option to play with more than 4 dice.
