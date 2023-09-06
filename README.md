@@ -125,7 +125,7 @@ Dice Mania is a simple idea which can be compared to classic dice games due to i
       <br>
       clearly demonstrating their balance in a red "0". Confirming they've just made an all-in:
       <br>
-      <img src="https://github.com/Jaaz7/dice-mania/assets/130407877/9d9ad8c6-f498-4585-a574-b79b2cf82f72" width=60% height=60%>
+      <img src="https://github.com/Jaaz7/dice-mania/assets/130407877/9d9ad8c6-f498-4585-a574-b79b2cf82f72" width=80% height=80%>
     - Quitting
       <br><br>
       If the player quits, a message thanks the player for playing and shows the total tokens they've redeemed:
@@ -206,17 +206,17 @@ Dice Mania is a simple idea which can be compared to classic dice games due to i
       <br><br>
       Must be "y" or "n":
       <br>
-      <img src="https://github.com/Jaaz7/dice-mania/assets/130407877/f0a6a8d1-cc82-4dc1-9fe7-e2715cf44b85" width=80% height=80%>
+      <img src="https://github.com/Jaaz7/dice-mania/assets/130407877/f0a6a8d1-cc82-4dc1-9fe7-e2715cf44b85" width=60% height=60%>
     - Charge tokens
       <br><br>
       Must be a number between 1 and 500:
       <br>
-      <img src="https://github.com/Jaaz7/dice-mania/assets/130407877/ac51cdfd-f38e-445a-85f8-14d4a6370f17" width=80% height=80%>
+      <img src="https://github.com/Jaaz7/dice-mania/assets/130407877/ac51cdfd-f38e-445a-85f8-14d4a6370f17" width=100% height=100%>
     - Place bet
       <br><br>
       Must be a number between 1 and current balance:
       <br>
-      <img src="https://github.com/Jaaz7/dice-mania/assets/130407877/ce8e8ab7-e88b-4008-b8d9-8ffd3fe8d94c" width=80% height=80%>
+      <img src="https://github.com/Jaaz7/dice-mania/assets/130407877/ce8e8ab7-e88b-4008-b8d9-8ffd3fe8d94c" width=100% height=100%>
     - Choose dice number
       <br><br>
       Must be a number between 2 and 4:
@@ -226,17 +226,17 @@ Dice Mania is a simple idea which can be compared to classic dice games due to i
       <br><br>
       Must be "m" or "l" or "s":
       <br>
-      <img src="https://github.com/Jaaz7/dice-mania/assets/130407877/c4d275fc-66b4-4083-a357-6f49744ab494" width=80% height=80%>
+      <img src="https://github.com/Jaaz7/dice-mania/assets/130407877/c4d275fc-66b4-4083-a357-6f49744ab494" width=60% height=60%>
     - Final menu
       <br><br>
       Must be "c" or "t" or "q":
       <br>
-      <img src="https://github.com/Jaaz7/dice-mania/assets/130407877/b36ee79b-f630-4f16-ac3a-e294e6c627d3" width=80% height=80%>
+      <img src="https://github.com/Jaaz7/dice-mania/assets/130407877/b36ee79b-f630-4f16-ac3a-e294e6c627d3" width=60% height=60%>
     - Top up
       <br><br>
       Must be a number between 1 and 500:
       <br>
-      <img src="https://github.com/Jaaz7/dice-mania/assets/130407877/fb6b1cbc-ce0a-4bf4-a055-cad881f26624" width=80% height=80%>
+      <img src="https://github.com/Jaaz7/dice-mania/assets/130407877/fb6b1cbc-ce0a-4bf4-a055-cad881f26624" width=90% height=90%>
 
 ---
 ## Bugs
