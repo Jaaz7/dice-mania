@@ -197,7 +197,7 @@ Dice Mania is a simple idea which can be compared to classic dice games due to i
       |All-In|To show a message showing a red balance of "0"|Bet the totality of the balance|As expected|<img src="https://github.com/Jaaz7/dice-mania/assets/130407877/9d9ad8c6-f498-4585-a574-b79b2cf82f72" width=90% height=90%>|
       |Quit|To thank the player for playing and show the total redeemed tokens|Input "q" to quit|As expected|<img src="https://github.com/Jaaz7/dice-mania/assets/130407877/cbf3da19-4972-46a1-9e97-2c2b13a4649d" width=100% height=100%>|
       |Game Over|To dsplay a game over message to the player|Run out of tokens|As expected|<img src="https://github.com/Jaaz7/dice-mania/assets/130407877/fc85c96a-ea9d-4624-8562-bda4fb5a7bbb" width=90% height=90%>|
-      |Final Menu|To accept "c" or "t" or "q"|Input "c" to continue<br><br> Input "t" to top-up<br><br>Input "q" to quit|As expected|<img src="https://github.com/Jaaz7/dice-mania/assets/130407877/b36ee79b-f630-4f16-ac3a-e294e6c627d3" width=90% height=90%>|
+      |Final Menu|To accept "c" or "t" or "q"|Input "c" to continue<br><br> Input "t" to top-up<br><br>Input "q" to quit|As expected|<img src="https://github.com/Jaaz7/dice-mania/assets/130407877/a111f917-3b2a-4289-811f-c2b59d2209dd" width=90% height=90%>|
       |Top Up|To accept a number between 1 and 500|Run out of tokens|As expected|<img src="https://github.com/Jaaz7/dice-mania/assets/130407877/fc85c96a-ea9d-4624-8562-bda4fb5a7bbb" width=90% height=90%>|
   - ### Input Validation Testing
     - Display rules
