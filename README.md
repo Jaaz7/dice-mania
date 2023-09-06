@@ -69,12 +69,12 @@ Dice Mania is a simple idea which can be compared to classic dice games due to i
       <br><br>
       Displays the logo, a welcome message and some tips:
       <br>
-      <img src="https://github.com/Jaaz7/dice-mania/assets/130407877/1b54b57b-847b-42a6-8966-966f64668d50" width=70% height=70%>
+      <img src="https://github.com/Jaaz7/dice-mania/assets/130407877/1b54b57b-847b-42a6-8966-966f64668d50" width=90% height=90%>
     - Show rules
       <br><br>
       Rules are shown when choosing "y":
       <br>
-      <img src="https://github.com/Jaaz7/dice-mania/assets/130407877/2b277fd9-4dbc-4e95-8f30-32f26b6fcd0f" width=70% height=70%>
+      <img src="https://github.com/Jaaz7/dice-mania/assets/130407877/2b277fd9-4dbc-4e95-8f30-32f26b6fcd0f" width=90% height=90%>
     - Charge tokens prompt
       <br><br>
       Confirmation that tokens were accepted:
@@ -86,14 +86,14 @@ Dice Mania is a simple idea which can be compared to classic dice games due to i
       <br>
       After the bet is accepted, a messaeg will confirm this and display the remaining tokens:
       <br>
-      <img src="https://github.com/Jaaz7/dice-mania/assets/130407877/34770609-1341-4dc8-85ec-e4df77aa28d8" width=50% height=50%>
+      <img src="https://github.com/Jaaz7/dice-mania/assets/130407877/34770609-1341-4dc8-85ec-e4df77aa28d8" width=70% height=70%>
     - Choose dice number prompt
       <br><br>
       A tip reminding about the jackpot is shown
       <br>
       Confirmation that the dice number was accepted:
       <br>
-      <img src="https://github.com/Jaaz7/dice-mania/assets/130407877/e9d582c9-acd8-4b4b-acc0-701ea69ac0f8" width=60% height=60%>
+      <img src="https://github.com/Jaaz7/dice-mania/assets/130407877/e9d582c9-acd8-4b4b-acc0-701ea69ac0f8" width=70% height=70%>
     - Choose play option prompt and conclusion of the play
       <br><br>
       After choosing, the dice are immediately rolled
@@ -130,7 +130,7 @@ Dice Mania is a simple idea which can be compared to classic dice games due to i
       <br><br>
       If the player quits, a message thanks the player for playing and shows the total tokens they've redeemed:
       <br>
-      <img src="https://github.com/Jaaz7/dice-mania/assets/130407877/cbf3da19-4972-46a1-9e97-2c2b13a4649d" width=50% height=50%>
+      <img src="https://github.com/Jaaz7/dice-mania/assets/130407877/cbf3da19-4972-46a1-9e97-2c2b13a4649d" width=70% height=70%>
     - Game over message
       <br><br>
       When the player runs out of tokens a message will inform that it's game over:
