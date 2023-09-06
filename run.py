@@ -184,7 +184,9 @@ def how_many_dice():
             string4 = ' to play this round? (2-4 possible): '
             x = int(input(string3 + string4))
             if (x < 2) or (x > 4):
-                print(' The number has to be between 2 and 4, please try again.\n')
+                string1 = ' The number has to be between'
+                string2 = ' 2 and 4, please try again.\n'
+                print(string1 + string2)
                 continue
             if (x >= 2) and (x <= 4):
                 print(f' You chose {x} dice.')
@@ -201,7 +203,17 @@ def choose_play(mania_nr):
     Asks the player to choose their play: more, less or same.
     """
     while True:
-        opt = input(f'\n Guess the next Mania Number!\n     It will be more than {mania_nr} (press {bold.BOLD + bold.YELLOW + "M" + bold.END})\n     It will be less than {mania_nr} (press {bold.BOLD + bold.YELLOW + "L" + bold.END})\n     It will be the same as {mania_nr} (press {bold.BOLD + bold.YELLOW + "S" + bold.END}): ').lower()
+        string1 = '\n Guess the next Mania Number!\n     '
+        string2 = 'It will be more than '
+        string3 = ', press '
+        string4 = '\n     It will be less than '
+        string5 = '\n     It will be the same as '
+        opt = input(string1 + string2 + str(mania_nr) + string3 +
+                    bold.BOLD + bold.YELLOW +
+                    "M" + bold.END + string4 + str(mania_nr) + string3
+                    + bold.BOLD + bold.YELLOW + "L" + bold.END
+                    + string5 + str(mania_nr) + string3 + bold.BOLD
+                    + bold.YELLOW + "S" + bold.END + ': ').lower()
         if (opt == 'm') or (opt == 'l') or (opt == 's'):
             print('')
             break
@@ -215,7 +227,9 @@ def roll_dice(dice_nr):
     """
     Rolls the number of dice chosen.
     """
-    print(bold.BOLD + colored(f' Rolling {dice_nr} dice on the table...', 'yellow'))
+    string1 = ' Rolling '
+    string2 = ' dice on the table...'
+    print(bold.BOLD + colored(string1 + str(dice_nr) + string2, 'yellow'))
     time.sleep(1)
     dice = []
     total = 0
@@ -224,7 +238,9 @@ def roll_dice(dice_nr):
 
     for line in range(5):
         for die in dice:
-            print(bold.BOLD + colored(bold.BOLD + DICE_ART.get(die)[line], 'yellow'), end="")
+            print(bold.BOLD + colored(bold.BOLD +
+                                      DICE_ART.get(die)[line],
+                                      'yellow'), end="")
         print()
 
     for die in dice:
@@ -236,7 +252,8 @@ def roll_dice(dice_nr):
 def new_play(tokens, bet, play, old_mania, nr_mania, dice_nr, loop):
     """
     Creates a new play with collected data:
-    tokens, bet, play option, old mania number, new mania number, dice number and loop.
+    tokens, bet, play option, old mania number,
+    new mania number, dice number and loop.
 
     Creates three options at the end of each play:
     Continue, top up or quit.
@@ -250,7 +267,13 @@ def new_play(tokens, bet, play, old_mania, nr_mania, dice_nr, loop):
 
     if (play == 'm') and (new_mania_nr < old_mania):
         print(bold.BOLD + colored(f'\n You lose', 'red'))
-        print(f' You chose {bold.BOLD + bold.YELLOW + "More" + bold.END}.\n {new_mania_nr} < {old_mania}')
+        string1 = ' You chose '
+        string2 = 'More'
+        string3 = '.\n '
+        string4 = ' < '
+        print(string1 + bold.BOLD + bold.YELLOW + string2 +
+              bold.END + string3 + str(new_mania_nr) +
+              string4 + str(old_mania))
         string1 = '\n Your token balance:'
         if tokens == 0:
             string1 = '\n Your token balance:'
@@ -267,14 +290,22 @@ def new_play(tokens, bet, play, old_mania, nr_mania, dice_nr, loop):
                 sys.exit()
 
         while True:
-            y = input(f'\n Would you like to continue? (press {bold.BOLD + bold.YELLOW + "C" + bold.END});\n Top up & continue? (press {bold.BOLD + bold.YELLOW + "T" + bold.END})\n Quit? (Press {bold.BOLD + bold.YELLOW + "Q" + bold.END}): ').lower()
+            string1 = '\n Would you like to continue? (press '
+            string2 = ')\n Top up & continue? (press '
+            string3 = ')\n Quit? (Press '
+            string4 = '): '
+            y = input(string1 + bold.BOLD + bold.YELLOW + "C" + bold.END +
+                      string2 + bold.BOLD + bold.YELLOW + "T" + bold.END +
+                      string3 + bold.BOLD + bold.YELLOW + "Q" + bold.END +
+                      string4).lower()
             if y == 'c':
                 bet_nr, updated_tokens = place_bet(tokens, new_mania_nr)
                 updated_dice_nr = how_many_dice()
                 play_name = choose_play(new_mania_nr)
                 updated_mania_nr = roll_dice(updated_dice_nr)
                 loop = 1
-                new_play(updated_tokens, bet_nr, play_name, new_mania_nr, updated_mania_nr, updated_dice_nr, loop)
+                new_play(updated_tokens, bet_nr, play_name,
+                         new_mania_nr, updated_mania_nr, updated_dice_nr, loop)
                 break
             elif y == 't':
                 new_balance = top_up(tokens)
@@ -283,7 +314,8 @@ def new_play(tokens, bet, play, old_mania, nr_mania, dice_nr, loop):
                 play_name = choose_play(new_mania_nr)
                 updated_mania_nr = roll_dice(updated_dice_nr)
                 loop = 1
-                new_play(updated_tokens, bet_nr, play_name, new_mania_nr, updated_mania_nr, updated_dice_nr, loop)
+                new_play(updated_tokens, bet_nr, play_name,
+                         new_mania_nr, updated_mania_nr, updated_dice_nr, loop)
                 break
             elif y == 'q':
                 string1 = "\n Thanks for playing! You've redeemed"
@@ -296,7 +328,13 @@ def new_play(tokens, bet, play, old_mania, nr_mania, dice_nr, loop):
 
     elif (play == 'm') and (new_mania_nr == old_mania):
         print(bold.BOLD + colored(f'\n You lose.', 'red'))
-        print(f' You chose {bold.BOLD + bold.YELLOW + "More" + bold.END}.\n {new_mania_nr} = {old_mania}')
+        string1 = ' You chose '
+        string2 = 'More'
+        string3 = '.\n '
+        string4 = ' = '
+        print(string1 + bold.BOLD + bold.YELLOW + string2 +
+              bold.END + string3 + str(new_mania_nr) +
+              string4 + str(old_mania))
         string1 = '\n Your token balance:'
         if tokens == 0:
             string1 = '\n Your token balance:'
@@ -313,14 +351,22 @@ def new_play(tokens, bet, play, old_mania, nr_mania, dice_nr, loop):
                 sys.exit()
 
         while True:
-            y = input(f'\n Would you like to continue? (press {bold.BOLD + bold.YELLOW + "C" + bold.END});\n Top up & continue? (press {bold.BOLD + bold.YELLOW + "T" + bold.END})\n Quit? (Press {bold.BOLD + bold.YELLOW + "Q" + bold.END}): ').lower()
+            string1 = '\n Would you like to continue? (press '
+            string2 = ')\n Top up & continue? (press '
+            string3 = ')\n Quit? (Press '
+            string4 = '): '
+            y = input(string1 + bold.BOLD + bold.YELLOW + "C" + bold.END +
+                      string2 + bold.BOLD + bold.YELLOW + "T" + bold.END +
+                      string3 + bold.BOLD + bold.YELLOW + "Q" + bold.END +
+                      string4).lower()
             if y == 'c':
                 bet_nr, updated_tokens = place_bet(tokens, new_mania_nr)
                 updated_dice_nr = how_many_dice()
                 play_name = choose_play(new_mania_nr)
                 updated_mania_nr = roll_dice(updated_dice_nr)
                 loop = 1
-                new_play(updated_tokens, bet_nr, play_name, new_mania_nr, updated_mania_nr, updated_dice_nr, loop)
+                new_play(updated_tokens, bet_nr, play_name,
+                         new_mania_nr, updated_mania_nr, updated_dice_nr, loop)
                 break
             elif y == 't':
                 new_balance = top_up(tokens)
@@ -329,7 +375,8 @@ def new_play(tokens, bet, play, old_mania, nr_mania, dice_nr, loop):
                 play_name = choose_play(new_mania_nr)
                 updated_mania_nr = roll_dice(updated_dice_nr)
                 loop = 1
-                new_play(updated_tokens, bet_nr, play_name, new_mania_nr, updated_mania_nr, updated_dice_nr, loop)
+                new_play(updated_tokens, bet_nr, play_name,
+                         new_mania_nr, updated_mania_nr, updated_dice_nr, loop)
                 break
             elif y == 'q':
                 string1 = "\n Thanks for playing! You've redeemed"
@@ -342,7 +389,13 @@ def new_play(tokens, bet, play, old_mania, nr_mania, dice_nr, loop):
 
     elif (play == 'm') and (new_mania_nr > old_mania):
         print(bold.BOLD + colored(f'\n You win {bet * 2} tokens!', 'cyan'))
-        print(f' You chose {bold.BOLD + bold.YELLOW + "More" + bold.END}.\n {new_mania_nr} > {old_mania}')
+        string1 = ' You chose '
+        string2 = 'More'
+        string3 = '.\n '
+        string4 = ' > '
+        print(string1 + bold.BOLD + bold.YELLOW + string2 +
+              bold.END + string3 + str(new_mania_nr) +
+              string4 + str(old_mania))
         new_tokens = tokens + (bet * 2)
         if new_tokens == 0:
             string1 = '\n Your token balance:'
@@ -359,14 +412,22 @@ def new_play(tokens, bet, play, old_mania, nr_mania, dice_nr, loop):
                 sys.exit()
 
         while True:
-            y = input(f'\n Would you like to continue? (press {bold.BOLD + bold.YELLOW + "C" + bold.END});\n Top up & continue? (press {bold.BOLD + bold.YELLOW + "T" + bold.END})\n Quit? (Press {bold.BOLD + bold.YELLOW + "Q" + bold.END}): ').lower()
+            string1 = '\n Would you like to continue? (press '
+            string2 = ')\n Top up & continue? (press '
+            string3 = ')\n Quit? (Press '
+            string4 = '): '
+            y = input(string1 + bold.BOLD + bold.YELLOW + "C" + bold.END +
+                      string2 + bold.BOLD + bold.YELLOW + "T" + bold.END +
+                      string3 + bold.BOLD + bold.YELLOW + "Q" + bold.END +
+                      string4).lower()
             if y == 'c':
                 bet_nr, updated_tokens = place_bet(new_tokens, new_mania_nr)
                 updated_dice_nr = how_many_dice()
                 play_name = choose_play(new_mania_nr)
                 updated_mania_nr = roll_dice(updated_dice_nr)
                 loop = 1
-                new_play(updated_tokens, bet_nr, play_name, new_mania_nr, updated_mania_nr, updated_dice_nr, loop)
+                new_play(updated_tokens, bet_nr, play_name,
+                         new_mania_nr, updated_mania_nr, updated_dice_nr, loop)
                 break
             elif y == 't':
                 new_balance = top_up(new_tokens)
@@ -375,12 +436,14 @@ def new_play(tokens, bet, play, old_mania, nr_mania, dice_nr, loop):
                 play_name = choose_play(new_mania_nr)
                 updated_mania_nr = roll_dice(updated_dice_nr)
                 loop = 1
-                new_play(updated_tokens, bet_nr, play_name, new_mania_nr, updated_mania_nr, updated_dice_nr, loop)
+                new_play(updated_tokens, bet_nr, play_name,
+                         new_mania_nr, updated_mania_nr, updated_dice_nr, loop)
                 break
             elif y == 'q':
                 string1 = "\n Thanks for playing! You've redeemed"
                 string2 = 'tokens.'
-                print(string1, bold.BOLD + colored(new_tokens, 'cyan'), string2)
+                print(string1, bold.BOLD + colored(new_tokens, 'cyan'),
+                      string2)
                 sys.exit()
             else:
                 print('\n This input is not valid, please try again.')
@@ -388,7 +451,13 @@ def new_play(tokens, bet, play, old_mania, nr_mania, dice_nr, loop):
 
     elif (play == 'l') and (new_mania_nr > old_mania):
         print(bold.BOLD + colored(f'\n You lose.', 'red'))
-        print(f' You chose {bold.BOLD + bold.YELLOW + "Less" + bold.END}.\n {new_mania_nr} > {old_mania}')
+        string1 = ' You chose '
+        string2 = 'Less'
+        string3 = '.\n '
+        string4 = ' > '
+        print(string1 + bold.BOLD + bold.YELLOW + string2 +
+              bold.END + string3 + str(new_mania_nr) +
+              string4 + str(old_mania))
         string1 = '\n Your token balance:'
         if tokens == 0:
             string1 = '\n Your token balance:'
@@ -405,14 +474,22 @@ def new_play(tokens, bet, play, old_mania, nr_mania, dice_nr, loop):
                 sys.exit()
 
         while True:
-            y = input(f'\n Would you like to continue? (press {bold.BOLD + bold.YELLOW + "C" + bold.END});\n Top up & continue? (press {bold.BOLD + bold.YELLOW + "T" + bold.END})\n Quit? (Press {bold.BOLD + bold.YELLOW + "Q" + bold.END}): ').lower()
+            string1 = '\n Would you like to continue? (press '
+            string2 = ')\n Top up & continue? (press '
+            string3 = ')\n Quit? (Press '
+            string4 = '): '
+            y = input(string1 + bold.BOLD + bold.YELLOW + "C" + bold.END +
+                      string2 + bold.BOLD + bold.YELLOW + "T" + bold.END +
+                      string3 + bold.BOLD + bold.YELLOW + "Q" + bold.END +
+                      string4).lower()
             if y == 'c':
                 bet_nr, updated_tokens = place_bet(tokens, new_mania_nr)
                 updated_dice_nr = how_many_dice()
                 play_name = choose_play(new_mania_nr)
                 updated_mania_nr = roll_dice(updated_dice_nr)
                 loop = 1
-                new_play(updated_tokens, bet_nr, play_name, new_mania_nr, updated_mania_nr, updated_dice_nr, loop)
+                new_play(updated_tokens, bet_nr, play_name,
+                         new_mania_nr, updated_mania_nr, updated_dice_nr, loop)
                 break
             elif y == 't':
                 new_balance = top_up(tokens)
@@ -421,7 +498,8 @@ def new_play(tokens, bet, play, old_mania, nr_mania, dice_nr, loop):
                 play_name = choose_play(new_mania_nr)
                 updated_mania_nr = roll_dice(updated_dice_nr)
                 loop = 1
-                new_play(updated_tokens, bet_nr, play_name, new_mania_nr, updated_mania_nr, updated_dice_nr, loop)
+                new_play(updated_tokens, bet_nr, play_name,
+                         new_mania_nr, updated_mania_nr, updated_dice_nr, loop)
                 break
             elif y == 'q':
                 string1 = "\n Thanks for playing! You've redeemed"
@@ -434,7 +512,13 @@ def new_play(tokens, bet, play, old_mania, nr_mania, dice_nr, loop):
 
     elif (play == 'l') and (new_mania_nr == old_mania):
         print(bold.BOLD + colored(f'\n You lose.', 'red'))
-        print(f' You chose {bold.BOLD + bold.YELLOW + "Less" + bold.END}.\n {new_mania_nr} = {old_mania}')
+        string1 = ' You chose '
+        string2 = 'Less'
+        string3 = '.\n '
+        string4 = ' = '
+        print(string1 + bold.BOLD + bold.YELLOW + string2 +
+              bold.END + string3 + str(new_mania_nr) +
+              string4 + str(old_mania))
         string1 = '\n Your token balance:'
         if tokens == 0:
             string1 = '\n Your token balance:'
@@ -451,14 +535,22 @@ def new_play(tokens, bet, play, old_mania, nr_mania, dice_nr, loop):
                 sys.exit()
 
         while True:
-            y = input(f'\n Would you like to continue? (press {bold.BOLD + bold.YELLOW + "C" + bold.END});\n Top up & continue? (press {bold.BOLD + bold.YELLOW + "T" + bold.END})\n Quit? (Press {bold.BOLD + bold.YELLOW + "Q" + bold.END}): ').lower()
+            string1 = '\n Would you like to continue? (press '
+            string2 = ')\n Top up & continue? (press '
+            string3 = ')\n Quit? (Press '
+            string4 = '): '
+            y = input(string1 + bold.BOLD + bold.YELLOW + "C" + bold.END +
+                      string2 + bold.BOLD + bold.YELLOW + "T" + bold.END +
+                      string3 + bold.BOLD + bold.YELLOW + "Q" + bold.END +
+                      string4).lower()
             if y == 'c':
                 bet_nr, updated_tokens = place_bet(tokens, new_mania_nr)
                 updated_dice_nr = how_many_dice()
                 play_name = choose_play(new_mania_nr)
                 updated_mania_nr = roll_dice(updated_dice_nr)
                 loop = 1
-                new_play(updated_tokens, bet_nr, play_name, new_mania_nr, updated_mania_nr, updated_dice_nr, loop)
+                new_play(updated_tokens, bet_nr, play_name,
+                         new_mania_nr, updated_mania_nr, updated_dice_nr, loop)
                 break
             elif y == 't':
                 new_balance = top_up(tokens)
@@ -467,7 +559,8 @@ def new_play(tokens, bet, play, old_mania, nr_mania, dice_nr, loop):
                 play_name = choose_play(new_mania_nr)
                 updated_mania_nr = roll_dice(updated_dice_nr)
                 loop = 1
-                new_play(updated_tokens, bet_nr, play_name, new_mania_nr, updated_mania_nr, updated_dice_nr, loop)
+                new_play(updated_tokens, bet_nr, play_name,
+                         new_mania_nr, updated_mania_nr, updated_dice_nr, loop)
                 break
             elif y == 'q':
                 string1 = "\n Thanks for playing! You've redeemed"
@@ -480,7 +573,13 @@ def new_play(tokens, bet, play, old_mania, nr_mania, dice_nr, loop):
 
     elif (play == 'l') and (new_mania_nr < old_mania):
         print(bold.BOLD + colored(f'\n You win {bet * 2} tokens!', 'cyan'))
-        print(f' You chose {bold.BOLD + bold.YELLOW + "Less" + bold.END}.\n {new_mania_nr} < {old_mania}')
+        string1 = ' You chose '
+        string2 = 'Less'
+        string3 = '.\n '
+        string4 = ' < '
+        print(string1 + bold.BOLD + bold.YELLOW + string2 +
+              bold.END + string3 + str(new_mania_nr) +
+              string4 + str(old_mania))
         new_tokens = tokens + (bet * 2)
         string1 = '\n Your token balance:'
         if new_tokens == 0:
@@ -498,14 +597,22 @@ def new_play(tokens, bet, play, old_mania, nr_mania, dice_nr, loop):
                 sys.exit()
 
         while True:
-            y = input(f'\n Would you like to continue? (press {bold.BOLD + bold.YELLOW + "C" + bold.END});\n Top up & continue? (press {bold.BOLD + bold.YELLOW + "T" + bold.END})\n Quit? (Press {bold.BOLD + bold.YELLOW + "Q" + bold.END}): ').lower()
+            string1 = '\n Would you like to continue? (press '
+            string2 = ')\n Top up & continue? (press '
+            string3 = ')\n Quit? (Press '
+            string4 = '): '
+            y = input(string1 + bold.BOLD + bold.YELLOW + "C" + bold.END +
+                      string2 + bold.BOLD + bold.YELLOW + "T" + bold.END +
+                      string3 + bold.BOLD + bold.YELLOW + "Q" + bold.END +
+                      string4).lower()
             if y == 'c':
                 bet_nr, updated_tokens = place_bet(new_tokens, new_mania_nr)
                 updated_dice_nr = how_many_dice()
                 play_name = choose_play(new_mania_nr)
                 updated_mania_nr = roll_dice(updated_dice_nr)
                 loop = 1
-                new_play(updated_tokens, bet_nr, play_name, new_mania_nr, updated_mania_nr, updated_dice_nr, loop)
+                new_play(updated_tokens, bet_nr, play_name,
+                         new_mania_nr, updated_mania_nr, updated_dice_nr, loop)
                 break
             elif y == 't':
                 new_balance = top_up(new_tokens)
@@ -514,12 +621,14 @@ def new_play(tokens, bet, play, old_mania, nr_mania, dice_nr, loop):
                 play_name = choose_play(new_mania_nr)
                 updated_mania_nr = roll_dice(updated_dice_nr)
                 loop = 1
-                new_play(updated_tokens, bet_nr, play_name, new_mania_nr, updated_mania_nr, updated_dice_nr, loop)
+                new_play(updated_tokens, bet_nr, play_name,
+                         new_mania_nr, updated_mania_nr, updated_dice_nr, loop)
                 break
             elif y == 'q':
                 string1 = "\n Thanks for playing! You've redeemed"
                 string2 = 'tokens.'
-                print(string1, bold.BOLD + colored(new_tokens, 'cyan'), string2)
+                print(string1, bold.BOLD + colored(new_tokens, 'cyan'),
+                      string2)
                 sys.exit()
             else:
                 print('\n This input is not valid, please try again.')
@@ -527,7 +636,13 @@ def new_play(tokens, bet, play, old_mania, nr_mania, dice_nr, loop):
 
     elif (play == 's') and (new_mania_nr > old_mania):
         print(bold.BOLD + colored(f'\n You lose.', 'red'))
-        print(f' You chose {bold.BOLD + bold.YELLOW + "Same" + bold.END}.\n {new_mania_nr} > {old_mania}')
+        string1 = ' You chose '
+        string2 = 'Same'
+        string3 = '.\n '
+        string4 = ' > '
+        print(string1 + bold.BOLD + bold.YELLOW + string2 +
+              bold.END + string3 + str(new_mania_nr) +
+              string4 + str(old_mania))
         string1 = '\n Your token balance:'
         if tokens == 0:
             string1 = '\n Your token balance:'
@@ -544,14 +659,22 @@ def new_play(tokens, bet, play, old_mania, nr_mania, dice_nr, loop):
                 sys.exit()
 
         while True:
-            y = input(f'\n Would you like to continue? (press {bold.BOLD + bold.YELLOW + "C" + bold.END});\n Top up & continue? (press {bold.BOLD + bold.YELLOW + "T" + bold.END})\n Quit? (Press {bold.BOLD + bold.YELLOW + "Q" + bold.END}): ').lower()
+            string1 = '\n Would you like to continue? (press '
+            string2 = ')\n Top up & continue? (press '
+            string3 = ')\n Quit? (Press '
+            string4 = '): '
+            y = input(string1 + bold.BOLD + bold.YELLOW + "C" + bold.END +
+                      string2 + bold.BOLD + bold.YELLOW + "T" + bold.END +
+                      string3 + bold.BOLD + bold.YELLOW + "Q" + bold.END +
+                      string4).lower()
             if y == 'c':
                 bet_nr, updated_tokens = place_bet(tokens, new_mania_nr)
                 updated_dice_nr = how_many_dice()
                 play_name = choose_play(new_mania_nr)
                 updated_mania_nr = roll_dice(updated_dice_nr)
                 loop = 1
-                new_play(updated_tokens, bet_nr, play_name, new_mania_nr, updated_mania_nr, updated_dice_nr, loop)
+                new_play(updated_tokens, bet_nr, play_name,
+                         new_mania_nr, updated_mania_nr, updated_dice_nr, loop)
                 break
             elif y == 't':
                 new_balance = top_up(tokens)
@@ -560,7 +683,8 @@ def new_play(tokens, bet, play, old_mania, nr_mania, dice_nr, loop):
                 play_name = choose_play(new_mania_nr)
                 updated_mania_nr = roll_dice(updated_dice_nr)
                 loop = 1
-                new_play(updated_tokens, bet_nr, play_name, new_mania_nr, updated_mania_nr, updated_dice_nr, loop)
+                new_play(updated_tokens, bet_nr, play_name,
+                         new_mania_nr, updated_mania_nr, updated_dice_nr, loop)
                 break
             elif y == 'q':
                 string1 = "\n Thanks for playing! You've redeemed"
@@ -573,7 +697,13 @@ def new_play(tokens, bet, play, old_mania, nr_mania, dice_nr, loop):
 
     elif (play == 's') and (new_mania_nr < old_mania):
         print(bold.BOLD + colored(f'\n You lose.', 'red'))
-        print(f' You chose {bold.BOLD + bold.YELLOW + "Same" + bold.END}.\n {new_mania_nr} < {old_mania}')
+        string1 = ' You chose '
+        string2 = 'Same'
+        string3 = '.\n '
+        string4 = ' < '
+        print(string1 + bold.BOLD + bold.YELLOW + string2 +
+              bold.END + string3 + str(new_mania_nr) +
+              string4 + str(old_mania))
         string1 = '\n Your token balance:'
         if tokens == 0:
             string1 = '\n Your token balance:'
@@ -590,14 +720,22 @@ def new_play(tokens, bet, play, old_mania, nr_mania, dice_nr, loop):
                 sys.exit()
 
         while True:
-            y = input(f'\n Would you like to continue? (press {bold.BOLD + bold.YELLOW + "C" + bold.END});\n Top up & continue? (press {bold.BOLD + bold.YELLOW + "T" + bold.END})\n Quit? (Press {bold.BOLD + bold.YELLOW + "Q" + bold.END}): ').lower()
+            string1 = '\n Would you like to continue? (press '
+            string2 = ')\n Top up & continue? (press '
+            string3 = ')\n Quit? (Press '
+            string4 = '): '
+            y = input(string1 + bold.BOLD + bold.YELLOW + "C" + bold.END +
+                      string2 + bold.BOLD + bold.YELLOW + "T" + bold.END +
+                      string3 + bold.BOLD + bold.YELLOW + "Q" + bold.END +
+                      string4).lower()
             if y == 'c':
                 bet_nr, updated_tokens = place_bet(tokens, new_mania_nr)
                 updated_dice_nr = how_many_dice()
                 play_name = choose_play(new_mania_nr)
                 updated_mania_nr = roll_dice(updated_dice_nr)
                 loop = 1
-                new_play(updated_tokens, bet_nr, play_name, new_mania_nr, updated_mania_nr, updated_dice_nr, loop)
+                new_play(updated_tokens, bet_nr, play_name,
+                         new_mania_nr, updated_mania_nr, updated_dice_nr, loop)
                 break
             elif y == 't':
                 new_balance = top_up(tokens)
@@ -606,7 +744,8 @@ def new_play(tokens, bet, play, old_mania, nr_mania, dice_nr, loop):
                 play_name = choose_play(new_mania_nr)
                 updated_mania_nr = roll_dice(updated_dice_nr)
                 loop = 1
-                new_play(updated_tokens, bet_nr, play_name, new_mania_nr, updated_mania_nr, updated_dice_nr, loop)
+                new_play(updated_tokens, bet_nr, play_name,
+                         new_mania_nr, updated_mania_nr, updated_dice_nr, loop)
                 break
             elif y == 'q':
                 string1 = "\n Thanks for playing! You've redeemed"
@@ -618,8 +757,16 @@ def new_play(tokens, bet, play, old_mania, nr_mania, dice_nr, loop):
                 continue
 
     elif (play == 's') and (new_mania_nr == old_mania) and (dice_nr == 4):
-        print(bold.BOLD + colored(f'\n Congratulations, you won a Jackpot! {bet * 4} tokens!', 'yellow'))
-        print(f' You chose {bold.BOLD + bold.YELLOW + "Same" + bold.END}.\n {new_mania_nr} = {old_mania}')
+        string1 = '\n Congratulations, you won a Jackpot! '
+        print(bold.BOLD + colored(string1 + str(bet * 4) +
+                                  ' tokens!', 'yellow'))
+        string1 = ' You chose '
+        string2 = 'Same'
+        string3 = '.\n '
+        string4 = ' = '
+        print(string1 + bold.BOLD + bold.YELLOW + string2 +
+              bold.END + string3 + str(new_mania_nr) +
+              string4 + str(old_mania))
         new_tokens = tokens + (bet * 4)
         string1 = '\n Your token balance:'
         if new_tokens == 0:
@@ -637,14 +784,22 @@ def new_play(tokens, bet, play, old_mania, nr_mania, dice_nr, loop):
                 sys.exit()
 
         while True:
-            y = input(f'\n Would you like to continue? (press {bold.BOLD + bold.YELLOW + "C" + bold.END});\n Top up & continue? (press {bold.BOLD + bold.YELLOW + "T" + bold.END})\n Quit? (Press {bold.BOLD + bold.YELLOW + "Q" + bold.END}): ').lower()
+            string1 = '\n Would you like to continue? (press '
+            string2 = ')\n Top up & continue? (press '
+            string3 = ')\n Quit? (Press '
+            string4 = '): '
+            y = input(string1 + bold.BOLD + bold.YELLOW + "C" + bold.END +
+                      string2 + bold.BOLD + bold.YELLOW + "T" + bold.END +
+                      string3 + bold.BOLD + bold.YELLOW + "Q" + bold.END +
+                      string4).lower()
             if y == 'c':
                 bet_nr, updated_tokens = place_bet(new_tokens, new_mania_nr)
                 updated_dice_nr = how_many_dice()
                 play_name = choose_play(new_mania_nr)
                 updated_mania_nr = roll_dice(updated_dice_nr)
                 loop = 1
-                new_play(updated_tokens, bet_nr, play_name, new_mania_nr, updated_mania_nr, updated_dice_nr, loop)
+                new_play(updated_tokens, bet_nr, play_name,
+                         new_mania_nr, updated_mania_nr, updated_dice_nr, loop)
                 break
             elif y == 't':
                 new_balance = top_up(new_tokens)
@@ -653,12 +808,14 @@ def new_play(tokens, bet, play, old_mania, nr_mania, dice_nr, loop):
                 play_name = choose_play(new_mania_nr)
                 updated_mania_nr = roll_dice(updated_dice_nr)
                 loop = 1
-                new_play(updated_tokens, bet_nr, play_name, new_mania_nr, updated_mania_nr, updated_dice_nr, loop)
+                new_play(updated_tokens, bet_nr, play_name,
+                         new_mania_nr, updated_mania_nr, updated_dice_nr, loop)
                 break
             elif y == 'q':
                 string1 = "\n Thanks for playing! You've redeemed"
                 string2 = 'tokens.'
-                print(string1, bold.BOLD + colored(new_tokens, 'cyan'), string2)
+                print(string1, bold.BOLD + colored(new_tokens, 'cyan'),
+                      string2)
                 sys.exit()
             else:
                 print('\n This input is not valid, please try again.')
@@ -666,7 +823,13 @@ def new_play(tokens, bet, play, old_mania, nr_mania, dice_nr, loop):
 
     elif (play == 's') and (new_mania_nr == old_mania):
         print(bold.BOLD + colored(f'\n You win {bet * 2} tokens!', 'cyan'))
-        print(f' You chose {bold.BOLD + bold.YELLOW + "Same" + bold.END}.\n {new_mania_nr} = {old_mania}')
+        string1 = ' You chose '
+        string2 = 'Same'
+        string3 = '.\n '
+        string4 = ' = '
+        print(string1 + bold.BOLD + bold.YELLOW + string2 +
+              bold.END + string3 + str(new_mania_nr) +
+              string4 + str(old_mania))
         new_tokens = tokens + (bet * 2)
         string1 = '\n Your token balance:'
         if new_tokens == 0:
@@ -684,14 +847,22 @@ def new_play(tokens, bet, play, old_mania, nr_mania, dice_nr, loop):
                 sys.exit()
 
         while True:
-            y = input(f'\n Would you like to continue? (press {bold.BOLD + bold.YELLOW + "C" + bold.END});\n Top up & continue? (press {bold.BOLD + bold.YELLOW + "T" + bold.END})\n Quit? (Press {bold.BOLD + bold.YELLOW + "Q" + bold.END}): ').lower()
+            string1 = '\n Would you like to continue? (press '
+            string2 = ')\n Top up & continue? (press '
+            string3 = ')\n Quit? (Press '
+            string4 = '): '
+            y = input(string1 + bold.BOLD + bold.YELLOW + "C" + bold.END +
+                      string2 + bold.BOLD + bold.YELLOW + "T" + bold.END +
+                      string3 + bold.BOLD + bold.YELLOW + "Q" + bold.END +
+                      string4).lower()
             if y == 'c':
                 bet_nr, updated_tokens = place_bet(new_tokens, new_mania_nr)
                 updated_dice_nr = how_many_dice()
                 play_name = choose_play(new_mania_nr)
                 updated_mania_nr = roll_dice(updated_dice_nr)
                 loop = 1
-                new_play(updated_tokens, bet_nr, play_name, new_mania_nr, updated_mania_nr, updated_dice_nr, loop)
+                new_play(updated_tokens, bet_nr, play_name,
+                         new_mania_nr, updated_mania_nr, updated_dice_nr, loop)
                 break
             elif y == 't':
                 new_balance = top_up(new_tokens)
@@ -700,12 +871,14 @@ def new_play(tokens, bet, play, old_mania, nr_mania, dice_nr, loop):
                 play_name = choose_play(new_mania_nr)
                 updated_mania_nr = roll_dice(updated_dice_nr)
                 loop = 1
-                new_play(updated_tokens, bet_nr, play_name, new_mania_nr, updated_mania_nr, updated_dice_nr, loop)
+                new_play(updated_tokens, bet_nr, play_name,
+                         new_mania_nr, updated_mania_nr, updated_dice_nr, loop)
                 break
             elif y == 'q':
                 string1 = "\n Thanks for playing! You've redeemed"
                 string2 = 'tokens.'
-                print(string1, bold.BOLD + colored(new_tokens, 'cyan'), string2)
+                print(string1, bold.BOLD + colored(new_tokens, 'cyan'),
+                      string2)
                 sys.exit()
             else:
                 print('\n This input is not valid, please try again.')
@@ -744,28 +917,52 @@ def main():
     """
     print("\n")
     create_title()
-    print("\n\n Welcome! Bet your tokens and guess the sum of the next dice play.\n Are you ready?\n")
-    print(bold.YELLOW + bold.BOLD + ' Tip: Press "Enter" after entering a value/number to play.' + bold.END)
-    print(bold.BOLD + colored(' This game window needs to be clicked to be interacted with.', "cyan"))
-    print(bold.YELLOW + bold.BOLD + ' If you enjoy the game, you can share it with a friend!\n' + bold.END)
+    string1 = '\n\n Welcome! Bet your tokens and guess '
+    string2 = 'the sum of the next dice play.\n Are you ready?\n'
+    print(string1 + string2)
+    string3 = ' Tip: Press "Enter" after entering a value/number to play.'
+    print(bold.YELLOW + bold.BOLD + string3 + bold.END)
+    string4 = ' This game window needs to be clicked to be interacted with.'
+    print(bold.BOLD + colored(string4, "cyan"))
+    string5 = ' If you enjoy the game, you can share it with a friend!\n'
+    print(bold.YELLOW + bold.BOLD + string5 + bold.END)
     while True:
-        answer = input('\n Would you like to display the rules? (y/n): ').lower()
+        string1 = '\n Would you like to'
+        string2 = ' display the rules? (y/n): '
+        answer = input(string1 + string2).lower()
         if answer == 'y':
             print(bold.YELLOW + bold.BOLD + "\n       Rules below:" + bold.END)
-            print("       --------------------------------------------------------")
-
+            string1 = '       ----------------------------------'
+            string2 = '------------------------------------------'
+            print(string1 + string2)
             print("       1 Charge your balance with tokens.")
-            print(bold.BOLD + colored("       2. Place your bet, only whole tokens are accepted.", 'cyan'))
+            string3 = '       2. Place your bet, only '
+            string4 = 'whole tokens are accepted.'
+            print(bold.BOLD + colored(string3 + string4, 'cyan'))
             print("       You start with a Mania Number of 12.")
-            print(bold.BOLD + colored('       3. Choose the number of dice you want to play from 2 to 4.', "cyan"))
+            string5 = '       3. Choose the number of dice '
+            string6 = 'you want to play from 2 to 4.'
+            print(bold.BOLD + colored(string5 + string6, "cyan"))
             print('       A single die cannot be played.')
-            print(bold.BOLD + colored("       The sum of the dice rolled will be your new Mania Number (let's call it MN).", 'cyan'))
-            print('       You must now guess the sum of new MN against the old MN.')
-            print(bold.BOLD + colored('       4. Choose one of three plays: "More", "Less" or "Same".', 'cyan'))
-            print('       If you bet "More", "Less" or "Same" and win, you get 2x the bet value.')
-            print(bold.BOLD + colored('       If you bet "Same" with 4 dice and win, you get a 4x Jackpot!', 'cyan'))
+            string7 = '       The sum of the dice rolled will '
+            string8 = "be your new Mania Number (let's call it MN)."
+            print(bold.BOLD + colored(string7 + string8, 'cyan'))
+            string9 = '       You must now guess the '
+            string10 = 'sum of new MN against the old MN.'
+            print(string9 + string10)
+            string11 = '       4. Choose one of three '
+            string12 = 'plays: "More", "Less" or "Same".'
+            print(bold.BOLD + colored(string11 + string12, 'cyan'))
+            string13 = '       If you bet "More", "Less" or "Same" '
+            string14 = 'and win, you get 2x the bet value.'
+            print(string13 + string14)
+            string15 = '       If you bet "Same" with 4 dice '
+            string16 = 'and win, you get a 4x Jackpot!'
+            print(bold.BOLD + colored(string15 + string16, 'cyan'))
             print('       The dice are rolled in, good luck!')
-            print(bold.BOLD + colored("       You can always continue, top up or quit.", 'cyan'))
+            string17 = '       You can always '
+            string18 = 'continue, top up or quit.'
+            print(bold.BOLD + colored(string17 + string18, 'cyan'))
             print("       You lose when your balance reaches 0.")
             break
         elif answer == 'n':
@@ -774,13 +971,18 @@ def main():
             print(' Input not valid, please try again.')
             continue
     """
-    The useless_var has no use here but it still has to be called for the function
+    The useless_var has no use here but it still has to be
+    called for the function
     to work because it's an argument on the function itself.
-    The player already has a mania number of 12 the first time playing.
-    From the second time on, the system needs to compare the new mania number against the old one.
+    The player already has a mania number of 12
+    the first time playing.
+    From the second time on, the system needs to compare
+    the new mania number against the old one.
 
-    This is the reason there's a loop var, the dice are not being rolled here in this function
-    because we already have 12 as "old mania number". When the loop is 1, the old mania will be assigned
+    This is the reason there's a loop var, the dice are not being
+    rolled here in this function
+    because we already have 12 as "old mania number". When the loop is 1,
+    the old mania will be assigned
     at the new_play function.
     """
     mania_nr = 12
@@ -790,7 +992,8 @@ def main():
     play_option = choose_play(mania_nr)
     loop = 0
     useless_var = 0
-    new_play(new_tokens, bet, play_option, mania_nr, useless_var, dice_nr, loop)
+    new_play(new_tokens, bet, play_option, mania_nr,
+             useless_var, dice_nr, loop)
 
 
 main()
