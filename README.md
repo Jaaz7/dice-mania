@@ -69,7 +69,7 @@ Dice Mania is a simple idea which can be compared to classic dice games due to i
       Displays the logo, a welcome message and some tips:
       <br>
       <img src="https://github.com/Jaaz7/dice-mania/assets/130407877/1b54b57b-847b-42a6-8966-966f64668d50" width=70% height=70%>
-    - Show_rules
+    - Show rules
       <br><br>
       Rules are shown when choosing "y":
       <br>
@@ -124,7 +124,7 @@ Dice Mania is a simple idea which can be compared to classic dice games due to i
       <br>
       clearly demonstrating their balance in a red "0". Confirming they've just made an all-in:
       <br>
-      <img src="https://github.com/Jaaz7/dice-mania/assets/130407877/9d9ad8c6-f498-4585-a574-b79b2cf82f72" width=50% height=50%>
+      <img src="https://github.com/Jaaz7/dice-mania/assets/130407877/9d9ad8c6-f498-4585-a574-b79b2cf82f72" width=60% height=60%>
     - Quitting
       <br><br>
       If the player quits, a message thanks the player for playing and shows the total tokens they've redeemed:
@@ -183,6 +183,22 @@ Dice Mania is a simple idea which can be compared to classic dice games due to i
       </details>
     - The game was manually tested extensively from start to end while coding it, the website was deployed to heroku at a relative early stage with automation on because further testing was necessary to know how the app looks online.
     - Testing of logo ASCII image display, rules display, tokens input validation, bet input validation, dice number input validation, play option input validation, menu choice input validation (continue, top up, quit) and top up            validation were done and improved upon.
+    - |Feature|Expected Result|Steps Taken|Actual Result|Snippet (click to zoom-in)
+      |:-----:|:-------------:|:---------:|:-----------:|:-----:
+      |Starting Screen|To display logo, welcome message and tips|None|As expected|<img src="https://github.com/Jaaz7/dice-mania/assets/130407877/1b54b57b-847b-42a6-8966-966f64668d50" width=90% height=90%>|
+      |Show Rules|To show the rules or skip by choosing "y" or "n"|Input "y" to display<br><br>Input "n" to skip|As expected|<img src="https://github.com/Jaaz7/dice-mania/assets/130407877/2b277fd9-4dbc-4e95-8f30-32f26b6fcd0f" width=90% height=90%>|
+      |Charge Tokens|To accept a number between 1 and 500|Input a number|As expected|<img src="https://github.com/Jaaz7/dice-mania/assets/130407877/ace9638f-95c8-479e-bbe6-c67383c81d26" width=70% height=70%>|
+      |Place Bet|To accept a number between 1 and current balance|Input a number|As expected|<img src="https://github.com/Jaaz7/dice-mania/assets/130407877/34770609-1341-4dc8-85ec-e4df77aa28d8" width=90% height=90%>|
+      |Choose Dice Number|To accept a number between 2 and 4|Input a number|As expected|<img src="https://github.com/Jaaz7/dice-mania/assets/130407877/e9d582c9-acd8-4b4b-acc0-701ea69ac0f8" width=100% height=100%>|
+      |Choose Play Option|To accept "m" or "l" or "s"|Input "m" for more<br><br>Input "l" for less<br><br>Input "s" for same|As expected|<img src="https://github.com/Jaaz7/dice-mania/assets/130407877/1edb7b5a-bcc1-49aa-82e3-79c7408d778f" width=90% height=90%>|
+      |Win The Play|To show a winning message|All 3 possible outcomes tested<br><br>To bet "more" and win<br><br>To bet "less" and win<br><br>To bet "same" and win|As expected|<img src="https://github.com/Jaaz7/dice-mania/assets/130407877/392682d9-dff8-45e6-af0c-1ffc0410a485" width=80% height=80%>|
+      |Lose The Play|To show a losing message|All 6 possible outcomes tested<br><br>To bet "more" and lose against "less" or "same"<br><br>To bet "less" and lose against "more" or "same"<br><br>To bet "same" and lose against "more" or "less"|As expected|<img src="https://github.com/Jaaz7/dice-mania/assets/130407877/dc5593c9-0e2b-4df9-8bab-196e874b2ef6" width=80% height=80%>|
+      |Win The Jackpot|To show a message informing the player they win the jackpot|Win "same" with 4 dice|As expected|<img src="https://github.com/Jaaz7/dice-mania/assets/130407877/ba95c0ea-2392-497e-b433-bbbd57b97185" width=80% height=80%>|
+      |All-In|To show a message showing a red balance of "0"|Bet the totality of the balance|As expected|<img src="https://github.com/Jaaz7/dice-mania/assets/130407877/9d9ad8c6-f498-4585-a574-b79b2cf82f72" width=90% height=90%>|
+      |Quit|To thank the player for playing and show the total redeemed tokens|Input "q" to quit|As expected|<img src="https://github.com/Jaaz7/dice-mania/assets/130407877/cbf3da19-4972-46a1-9e97-2c2b13a4649d" width=100% height=100%>|
+      |Game Over|To dsplay a game over message to the player|Run out of tokens|As expected|<img src="https://github.com/Jaaz7/dice-mania/assets/130407877/fc85c96a-ea9d-4624-8562-bda4fb5a7bbb" width=90% height=90%>|
+      |Final Menu|To accept "c" or "t" or "q"|Input "c" to continue<br><br> Input "t" to top-up<br><br>Input "q" to quit|As expected|<img src="https://github.com/Jaaz7/dice-mania/assets/130407877/b36ee79b-f630-4f16-ac3a-e294e6c627d3" width=90% height=90%>|
+      |Top Up|To accept a number between 1 and 500|Run out of tokens|As expected|<img src="https://github.com/Jaaz7/dice-mania/assets/130407877/fc85c96a-ea9d-4624-8562-bda4fb5a7bbb" width=90% height=90%>|
   - ### Input Validation Testing
     - Display rules
       <br><br>

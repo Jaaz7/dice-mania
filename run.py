@@ -146,10 +146,14 @@ def verify_bet(tokens, bet):
     """
     try:
         if int(bet) > tokens:
-            print(f' Bet surpassed allowed amount, maximum {tokens} permitted, please try again.\n')
+            string1 = ' Bet surpassed allowed amount, maximum '
+            string2 = ' permitted, please try again.\n'
+            print(string1 + str(tokens) + string2)
             return False
         elif int(bet) < 1:
-            print(f" Bet has to be as least 1, you entered {bet}, please try again.\n")
+            string1 = ' Bet has to be as least 1, you entered '
+            string2 = ', please try again.\n'
+            print(string1 + bet + string2)
             return False
         else:
             new_tokens = update_tokens(tokens, bet)
@@ -173,8 +177,12 @@ def how_many_dice():
     """
     while True:
         try:
-            print(bold.BOLD + colored('\n Tip: win 4x by rolling 4 dice and playing "Same"!', 'yellow'))
-            x = int(input(' How many dice do you want to play this round? (2-4 possible): '))
+            string1 = '\n Tip: win 4x by rolling'
+            string2 = ' 4 dice and playing "Same"!'
+            print(bold.BOLD + colored(string1 + string2, 'yellow'))
+            string3 = ' How many dice do you want'
+            string4 = ' to play this round? (2-4 possible): '
+            x = int(input(string3 + string4))
             if (x < 2) or (x > 4):
                 print(' The number has to be between 2 and 4, please try again.\n')
                 continue
