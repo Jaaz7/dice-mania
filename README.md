@@ -140,7 +140,7 @@ Dice Mania is a simple idea which can be compared to classic dice games due to i
     - Option to cancel the top up, going back to the pervious menu.
     - Option to play with more than 4 dice.
     - There could have been different kinds of prizes.
-    - A counter of how many games currently played.
+    - A counter of how many games were played / current play number.
 
 ---
 ## Design
