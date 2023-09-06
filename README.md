@@ -93,7 +93,7 @@ Dice Mania is a simple idea which can be compared to classic dice games due to i
       <br>
       Confirmation that the dice number was accepted:
       <br>
-      <img src="https://github.com/Jaaz7/dice-mania/assets/130407877/e9d582c9-acd8-4b4b-acc0-701ea69ac0f8" width=70% height=70%>
+      <img src="https://github.com/Jaaz7/dice-mania/assets/130407877/e9d582c9-acd8-4b4b-acc0-701ea69ac0f8" width=90% height=90%>
     - Choose play option prompt and conclusion of the play
       <br><br>
       After choosing, the dice are immediately rolled
@@ -135,7 +135,7 @@ Dice Mania is a simple idea which can be compared to classic dice games due to i
       <br><br>
       When the player runs out of tokens a message will inform that it's game over:
       <br>
-      <img src="https://github.com/Jaaz7/dice-mania/assets/130407877/fc85c96a-ea9d-4624-8562-bda4fb5a7bbb" width=40% height=40%>
+      <img src="https://github.com/Jaaz7/dice-mania/assets/130407877/fc85c96a-ea9d-4624-8562-bda4fb5a7bbb" width=60% height=60%>
   - ### Features Left To Implement
     - Option to cancel the top up, going back to the pervious menu.
     - Option to play with more than 4 dice.
@@ -206,37 +206,37 @@ Dice Mania is a simple idea which can be compared to classic dice games due to i
       <br><br>
       Must be "y" or "n":
       <br>
-      <img src="https://github.com/Jaaz7/dice-mania/assets/130407877/f0a6a8d1-cc82-4dc1-9fe7-e2715cf44b85" width=50% height=50%>
+      <img src="https://github.com/Jaaz7/dice-mania/assets/130407877/f0a6a8d1-cc82-4dc1-9fe7-e2715cf44b85" width=80% height=80%>
     - Charge tokens
       <br><br>
       Must be a number between 1 and 500:
       <br>
-      <img src="https://github.com/Jaaz7/dice-mania/assets/130407877/ac51cdfd-f38e-445a-85f8-14d4a6370f17" width=75% height=75%>
+      <img src="https://github.com/Jaaz7/dice-mania/assets/130407877/ac51cdfd-f38e-445a-85f8-14d4a6370f17" width=80% height=80%>
     - Place bet
       <br><br>
       Must be a number between 1 and current balance:
       <br>
-      <img src="https://github.com/Jaaz7/dice-mania/assets/130407877/ce8e8ab7-e88b-4008-b8d9-8ffd3fe8d94c" width=75% height=75%>
+      <img src="https://github.com/Jaaz7/dice-mania/assets/130407877/ce8e8ab7-e88b-4008-b8d9-8ffd3fe8d94c" width=80% height=80%>
     - Choose dice number
       <br><br>
       Must be a number between 2 and 4:
       <br>
-      <img src="https://github.com/Jaaz7/dice-mania/assets/130407877/d64aa420-8194-4738-a11f-a5e991f506fa" width=70% height=70%>
+      <img src="https://github.com/Jaaz7/dice-mania/assets/130407877/d64aa420-8194-4738-a11f-a5e991f506fa" width=90% height=90%>
     - Play option
       <br><br>
       Must be "m" or "l" or "s":
       <br>
-      <img src="https://github.com/Jaaz7/dice-mania/assets/130407877/c4d275fc-66b4-4083-a357-6f49744ab494" width=40% height=40%>
+      <img src="https://github.com/Jaaz7/dice-mania/assets/130407877/c4d275fc-66b4-4083-a357-6f49744ab494" width=80% height=80%>
     - Final menu
       <br><br>
       Must be "c" or "t" or "q":
       <br>
-      <img src="https://github.com/Jaaz7/dice-mania/assets/130407877/b36ee79b-f630-4f16-ac3a-e294e6c627d3" width=40% height=40%>
+      <img src="https://github.com/Jaaz7/dice-mania/assets/130407877/b36ee79b-f630-4f16-ac3a-e294e6c627d3" width=80% height=80%>
     - Top up
       <br><br>
       Must be a number between 1 and 500:
       <br>
-      <img src="https://github.com/Jaaz7/dice-mania/assets/130407877/fb6b1cbc-ce0a-4bf4-a055-cad881f26624" width=75% height=75%>
+      <img src="https://github.com/Jaaz7/dice-mania/assets/130407877/fb6b1cbc-ce0a-4bf4-a055-cad881f26624" width=80% height=80%>
 
 ---
 ## Bugs
